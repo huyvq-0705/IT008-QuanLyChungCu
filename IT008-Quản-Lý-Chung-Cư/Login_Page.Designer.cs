@@ -74,7 +74,6 @@
             guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2GradientPanel1.Size = new Size(538, 606);
             guna2GradientPanel1.TabIndex = 0;
-            guna2GradientPanel1.Paint += guna2GradientPanel1_Paint;
             // 
             // lbl_IncorrectPass
             // 
@@ -216,7 +215,6 @@
             txt_Password.Size = new Size(356, 34);
             txt_Password.TabIndex = 2;
             txt_Password.IconRightClick += txt_Password_IconRightClick;
-            txt_Password.TextChanged += txt_Password_TextChanged;
             // 
             // txt_Username
             // 
@@ -245,7 +243,6 @@
             txt_Username.ShadowDecoration.Shadow = new Padding(2);
             txt_Username.Size = new Size(356, 32);
             txt_Username.TabIndex = 1;
-            txt_Username.TextChanged += txt_Username_TextChanged;
             // 
             // Minimize_Animation
             // 
