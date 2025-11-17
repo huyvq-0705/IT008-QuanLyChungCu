@@ -1,3 +1,4 @@
+// Updated Login_Page.cs
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -13,18 +14,31 @@ namespace IT008_Quản_Lý_Chung_Cư
         public Login_Page()
         {
             InitializeComponent();
+            txt_Password.UseSystemPasswordChar = true; // Set default to hide password
+            this.Resize += Login_Page_Resize;
+            UpdateFormAppearance(); // Initial setup
         }
 
-        // Close the app
-        private void btn_Close_LoginForm_Click(object sender, EventArgs e)
+        private void Login_Page_Resize(object sender, EventArgs e)
         {
-            Application.Exit();
+            UpdateFormAppearance();
         }
 
-        // Minimize window
-        private void btn_Minimize_Click(object sender, EventArgs e)
+        private void UpdateFormAppearance()
         {
-            WindowState = FormWindowState.Minimized;
+            if (WindowState == FormWindowState.Maximized)
+            {
+                BackgroundImage = null;
+                BackColor = SystemColors.Control;
+                guna2GradientPanel1.Left = (ClientSize.Width - guna2GradientPanel1.Width) / 2;
+                guna2GradientPanel1.Top = (ClientSize.Height - guna2GradientPanel1.Height) / 2;
+            }
+            else
+            {
+                BackgroundImage = Properties.Resources.BackGround_1000x600;
+                guna2GradientPanel1.Left = ClientSize.Width - guna2GradientPanel1.Width;
+                guna2GradientPanel1.Top = 0;
+            }
         }
 
         // Handle Login
@@ -39,6 +53,7 @@ namespace IT008_Quản_Lý_Chung_Cư
                 return;
             }
 
+            this.Cursor = Cursors.WaitCursor; // Show loading cursor
             try
             {
                 using var conn = Db.Open();
@@ -71,6 +86,7 @@ namespace IT008_Quản_Lý_Chung_Cư
 
                         new Dashboard_Form().Show();
                         Hide();
+                        this.Cursor = Cursors.Default; // Reset cursor
                         return;
                     }
                 }
@@ -85,6 +101,10 @@ namespace IT008_Quản_Lý_Chung_Cư
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default; // Always reset cursor
             }
         }
 
