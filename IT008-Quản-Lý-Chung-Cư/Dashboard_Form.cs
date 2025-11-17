@@ -12,9 +12,11 @@ namespace IT008_Quản_Lý_Chung_Cư
     {
         private ProgressBar progressBarLoad;
         private Label lblLoadStatus;
+
         public Dashboard_Form()
         {
             InitializeComponent();
+
             progressBarLoad = new ProgressBar()
             {
                 Name = "progressBarLoad",
@@ -22,7 +24,7 @@ namespace IT008_Quản_Lý_Chung_Cư
                 Maximum = 100,
                 Value = 0,
                 Size = new Size(300, 20),
-                Location = new Point(10, 10),
+                Location = new Point(210, 10),
                 Style = ProgressBarStyle.Blocks,
                 Visible = false
             };
@@ -35,17 +37,19 @@ namespace IT008_Quản_Lý_Chung_Cư
                 Location = new Point(progressBarLoad.Right + 8, progressBarLoad.Top - 2),
                 Visible = false
             };
+
             this.Controls.Add(progressBarLoad);
             this.Controls.Add(lblLoadStatus);
             this.Load += Dashboard_Form_Load;
         }
-            
-                private async void Dashboard_Form_Load(object? sender, EventArgs e)
+
+        private async void Dashboard_Form_Load(object? sender, EventArgs e)
         {
             progressBarLoad.Visible = true;
             lblLoadStatus.Visible = true;
             progressBarLoad.Value = 0;
             lblLoadStatus.Text = "Loading 0%";
+
             var progress = new Progress<int>(percent =>
             {
                 if (percent < progressBarLoad.Minimum) percent = progressBarLoad.Minimum;
@@ -53,6 +57,7 @@ namespace IT008_Quản_Lý_Chung_Cư
                 progressBarLoad.Value = percent;
                 lblLoadStatus.Text = $"Loading {percent}%";
             });
+
             try
             {
                 await Task.Run(() => LoadDashboardData(progress));
@@ -70,6 +75,7 @@ namespace IT008_Quản_Lý_Chung_Cư
                 lblLoadStatus.Visible = false;
             }
         }
+
         private void LoadDashboardData(IProgress<int> progress)
         {
             for (int i = 0; i <= 100; i += 10)
@@ -79,9 +85,50 @@ namespace IT008_Quản_Lý_Chung_Cư
             }
         }
 
-        private void btn_Close_Dashboard_Click(object sender, EventArgs e)
+        private void btnStaff_Click(object sender, EventArgs e)
         {
-            Close();
+            MessageBox.Show("Staff menu clicked", "Navigation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Add your navigation logic here
+        }
+
+        private void btnUnit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Unit menu clicked", "Navigation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Add your navigation logic here
+        }
+
+        private void btnHousehold_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Household menu clicked", "Navigation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Add your navigation logic here
+        }
+
+        private void btnMeterReading_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Meter reading menu clicked", "Navigation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Add your navigation logic here
+        }
+
+        private void btnMonthlyBill_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Monthly bill menu clicked", "Navigation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Add your navigation logic here
+        }
+
+        private void btnTicket_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ticket menu clicked", "Navigation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Add your navigation logic here
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                // Add your logout logic here
+                this.Close();
+            }
         }
     }
 }
