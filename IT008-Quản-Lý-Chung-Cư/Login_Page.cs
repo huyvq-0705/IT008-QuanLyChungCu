@@ -1,4 +1,3 @@
-// Updated Login_Page.cs
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -14,15 +13,12 @@ namespace IT008_Quản_Lý_Chung_Cư
         public Login_Page()
         {
             InitializeComponent();
-            txt_Password.UseSystemPasswordChar = true; // Set default to hide password
+            txt_Password.UseSystemPasswordChar = true;
             this.Resize += Login_Page_Resize;
-            UpdateFormAppearance(); // Initial setup
-        }
-
-        private void Login_Page_Resize(object sender, EventArgs e)
-        {
             UpdateFormAppearance();
         }
+
+        private void Login_Page_Resize(object sender, EventArgs e) { UpdateFormAppearance(); }
 
         private void UpdateFormAppearance()
         {
@@ -41,7 +37,6 @@ namespace IT008_Quản_Lý_Chung_Cư
             }
         }
 
-        // Handle Login
         private void btn_Login_Click(object sender, EventArgs e)
         {
             string username = txt_Username.Text.Trim();
@@ -53,17 +48,12 @@ namespace IT008_Quản_Lý_Chung_Cư
                 return;
             }
 
-            this.Cursor = Cursors.WaitCursor; // Show loading cursor
+            this.Cursor = Cursors.WaitCursor;
             try
             {
                 using var conn = Db.Open();
-                string sql = @"
-                    SELECT full_name, password_hash
-                    FROM staff
-                    WHERE username = @username
-                      AND is_active = TRUE
-                      AND is_deleted = FALSE
-                    LIMIT 1;";
+                // Fetch ID as well
+                string sql = "SELECT id, full_name, password_hash FROM staff WHERE username = @username AND is_active = TRUE AND is_deleted = FALSE LIMIT 1;";
 
                 using var cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@username", username);
@@ -71,58 +61,43 @@ namespace IT008_Quản_Lý_Chung_Cư
                 using var reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    string fullName = reader.GetString(0);
-                    string storedHash = reader.GetString(1);
+                    int id = reader.GetInt32(0); // Get ID
+                    string fullName = reader.GetString(1);
+                    string storedHash = reader.GetString(2);
 
                     if (BCrypt.Net.BCrypt.Verify(password, storedHash))
                     {
                         lbl_IncorrectPass.Visible = false;
-                        MessageBox.Show(
-                            $"Welcome, {fullName}!",
-                            "Login Successful",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Information
-                        );
+                        MessageBox.Show($"Welcome, {fullName}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        new Dashboard_Form().Show();
+                        // PASS THE ID TO THE DASHBOARD
+                        new Dashboard_Form(id).Show();
+
                         Hide();
-                        this.Cursor = Cursors.Default; // Reset cursor
+                        this.Cursor = Cursors.Default;
                         return;
                     }
                 }
-
                 ShowError("Username or Password is incorrect!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(
-                    $" Database error:\n{ex.Message}",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
+                MessageBox.Show($"Database error:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                this.Cursor = Cursors.Default; // Always reset cursor
-            }
+            finally { this.Cursor = Cursors.Default; }
         }
 
-        // Helper for showing errors
         private void ShowError(string message)
         {
             lbl_IncorrectPass.Text = message;
             lbl_IncorrectPass.Visible = true;
         }
 
-        // Toggle password visibility
         private void txt_Password_IconRightClick(object sender, EventArgs e)
         {
             isPasswordVisible = !isPasswordVisible;
             txt_Password.UseSystemPasswordChar = !isPasswordVisible;
-            txt_Password.IconRight = isPasswordVisible
-                ? Properties.Resources.Closed_Eye
-                : Properties.Resources.Eye;
+            txt_Password.IconRight = isPasswordVisible ? Properties.Resources.Closed_Eye : Properties.Resources.Eye;
         }
     }
 }
