@@ -49,9 +49,21 @@ namespace IT008_Quản_Lý_Chung_Cư
         {
             ShowControl(new HouseholdListControl());
         }
-        private void btnMeterReading_Click(object sender, EventArgs e) { }
-        private void btnMonthlyBill_Click(object sender, EventArgs e) { }
-        private void btnTicket_Click(object sender, EventArgs e) { }
+        private void btnMeterReading_Click(object sender, EventArgs e)
+        {
+            // Pass the current staff ID to the control
+            ShowControl(new IT008_Quản_Lý_Chung_Cư.Controls.MeterReadingListControl(_currentStaffId));
+        }
+        private void btnMonthlyBill_Click(object sender, EventArgs e)
+        {
+            // Pass the _currentStaffId so creating bills works
+            ShowControl(new IT008_Quản_Lý_Chung_Cư.Controls.MonthlyBillListControl(_currentStaffId));
+        }
+        private void btnTicket_Click(object sender, EventArgs e)
+        {
+            // Make sure to use the full namespace if needed or just Controls.TicketListControl
+            ShowControl(new IT008_Quản_Lý_Chung_Cư.Controls.TicketListControl(_currentStaffId));
+        }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
