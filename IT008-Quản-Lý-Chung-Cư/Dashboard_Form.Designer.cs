@@ -2,15 +2,8 @@
 {
     partial class Dashboard_Form
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -42,213 +31,194 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Dashboard = new Label();
-            panelSidebar = new Panel();
-            btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            btnTicket = new Guna.UI2.WinForms.Guna2Button();
-            btnMonthlyBill = new Guna.UI2.WinForms.Guna2Button();
-            btnMeterReading = new Guna.UI2.WinForms.Guna2Button();
-            btnHousehold = new Guna.UI2.WinForms.Guna2Button();
-            btnUnit = new Guna.UI2.WinForms.Guna2Button();
-            btnStaff = new Guna.UI2.WinForms.Guna2Button();
-            panelSidebar.SuspendLayout();
-            SuspendLayout();
-            // 
-            // Dashboard
-            // 
-            Dashboard.AutoSize = true;
-            Dashboard.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Dashboard.Location = new Point(600, 80);
-            Dashboard.Name = "Dashboard";
-            Dashboard.Size = new Size(181, 46);
-            Dashboard.TabIndex = 0;
-            Dashboard.Text = "WELCOME";
+
+            this.panelSidebar = new System.Windows.Forms.Panel();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTicket = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMonthlyBill = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMeterReading = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHousehold = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUnit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnStaff = new Guna.UI2.WinForms.Guna2Button();
+
+            // New Panel for Main Content
+            this.panelContent = new System.Windows.Forms.Panel();
+
+            this.panelSidebar.SuspendLayout();
+            this.SuspendLayout();
+
             // 
             // panelSidebar
             // 
-            panelSidebar.BackColor = Color.FromArgb(250, 250, 250);
-            panelSidebar.BorderStyle = BorderStyle.FixedSingle;
-            panelSidebar.Controls.Add(btnLogout);
-            panelSidebar.Controls.Add(btnTicket);
-            panelSidebar.Controls.Add(btnMonthlyBill);
-            panelSidebar.Controls.Add(btnMeterReading);
-            panelSidebar.Controls.Add(btnHousehold);
-            panelSidebar.Controls.Add(btnUnit);
-            panelSidebar.Controls.Add(btnStaff);
-            panelSidebar.Dock = DockStyle.Left;
-            panelSidebar.Location = new Point(0, 0);
-            panelSidebar.Name = "panelSidebar";
-            panelSidebar.Size = new Size(195, 800);
-            panelSidebar.TabIndex = 2;
-            // 
-            // btnLogout
-            // 
-            btnLogout.CustomizableEdges = customizableEdges1;
-            btnLogout.DisabledState.BorderColor = Color.DarkGray;
-            btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnLogout.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnLogout.Dock = DockStyle.Bottom;
-            btnLogout.FillColor = Color.White;
-            btnLogout.Font = new Font("Segoe UI", 10F);
-            btnLogout.ForeColor = Color.Black;
-            btnLogout.HoverState.FillColor = Color.FromArgb(230, 230, 230);
-            btnLogout.Location = new Point(0, 738);
-            btnLogout.Name = "btnLogout";
-            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnLogout.Size = new Size(193, 60);
-            btnLogout.TabIndex = 6;
-            btnLogout.Text = "LOGOUT";
-            btnLogout.TextAlign = HorizontalAlignment.Left;
-            btnLogout.Click += btnLogout_Click;
-            // 
-            // btnTicket
-            // 
-            btnTicket.CustomizableEdges = customizableEdges3;
-            btnTicket.DisabledState.BorderColor = Color.DarkGray;
-            btnTicket.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnTicket.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnTicket.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnTicket.Dock = DockStyle.Top;
-            btnTicket.FillColor = Color.White;
-            btnTicket.Font = new Font("Segoe UI", 10F);
-            btnTicket.ForeColor = Color.Black;
-            btnTicket.HoverState.FillColor = Color.FromArgb(230, 230, 230);
-            btnTicket.Location = new Point(0, 360);
-            btnTicket.Name = "btnTicket";
-            btnTicket.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnTicket.Size = new Size(193, 60);
-            btnTicket.TabIndex = 5;
-            btnTicket.Text = "Ticket";
-            btnTicket.TextAlign = HorizontalAlignment.Left;
-            btnTicket.Click += btnTicket_Click;
-            // 
-            // btnMonthlyBill
-            // 
-            btnMonthlyBill.CustomizableEdges = customizableEdges5;
-            btnMonthlyBill.DisabledState.BorderColor = Color.DarkGray;
-            btnMonthlyBill.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnMonthlyBill.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnMonthlyBill.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnMonthlyBill.Dock = DockStyle.Top;
-            btnMonthlyBill.FillColor = Color.White;
-            btnMonthlyBill.Font = new Font("Segoe UI", 10F);
-            btnMonthlyBill.ForeColor = Color.Black;
-            btnMonthlyBill.HoverState.FillColor = Color.FromArgb(230, 230, 230);
-            btnMonthlyBill.Location = new Point(0, 300);
-            btnMonthlyBill.Name = "btnMonthlyBill";
-            btnMonthlyBill.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnMonthlyBill.Size = new Size(193, 60);
-            btnMonthlyBill.TabIndex = 4;
-            btnMonthlyBill.Text = "Monthly bill";
-            btnMonthlyBill.TextAlign = HorizontalAlignment.Left;
-            btnMonthlyBill.Click += btnMonthlyBill_Click;
-            // 
-            // btnMeterReading
-            // 
-            btnMeterReading.CustomizableEdges = customizableEdges7;
-            btnMeterReading.DisabledState.BorderColor = Color.DarkGray;
-            btnMeterReading.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnMeterReading.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnMeterReading.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnMeterReading.Dock = DockStyle.Top;
-            btnMeterReading.FillColor = Color.White;
-            btnMeterReading.Font = new Font("Segoe UI", 10F);
-            btnMeterReading.ForeColor = Color.Black;
-            btnMeterReading.HoverState.FillColor = Color.FromArgb(230, 230, 230);
-            btnMeterReading.Location = new Point(0, 240);
-            btnMeterReading.Name = "btnMeterReading";
-            btnMeterReading.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnMeterReading.Size = new Size(193, 60);
-            btnMeterReading.TabIndex = 3;
-            btnMeterReading.Text = "Meter reading";
-            btnMeterReading.TextAlign = HorizontalAlignment.Left;
-            btnMeterReading.Click += btnMeterReading_Click;
-            // 
-            // btnHousehold
-            // 
-            btnHousehold.CustomizableEdges = customizableEdges9;
-            btnHousehold.DisabledState.BorderColor = Color.DarkGray;
-            btnHousehold.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnHousehold.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnHousehold.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnHousehold.Dock = DockStyle.Top;
-            btnHousehold.FillColor = Color.White;
-            btnHousehold.Font = new Font("Segoe UI", 10F);
-            btnHousehold.ForeColor = Color.Black;
-            btnHousehold.HoverState.FillColor = Color.FromArgb(230, 230, 230);
-            btnHousehold.Location = new Point(0, 180);
-            btnHousehold.Name = "btnHousehold";
-            btnHousehold.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnHousehold.Size = new Size(193, 60);
-            btnHousehold.TabIndex = 2;
-            btnHousehold.Text = "Household";
-            btnHousehold.TextAlign = HorizontalAlignment.Left;
-            btnHousehold.Click += btnHousehold_Click;
+            this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.panelSidebar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSidebar.Controls.Add(this.btnLogout);
+            this.panelSidebar.Controls.Add(this.btnTicket);
+            this.panelSidebar.Controls.Add(this.btnMonthlyBill);
+            this.panelSidebar.Controls.Add(this.btnMeterReading);
+            this.panelSidebar.Controls.Add(this.btnHousehold);
+            this.panelSidebar.Controls.Add(this.btnUnit);
+            this.panelSidebar.Controls.Add(this.btnStaff);
+            this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSidebar.Location = new System.Drawing.Point(0, 0);
+            this.panelSidebar.Name = "panelSidebar";
+            this.panelSidebar.Size = new System.Drawing.Size(195, 800);
+            this.panelSidebar.TabIndex = 2;
+
             // 
             // btnUnit
             // 
-            btnUnit.CustomizableEdges = customizableEdges11;
-            btnUnit.DisabledState.BorderColor = Color.DarkGray;
-            btnUnit.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnUnit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnUnit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnUnit.Dock = DockStyle.Top;
-            btnUnit.FillColor = Color.White;
-            btnUnit.Font = new Font("Segoe UI", 10F);
-            btnUnit.ForeColor = Color.Black;
-            btnUnit.HoverState.FillColor = Color.FromArgb(230, 230, 230);
-            btnUnit.Location = new Point(0, 120);
-            btnUnit.Name = "btnUnit";
-            btnUnit.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnUnit.Size = new Size(193, 60);
-            btnUnit.TabIndex = 1;
-            btnUnit.Text = "Unit";
-            btnUnit.TextAlign = HorizontalAlignment.Left;
-            btnUnit.Click += btnUnit_Click;
+            this.btnUnit.CustomizableEdges = customizableEdges11;
+            this.btnUnit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUnit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUnit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUnit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUnit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUnit.FillColor = System.Drawing.Color.White;
+            this.btnUnit.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnUnit.ForeColor = System.Drawing.Color.Black;
+            this.btnUnit.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnUnit.Location = new System.Drawing.Point(0, 120);
+            this.btnUnit.Name = "btnUnit";
+            this.btnUnit.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            this.btnUnit.Size = new System.Drawing.Size(193, 60);
+            this.btnUnit.TabIndex = 1;
+            this.btnUnit.Text = "Unit";
+            this.btnUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUnit.Click += new System.EventHandler(this.btnUnit_Click);
+
             // 
             // btnStaff
             // 
-            btnStaff.CustomizableEdges = customizableEdges13;
-            btnStaff.DisabledState.BorderColor = Color.DarkGray;
-            btnStaff.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnStaff.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnStaff.Dock = DockStyle.Top;
-            btnStaff.FillColor = Color.White;
-            btnStaff.Font = new Font("Segoe UI", 10F);
-            btnStaff.ForeColor = Color.Black;
-            btnStaff.HoverState.FillColor = Color.FromArgb(230, 230, 230);
-            btnStaff.Location = new Point(0, 60);
-            btnStaff.Name = "btnStaff";
-            btnStaff.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnStaff.Size = new Size(193, 60);
-            btnStaff.TabIndex = 0;
-            btnStaff.Text = "Staff";
-            btnStaff.TextAlign = HorizontalAlignment.Left;
-            btnStaff.Click += btnStaff_Click;
+            this.btnStaff.CustomizableEdges = customizableEdges13;
+            this.btnStaff.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStaff.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStaff.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStaff.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStaff.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStaff.FillColor = System.Drawing.Color.White;
+            this.btnStaff.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnStaff.ForeColor = System.Drawing.Color.Black;
+            this.btnStaff.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnStaff.Location = new System.Drawing.Point(0, 60);
+            this.btnStaff.Name = "btnStaff";
+            this.btnStaff.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            this.btnStaff.Size = new System.Drawing.Size(193, 60);
+            this.btnStaff.TabIndex = 0;
+            this.btnStaff.Text = "Staff";
+            this.btnStaff.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
+
+            // 
+            // btnHousehold (Placeholder for visual completeness)
+            // 
+            this.btnHousehold.CustomizableEdges = customizableEdges9;
+            this.btnHousehold.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHousehold.FillColor = System.Drawing.Color.White;
+            this.btnHousehold.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnHousehold.ForeColor = System.Drawing.Color.Black;
+            this.btnHousehold.Location = new System.Drawing.Point(0, 180);
+            this.btnHousehold.Name = "btnHousehold";
+            this.btnHousehold.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            this.btnHousehold.Size = new System.Drawing.Size(193, 60);
+            this.btnHousehold.Text = "Household";
+            this.btnHousehold.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHousehold.Click += new System.EventHandler(this.btnHousehold_Click);
+
+            // 
+            // btnMeterReading (Placeholder)
+            // 
+            this.btnMeterReading.CustomizableEdges = customizableEdges7;
+            this.btnMeterReading.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMeterReading.FillColor = System.Drawing.Color.White;
+            this.btnMeterReading.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnMeterReading.ForeColor = System.Drawing.Color.Black;
+            this.btnMeterReading.Location = new System.Drawing.Point(0, 240);
+            this.btnMeterReading.Name = "btnMeterReading";
+            this.btnMeterReading.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            this.btnMeterReading.Size = new System.Drawing.Size(193, 60);
+            this.btnMeterReading.Text = "Meter reading";
+            this.btnMeterReading.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMeterReading.Click += new System.EventHandler(this.btnMeterReading_Click);
+
+            // 
+            // btnMonthlyBill (Placeholder)
+            // 
+            this.btnMonthlyBill.CustomizableEdges = customizableEdges5;
+            this.btnMonthlyBill.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMonthlyBill.FillColor = System.Drawing.Color.White;
+            this.btnMonthlyBill.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnMonthlyBill.ForeColor = System.Drawing.Color.Black;
+            this.btnMonthlyBill.Location = new System.Drawing.Point(0, 300);
+            this.btnMonthlyBill.Name = "btnMonthlyBill";
+            this.btnMonthlyBill.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            this.btnMonthlyBill.Size = new System.Drawing.Size(193, 60);
+            this.btnMonthlyBill.Text = "Monthly bill";
+            this.btnMonthlyBill.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMonthlyBill.Click += new System.EventHandler(this.btnMonthlyBill_Click);
+
+            // 
+            // btnTicket (Placeholder)
+            // 
+            this.btnTicket.CustomizableEdges = customizableEdges3;
+            this.btnTicket.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTicket.FillColor = System.Drawing.Color.White;
+            this.btnTicket.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnTicket.ForeColor = System.Drawing.Color.Black;
+            this.btnTicket.Location = new System.Drawing.Point(0, 360);
+            this.btnTicket.Name = "btnTicket";
+            this.btnTicket.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            this.btnTicket.Size = new System.Drawing.Size(193, 60);
+            this.btnTicket.Text = "Ticket";
+            this.btnTicket.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTicket.Click += new System.EventHandler(this.btnTicket_Click);
+
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.CustomizableEdges = customizableEdges1;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FillColor = System.Drawing.Color.White;
+            this.btnLogout.ForeColor = System.Drawing.Color.Black;
+            this.btnLogout.Location = new System.Drawing.Point(0, 738);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            this.btnLogout.Size = new System.Drawing.Size(193, 60);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "LOGOUT";
+            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+
+            // 
+            // panelContent
+            // 
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.Location = new System.Drawing.Point(195, 0);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Padding = new System.Windows.Forms.Padding(10);
+            this.panelContent.Size = new System.Drawing.Size(1205, 800);
+            this.panelContent.TabIndex = 3;
+
             // 
             // Dashboard_Form
             // 
-            AutoScaleDimensions = new SizeF(9F, 23F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1400, 800);
-            Controls.Add(Dashboard);
-            Controls.Add(panelSidebar);
-            FormBorderStyle = FormBorderStyle.Sizable;
-            Name = "Dashboard_Form";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Dashboard";
-            Load += Dashboard_Form_Load;
-            panelSidebar.ResumeLayout(false);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.panelContent); // Add content panel
+            this.Controls.Add(this.panelSidebar);
+            this.Name = "Dashboard_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Form_Load);
+            this.panelSidebar.ResumeLayout(false);
+            this.ResumeLayout(false);
         }
 
         #endregion
 
-        private Label Dashboard;
-        private Panel panelSidebar;
+        private System.Windows.Forms.Panel panelSidebar;
+        private System.Windows.Forms.Panel panelContent; // The new container
         private Guna.UI2.WinForms.Guna2Button btnStaff;
         private Guna.UI2.WinForms.Guna2Button btnUnit;
         private Guna.UI2.WinForms.Guna2Button btnHousehold;
