@@ -3,75 +3,137 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
     partial class TicketItemControl
     {
         private System.ComponentModel.IContainer components = null;
-        protected override void Dispose(bool disposing) { if (disposing && (components != null)) components.Dispose(); base.Dispose(disposing); }
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null)) components.Dispose();
+            base.Dispose(disposing);
+        }
 
         private void InitializeComponent()
         {
-            this.pnlStrip = new System.Windows.Forms.Panel();
-            this.lblInfo = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            pnlStrip = new Panel();
+            lblInfo = new Label();
+            lblStatus = new Label();
+            lblDate = new Label();
+            picTicketIcon = new PictureBox();
+            picCalendarIcon = new PictureBox();
+            pnlBackground = new Panel();
+            ((System.ComponentModel.ISupportInitialize)picTicketIcon).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picCalendarIcon).BeginInit();
+            pnlBackground.SuspendLayout();
+            SuspendLayout();
             // 
             // pnlStrip
             // 
-            this.pnlStrip.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlStrip.Location = new System.Drawing.Point(0, 0);
-            this.pnlStrip.Name = "pnlStrip";
-            this.pnlStrip.Size = new System.Drawing.Size(5, 60);
-            this.pnlStrip.TabIndex = 0;
+            pnlStrip.BackColor = Color.FromArgb(52, 152, 219);
+            pnlStrip.Dock = DockStyle.Left;
+            pnlStrip.Location = new Point(0, 0);
+            pnlStrip.Margin = new Padding(3, 4, 3, 4);
+            pnlStrip.Name = "pnlStrip";
+            pnlStrip.Size = new Size(7, 77);
+            pnlStrip.TabIndex = 0;
             // 
             // lblInfo
             // 
-            this.lblInfo.AutoSize = true;
-            this.lblInfo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblInfo.Location = new System.Drawing.Point(20, 10);
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(200, 20);
-            this.lblInfo.TabIndex = 1;
-            this.lblInfo.Text = "[A101] Air Conditioner Leak";
+            lblInfo.AutoSize = true;
+            lblInfo.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblInfo.ForeColor = Color.FromArgb(44, 62, 80);
+            lblInfo.Location = new Point(64, 31);
+            lblInfo.Name = "lblInfo";
+            lblInfo.Size = new Size(261, 25);
+            lblInfo.TabIndex = 1;
+            lblInfo.Text = "[A101] Air Conditioner Leak";
             // 
             // lblStatus
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblStatus.Location = new System.Drawing.Point(20, 32);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(46, 19);
-            this.lblStatus.TabIndex = 2;
-            this.lblStatus.Text = "OPEN";
+            lblStatus.AutoSize = true;
+            lblStatus.BackColor = Color.White;
+            lblStatus.BorderStyle = BorderStyle.FixedSingle;
+            lblStatus.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            lblStatus.ForeColor = Color.FromArgb(46, 204, 113);
+            lblStatus.Location = new Point(634, 31);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Padding = new Padding(6, 3, 6, 3);
+            lblStatus.Size = new Size(63, 28);
+            lblStatus.TabIndex = 2;
+            lblStatus.Text = "OPEN";
             // 
             // lblDate
             // 
-            this.lblDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic);
-            this.lblDate.ForeColor = System.Drawing.Color.Gray;
-            this.lblDate.Location = new System.Drawing.Point(650, 20);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(100, 15);
-            this.lblDate.TabIndex = 3;
-            this.lblDate.Text = "12/07/2025 14:30";
+            lblDate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblDate.AutoSize = true;
+            lblDate.Font = new Font("Segoe UI", 9F);
+            lblDate.ForeColor = Color.Gray;
+            lblDate.Location = new Point(747, 33);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(124, 20);
+            lblDate.TabIndex = 3;
+            lblDate.Text = "12/07/2025 14:30";
+            // 
+            // picTicketIcon
+            // 
+            picTicketIcon.Image = Properties.Resources.ticket_icon;
+            picTicketIcon.Location = new Point(21, 24);
+            picTicketIcon.Margin = new Padding(3, 4, 3, 4);
+            picTicketIcon.Name = "picTicketIcon";
+            picTicketIcon.Size = new Size(37, 43);
+            picTicketIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            picTicketIcon.TabIndex = 4;
+            picTicketIcon.TabStop = false;
+            // 
+            // picCalendarIcon
+            // 
+            picCalendarIcon.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            picCalendarIcon.Image = Properties.Resources.calendar_icon;
+            picCalendarIcon.Location = new Point(720, 32);
+            picCalendarIcon.Margin = new Padding(3, 4, 3, 4);
+            picCalendarIcon.Name = "picCalendarIcon";
+            picCalendarIcon.Size = new Size(21, 24);
+            picCalendarIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            picCalendarIcon.TabIndex = 5;
+            picCalendarIcon.TabStop = false;
+            // 
+            // pnlBackground
+            // 
+            pnlBackground.BackColor = Color.White;
+            pnlBackground.BorderStyle = BorderStyle.FixedSingle;
+            pnlBackground.Controls.Add(picCalendarIcon);
+            pnlBackground.Controls.Add(lblDate);
+            pnlBackground.Controls.Add(lblStatus);
+            pnlBackground.Controls.Add(lblInfo);
+            pnlBackground.Controls.Add(picTicketIcon);
+            pnlBackground.Controls.Add(pnlStrip);
+            pnlBackground.Dock = DockStyle.Fill;
+            pnlBackground.Location = new Point(0, 7);
+            pnlBackground.Margin = new Padding(6, 7, 6, 7);
+            pnlBackground.Name = "pnlBackground";
+            pnlBackground.Size = new Size(914, 79);
+            pnlBackground.TabIndex = 0;
             // 
             // TicketItemControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.lblInfo);
-            this.Controls.Add(this.pnlStrip);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Name = "TicketItemControl";
-            this.Size = new System.Drawing.Size(800, 60);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(240, 244, 248);
+            Controls.Add(pnlBackground);
+            Cursor = Cursors.Hand;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "TicketItemControl";
+            Padding = new Padding(0, 7, 0, 7);
+            Size = new Size(914, 93);
+            ((System.ComponentModel.ISupportInitialize)picTicketIcon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picCalendarIcon).EndInit();
+            pnlBackground.ResumeLayout(false);
+            pnlBackground.PerformLayout();
+            ResumeLayout(false);
         }
 
         private System.Windows.Forms.Panel pnlStrip;
+        private System.Windows.Forms.Panel pnlBackground;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.PictureBox picTicketIcon;
+        private System.Windows.Forms.PictureBox picCalendarIcon;
     }
 }
