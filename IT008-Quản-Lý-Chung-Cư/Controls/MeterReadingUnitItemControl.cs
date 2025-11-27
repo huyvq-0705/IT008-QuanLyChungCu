@@ -17,12 +17,22 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             _unitCode = unitCode;
             _staffId = staffId;
 
-            lblMainInfo.Text = $"Unit_Code: {unitCode}   Primary_Owner: {primaryOwner}";
 
-            // Click events to open details
+            lblUnitCode.Text = $"Unit Code: {unitCode}";
+            if (string.IsNullOrEmpty(primaryOwner))
+            {
+                lblOwner.Text = "Owner: ---";
+            }
+            else
+            {
+                lblOwner.Text = $"Owner: {primaryOwner}";
+            }
+
             this.Click += (s, e) => OpenDetails();
             btnView.Click += (s, e) => OpenDetails();
-            lblMainInfo.Click += (s, e) => OpenDetails();
+
+            lblUnitCode.Click += (s, e) => OpenDetails();
+            lblOwner.Click += (s, e) => OpenDetails();
         }
 
         private void OpenDetails()

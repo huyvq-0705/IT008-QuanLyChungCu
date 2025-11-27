@@ -12,271 +12,311 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
 
         private void InitializeComponent()
         {
-            this.mainLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.groupBoxInfo = new System.Windows.Forms.GroupBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.txtFullName = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblPass = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.lblRoleValue = new System.Windows.Forms.Label();
-            this.lblRoleLabel = new System.Windows.Forms.Label();
-            this.lblIdValue = new System.Windows.Forms.Label();
-            this.lblIdLabel = new System.Windows.Forms.Label();
-            this.mainLayout.SuspendLayout();
-            this.groupBoxInfo.SuspendLayout();
-            this.SuspendLayout();
+            mainLayout = new TableLayoutPanel();
+            pnlHeader = new Panel();
+            labelTitle = new Label();
+            groupBoxInfo = new GroupBox();
+            picAvatar = new PictureBox();
+            btnSave = new Button();
+            txtEmail = new TextBox();
+            lblEmail = new Label();
+            txtPhone = new TextBox();
+            lblPhone = new Label();
+            txtFullName = new TextBox();
+            lblName = new Label();
+            txtPassword = new TextBox();
+            lblPass = new Label();
+            txtUsername = new TextBox();
+            lblUser = new Label();
+            lblRoleValue = new Label();
+            lblRoleLabel = new Label();
+            lblIdValue = new Label();
+            lblIdLabel = new Label();
+            mainLayout.SuspendLayout();
+            pnlHeader.SuspendLayout();
+            groupBoxInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picAvatar).BeginInit();
+            SuspendLayout();
             // 
             // mainLayout
             // 
-            this.mainLayout.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mainLayout.ColumnCount = 3;
-            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 650F));
-            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.mainLayout.Controls.Add(this.labelTitle, 1, 0);
-            this.mainLayout.Controls.Add(this.groupBoxInfo, 1, 1);
-            this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainLayout.Location = new System.Drawing.Point(0, 0);
-            this.mainLayout.Name = "mainLayout";
-            this.mainLayout.RowCount = 3;
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize, 500F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainLayout.Size = new System.Drawing.Size(900, 600);
-            this.mainLayout.TabIndex = 0;
+            mainLayout.BackColor = Color.FromArgb(240, 244, 248);
+            mainLayout.ColumnCount = 3;
+            mainLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            mainLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 743F));
+            mainLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            mainLayout.Controls.Add(pnlHeader, 1, 0);
+            mainLayout.Controls.Add(groupBoxInfo, 1, 1);
+            mainLayout.Dock = DockStyle.Fill;
+            mainLayout.Location = new Point(0, 0);
+            mainLayout.Margin = new Padding(3, 4, 3, 4);
+            mainLayout.Name = "mainLayout";
+            mainLayout.RowCount = 3;
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 107F));
+            mainLayout.RowStyles.Add(new RowStyle());
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            mainLayout.Size = new Size(1029, 800);
+            mainLayout.TabIndex = 0;
+            // 
+            // pnlHeader
+            // 
+            pnlHeader.Controls.Add(labelTitle);
+            pnlHeader.Dock = DockStyle.Fill;
+            pnlHeader.Location = new Point(146, 4);
+            pnlHeader.Margin = new Padding(3, 4, 3, 4);
+            pnlHeader.Name = "pnlHeader";
+            pnlHeader.Size = new Size(737, 99);
+            pnlHeader.TabIndex = 2;
             // 
             // labelTitle
             // 
-            this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelTitle.Location = new System.Drawing.Point(128, 35);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(207, 45);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "MY PROFILE";
+            labelTitle.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            labelTitle.AutoSize = true;
+            labelTitle.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            labelTitle.ForeColor = Color.FromArgb(41, 50, 65);
+            labelTitle.Location = new Point(241, 33);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(252, 54);
+            labelTitle.TabIndex = 0;
+            labelTitle.Text = "MY PROFILE";
             // 
             // groupBoxInfo
             // 
-            this.groupBoxInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBoxInfo.BackColor = System.Drawing.Color.White;
-            this.groupBoxInfo.Controls.Add(this.btnSave);
-            this.groupBoxInfo.Controls.Add(this.txtEmail);
-            this.groupBoxInfo.Controls.Add(this.lblEmail);
-            this.groupBoxInfo.Controls.Add(this.txtPhone);
-            this.groupBoxInfo.Controls.Add(this.lblPhone);
-            this.groupBoxInfo.Controls.Add(this.txtFullName);
-            this.groupBoxInfo.Controls.Add(this.lblName);
-            this.groupBoxInfo.Controls.Add(this.txtPassword);
-            this.groupBoxInfo.Controls.Add(this.lblPass);
-            this.groupBoxInfo.Controls.Add(this.txtUsername);
-            this.groupBoxInfo.Controls.Add(this.lblUser);
-            this.groupBoxInfo.Controls.Add(this.lblRoleValue);
-            this.groupBoxInfo.Controls.Add(this.lblRoleLabel);
-            this.groupBoxInfo.Controls.Add(this.lblIdValue);
-            this.groupBoxInfo.Controls.Add(this.lblIdLabel);
-            this.groupBoxInfo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.groupBoxInfo.Location = new System.Drawing.Point(128, 83);
-            this.groupBoxInfo.Name = "groupBoxInfo";
-            this.groupBoxInfo.Padding = new System.Windows.Forms.Padding(20);
-            this.groupBoxInfo.Size = new System.Drawing.Size(644, 480);
-            this.groupBoxInfo.TabIndex = 1;
-            this.groupBoxInfo.TabStop = false;
-            this.groupBoxInfo.Text = "Edit Information";
+            groupBoxInfo.Anchor = AnchorStyles.Top;
+            groupBoxInfo.BackColor = Color.White;
+            groupBoxInfo.Controls.Add(picAvatar);
+            groupBoxInfo.Controls.Add(btnSave);
+            groupBoxInfo.Controls.Add(txtEmail);
+            groupBoxInfo.Controls.Add(lblEmail);
+            groupBoxInfo.Controls.Add(txtPhone);
+            groupBoxInfo.Controls.Add(lblPhone);
+            groupBoxInfo.Controls.Add(txtFullName);
+            groupBoxInfo.Controls.Add(lblName);
+            groupBoxInfo.Controls.Add(txtPassword);
+            groupBoxInfo.Controls.Add(lblPass);
+            groupBoxInfo.Controls.Add(txtUsername);
+            groupBoxInfo.Controls.Add(lblUser);
+            groupBoxInfo.Controls.Add(lblRoleValue);
+            groupBoxInfo.Controls.Add(lblRoleLabel);
+            groupBoxInfo.Controls.Add(lblIdValue);
+            groupBoxInfo.Controls.Add(lblIdLabel);
+            groupBoxInfo.Font = new Font("Segoe UI", 10F);
+            groupBoxInfo.Location = new Point(146, 111);
+            groupBoxInfo.Margin = new Padding(3, 4, 3, 4);
+            groupBoxInfo.Name = "groupBoxInfo";
+            groupBoxInfo.Padding = new Padding(23, 27, 23, 27);
+            groupBoxInfo.Size = new Size(736, 571);
+            groupBoxInfo.TabIndex = 1;
+            groupBoxInfo.TabStop = false;
+            groupBoxInfo.Text = "Edit Information";
+            // 
+            // picAvatar
+            // 
+            picAvatar.Image = Properties.Resources.User_Icon;
+            picAvatar.Location = new Point(629, 32);
+            picAvatar.Margin = new Padding(3, 4, 3, 4);
+            picAvatar.Name = "picAvatar";
+            picAvatar.Size = new Size(73, 85);
+            picAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+            picAvatar.TabIndex = 15;
+            picAvatar.TabStop = false;
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(30, 400);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(584, 50);
-            this.btnSave.TabIndex = 14;
-            this.btnSave.Text = "SAVE CHANGES";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            btnSave.BackColor = Color.FromArgb(52, 152, 219);
+            btnSave.Cursor = Cursors.Hand;
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(34, 465);
+            btnSave.Margin = new Padding(3, 4, 3, 4);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(667, 67);
+            btnSave.TabIndex = 14;
+            btnSave.Text = "SAVE CHANGES";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtEmail.Location = new System.Drawing.Point(330, 272);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(284, 27);
-            this.txtEmail.TabIndex = 13;
+            txtEmail.BackColor = Color.WhiteSmoke;
+            txtEmail.BorderStyle = BorderStyle.FixedSingle;
+            txtEmail.Font = new Font("Segoe UI", 11F);
+            txtEmail.Location = new Point(377, 389);
+            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(324, 32);
+            txtEmail.TabIndex = 13;
             // 
             // lblEmail
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.lblEmail.Location = new System.Drawing.Point(330, 250);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(39, 15);
-            this.lblEmail.TabIndex = 12;
-            this.lblEmail.Text = "Email:";
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblEmail.ForeColor = Color.FromArgb(44, 62, 80);
+            lblEmail.Location = new Point(377, 360);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(51, 20);
+            lblEmail.TabIndex = 12;
+            lblEmail.Text = "Email:";
             // 
             // txtPhone
             // 
-            this.txtPhone.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtPhone.Location = new System.Drawing.Point(30, 272);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(280, 27);
-            this.txtPhone.TabIndex = 11;
+            txtPhone.BackColor = Color.WhiteSmoke;
+            txtPhone.BorderStyle = BorderStyle.FixedSingle;
+            txtPhone.Font = new Font("Segoe UI", 11F);
+            txtPhone.Location = new Point(34, 389);
+            txtPhone.Margin = new Padding(3, 4, 3, 4);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(320, 32);
+            txtPhone.TabIndex = 11;
             // 
             // lblPhone
             // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPhone.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPhone.Location = new System.Drawing.Point(30, 250);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(45, 15);
-            this.lblPhone.TabIndex = 10;
-            this.lblPhone.Text = "Phone:";
+            lblPhone.AutoSize = true;
+            lblPhone.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblPhone.ForeColor = Color.FromArgb(44, 62, 80);
+            lblPhone.Location = new Point(34, 360);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(57, 20);
+            lblPhone.TabIndex = 10;
+            lblPhone.Text = "Phone:";
             // 
             // txtFullName
             // 
-            this.txtFullName.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFullName.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtFullName.Location = new System.Drawing.Point(30, 202);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(584, 27);
-            this.txtFullName.TabIndex = 9;
+            txtFullName.BackColor = Color.WhiteSmoke;
+            txtFullName.BorderStyle = BorderStyle.FixedSingle;
+            txtFullName.Font = new Font("Segoe UI", 11F);
+            txtFullName.Location = new Point(34, 296);
+            txtFullName.Margin = new Padding(3, 4, 3, 4);
+            txtFullName.Name = "txtFullName";
+            txtFullName.Size = new Size(667, 32);
+            txtFullName.TabIndex = 9;
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblName.ForeColor = System.Drawing.Color.DimGray;
-            this.lblName.Location = new System.Drawing.Point(30, 180);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(65, 15);
-            this.lblName.TabIndex = 8;
-            this.lblName.Text = "Full Name:";
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblName.ForeColor = Color.FromArgb(44, 62, 80);
+            lblName.Location = new Point(34, 267);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(84, 20);
+            lblName.TabIndex = 8;
+            lblName.Text = "Full Name:";
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtPassword.Location = new System.Drawing.Point(330, 132);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '•';
-            this.txtPassword.PlaceholderText = "Leave blank to keep current";
-            this.txtPassword.Size = new System.Drawing.Size(284, 27);
-            this.txtPassword.TabIndex = 7;
+            txtPassword.BackColor = Color.WhiteSmoke;
+            txtPassword.BorderStyle = BorderStyle.FixedSingle;
+            txtPassword.Font = new Font("Segoe UI", 11F);
+            txtPassword.Location = new Point(377, 203);
+            txtPassword.Margin = new Padding(3, 4, 3, 4);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '•';
+            txtPassword.PlaceholderText = "Leave blank to keep current";
+            txtPassword.Size = new Size(324, 32);
+            txtPassword.TabIndex = 7;
             // 
             // lblPass
             // 
-            this.lblPass.AutoSize = true;
-            this.lblPass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPass.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPass.Location = new System.Drawing.Point(330, 110);
-            this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(91, 15);
-            this.lblPass.TabIndex = 6;
-            this.lblPass.Text = "New Password:";
+            lblPass.AutoSize = true;
+            lblPass.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblPass.ForeColor = Color.FromArgb(44, 62, 80);
+            lblPass.Location = new Point(377, 173);
+            lblPass.Name = "lblPass";
+            lblPass.Size = new Size(116, 20);
+            lblPass.TabIndex = 6;
+            lblPass.Text = "New Password:";
             // 
             // txtUsername
             // 
-            this.txtUsername.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtUsername.Location = new System.Drawing.Point(30, 132);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(280, 27);
-            this.txtUsername.TabIndex = 5;
+            txtUsername.BackColor = Color.WhiteSmoke;
+            txtUsername.BorderStyle = BorderStyle.FixedSingle;
+            txtUsername.Font = new Font("Segoe UI", 11F);
+            txtUsername.Location = new Point(34, 203);
+            txtUsername.Margin = new Padding(3, 4, 3, 4);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(320, 32);
+            txtUsername.TabIndex = 5;
             // 
             // lblUser
             // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblUser.ForeColor = System.Drawing.Color.DimGray;
-            this.lblUser.Location = new System.Drawing.Point(30, 110);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(67, 15);
-            this.lblUser.TabIndex = 4;
-            this.lblUser.Text = "Username:";
+            lblUser.AutoSize = true;
+            lblUser.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblUser.ForeColor = Color.FromArgb(44, 62, 80);
+            lblUser.Location = new Point(34, 173);
+            lblUser.Name = "lblUser";
+            lblUser.Size = new Size(84, 20);
+            lblUser.TabIndex = 4;
+            lblUser.Text = "Username:";
             // 
             // lblRoleValue
             // 
-            this.lblRoleValue.AutoSize = true;
-            this.lblRoleValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblRoleValue.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblRoleValue.Location = new System.Drawing.Point(370, 48);
-            this.lblRoleValue.Name = "lblRoleValue";
-            this.lblRoleValue.Size = new System.Drawing.Size(37, 21);
-            this.lblRoleValue.TabIndex = 3;
-            this.lblRoleValue.Text = "---";
+            lblRoleValue.AutoSize = true;
+            lblRoleValue.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblRoleValue.ForeColor = Color.FromArgb(52, 152, 219);
+            lblRoleValue.Location = new Point(423, 64);
+            lblRoleValue.Name = "lblRoleValue";
+            lblRoleValue.Size = new Size(36, 28);
+            lblRoleValue.TabIndex = 3;
+            lblRoleValue.Text = "---";
             // 
             // lblRoleLabel
             // 
-            this.lblRoleLabel.AutoSize = true;
-            this.lblRoleLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblRoleLabel.ForeColor = System.Drawing.Color.Gray;
-            this.lblRoleLabel.Location = new System.Drawing.Point(320, 50);
-            this.lblRoleLabel.Name = "lblRoleLabel";
-            this.lblRoleLabel.Size = new System.Drawing.Size(43, 19);
-            this.lblRoleLabel.TabIndex = 2;
-            this.lblRoleLabel.Text = "Role:";
+            lblRoleLabel.AutoSize = true;
+            lblRoleLabel.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblRoleLabel.ForeColor = Color.Gray;
+            lblRoleLabel.Location = new Point(366, 67);
+            lblRoleLabel.Name = "lblRoleLabel";
+            lblRoleLabel.Size = new Size(50, 23);
+            lblRoleLabel.TabIndex = 2;
+            lblRoleLabel.Text = "Role:";
             // 
             // lblIdValue
             // 
-            this.lblIdValue.AutoSize = true;
-            this.lblIdValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblIdValue.Location = new System.Drawing.Point(100, 48);
-            this.lblIdValue.Name = "lblIdValue";
-            this.lblIdValue.Size = new System.Drawing.Size(37, 21);
-            this.lblIdValue.TabIndex = 1;
-            this.lblIdValue.Text = "---";
+            lblIdValue.AutoSize = true;
+            lblIdValue.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblIdValue.ForeColor = Color.FromArgb(44, 62, 80);
+            lblIdValue.Location = new Point(114, 64);
+            lblIdValue.Name = "lblIdValue";
+            lblIdValue.Size = new Size(36, 28);
+            lblIdValue.TabIndex = 1;
+            lblIdValue.Text = "---";
             // 
             // lblIdLabel
             // 
-            this.lblIdLabel.AutoSize = true;
-            this.lblIdLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblIdLabel.ForeColor = System.Drawing.Color.Gray;
-            this.lblIdLabel.Location = new System.Drawing.Point(30, 50);
-            this.lblIdLabel.Name = "lblIdLabel";
-            this.lblIdLabel.Size = new System.Drawing.Size(65, 19);
-            this.lblIdLabel.TabIndex = 0;
-            this.lblIdLabel.Text = "Staff ID:";
+            lblIdLabel.AutoSize = true;
+            lblIdLabel.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblIdLabel.ForeColor = Color.Gray;
+            lblIdLabel.Location = new Point(34, 67);
+            lblIdLabel.Name = "lblIdLabel";
+            lblIdLabel.Size = new Size(78, 23);
+            lblIdLabel.TabIndex = 0;
+            lblIdLabel.Text = "Staff ID:";
             // 
             // MyProfileControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.mainLayout);
-            this.Name = "MyProfileControl";
-            this.Size = new System.Drawing.Size(900, 600);
-            this.mainLayout.ResumeLayout(false);
-            this.mainLayout.PerformLayout();
-            this.groupBoxInfo.ResumeLayout(false);
-            this.groupBoxInfo.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(mainLayout);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "MyProfileControl";
+            Size = new Size(1029, 800);
+            mainLayout.ResumeLayout(false);
+            pnlHeader.ResumeLayout(false);
+            pnlHeader.PerformLayout();
+            groupBoxInfo.ResumeLayout(false);
+            groupBoxInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picAvatar).EndInit();
+            ResumeLayout(false);
 
         }
 
         private System.Windows.Forms.TableLayoutPanel mainLayout;
+        private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.GroupBox groupBoxInfo;
+        private System.Windows.Forms.PictureBox picAvatar;
         private System.Windows.Forms.Label lblIdLabel;
         private System.Windows.Forms.Label lblIdValue;
         private System.Windows.Forms.Label lblRoleLabel;
