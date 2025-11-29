@@ -1,4 +1,5 @@
-﻿namespace IT008_Quản_Lý_Chung_Cư
+﻿// Updated Login_Page.Designer.cs
+namespace IT008_Quản_Lý_Chung_Cư
 {
     partial class Login_Page
     {
@@ -28,7 +29,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -46,13 +46,10 @@
             lbl_IncorrectPass = new Label();
             panel2 = new Panel();
             panel1 = new Panel();
-            btn_Minimize = new Guna.UI2.WinForms.Guna2Button();
-            btn_Close_LoginForm = new Guna.UI2.WinForms.Guna2Button();
             lb_Welcome = new Label();
             btn_Login = new Guna.UI2.WinForms.Guna2GradientButton();
             txt_Password = new Guna.UI2.WinForms.Guna2TextBox();
             txt_Username = new Guna.UI2.WinForms.Guna2TextBox();
-            Minimize_Animation = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
             guna2GradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -62,17 +59,15 @@
             guna2GradientPanel1.Controls.Add(lbl_IncorrectPass);
             guna2GradientPanel1.Controls.Add(panel2);
             guna2GradientPanel1.Controls.Add(panel1);
-            guna2GradientPanel1.Controls.Add(btn_Minimize);
-            guna2GradientPanel1.Controls.Add(btn_Close_LoginForm);
             guna2GradientPanel1.Controls.Add(lb_Welcome);
             guna2GradientPanel1.Controls.Add(btn_Login);
             guna2GradientPanel1.Controls.Add(txt_Password);
             guna2GradientPanel1.Controls.Add(txt_Username);
             guna2GradientPanel1.CustomizableEdges = customizableEdges11;
-            guna2GradientPanel1.Location = new Point(465, -2);
+            guna2GradientPanel1.Location = new Point(462, 0);
             guna2GradientPanel1.Name = "guna2GradientPanel1";
             guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2GradientPanel1.Size = new Size(538, 606);
+            guna2GradientPanel1.Size = new Size(538, 600);
             guna2GradientPanel1.TabIndex = 0;
             // 
             // lbl_IncorrectPass
@@ -84,7 +79,7 @@
             lbl_IncorrectPass.Name = "lbl_IncorrectPass";
             lbl_IncorrectPass.Size = new Size(269, 19);
             lbl_IncorrectPass.TabIndex = 8;
-            lbl_IncorrectPass.Text = "Username or Passwerod is incorrect!";
+            lbl_IncorrectPass.Text = "Username or Password is incorrect!";
             lbl_IncorrectPass.Visible = false;
             // 
             // panel2
@@ -103,68 +98,21 @@
             panel1.Size = new Size(350, 2);
             panel1.TabIndex = 6;
             // 
-            // btn_Minimize
-            // 
-            btn_Minimize.BackColor = SystemColors.Window;
-            btn_Minimize.BorderColor = Color.BlueViolet;
-            btn_Minimize.Cursor = Cursors.Hand;
-            btn_Minimize.CustomizableEdges = customizableEdges1;
-            btn_Minimize.DisabledState.BorderColor = Color.DarkGray;
-            btn_Minimize.DisabledState.CustomBorderColor = Color.DarkGray;
-            btn_Minimize.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btn_Minimize.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_Minimize.FillColor = Color.Transparent;
-            btn_Minimize.Font = new Font("Segoe UI", 9F);
-            btn_Minimize.ForeColor = Color.White;
-            btn_Minimize.Image = (Image)resources.GetObject("btn_Minimize.Image");
-            btn_Minimize.ImageSize = new Size(30, 30);
-            btn_Minimize.Location = new Point(429, 19);
-            btn_Minimize.Name = "btn_Minimize";
-            btn_Minimize.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btn_Minimize.Size = new Size(33, 34);
-            btn_Minimize.TabIndex = 5;
-            btn_Minimize.Click += btn_Minimize_Click;
-            // 
-            // btn_Close_LoginForm
-            // 
-            btn_Close_LoginForm.BackColor = SystemColors.Window;
-            btn_Close_LoginForm.BorderColor = Color.BlueViolet;
-            btn_Close_LoginForm.Cursor = Cursors.Hand;
-            btn_Close_LoginForm.CustomizableEdges = customizableEdges3;
-            btn_Close_LoginForm.DisabledState.BorderColor = Color.DarkGray;
-            btn_Close_LoginForm.DisabledState.CustomBorderColor = Color.DarkGray;
-            btn_Close_LoginForm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btn_Close_LoginForm.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_Close_LoginForm.FillColor = Color.Transparent;
-            btn_Close_LoginForm.Font = new Font("Segoe UI", 9F);
-            btn_Close_LoginForm.ForeColor = Color.White;
-            btn_Close_LoginForm.Image = Properties.Resources.X_button;
-            btn_Close_LoginForm.ImageSize = new Size(30, 30);
-            btn_Close_LoginForm.Location = new Point(478, 19);
-            btn_Close_LoginForm.Name = "btn_Close_LoginForm";
-            btn_Close_LoginForm.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btn_Close_LoginForm.Size = new Size(33, 34);
-            btn_Close_LoginForm.TabIndex = 4;
-            btn_Close_LoginForm.Click += btn_Close_LoginForm_Click;
-            // 
             // lb_Welcome
             // 
             lb_Welcome.AutoSize = true;
-            lb_Welcome.Font = new Font("Algerian", 22.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lb_Welcome.ForeColor = Color.SaddleBrown;
-            lb_Welcome.Location = new Point(101, 81);
+            lb_Welcome.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
+            lb_Welcome.ForeColor = Color.Black;
+            lb_Welcome.Location = new Point(124, 80);
             lb_Welcome.Name = "lb_Welcome";
-            lb_Welcome.Size = new Size(318, 41);
+            lb_Welcome.Size = new Size(290, 51);
             lb_Welcome.TabIndex = 3;
-            lb_Welcome.Text = "Welcome Back!";
+            lb_Welcome.Text = "WELCOME";
             // 
             // btn_Login
             // 
-            btn_Login.BackColor = Color.Transparent;
-            btn_Login.BorderColor = Color.Transparent;
             btn_Login.BorderRadius = 20;
-            btn_Login.Cursor = Cursors.Hand;
-            btn_Login.CustomizableEdges = customizableEdges5;
+            btn_Login.CustomizableEdges = customizableEdges1;
             btn_Login.DisabledState.BorderColor = Color.DarkGray;
             btn_Login.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Login.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -214,6 +162,7 @@
             txt_Password.ShadowDecoration.Shadow = new Padding(2);
             txt_Password.Size = new Size(356, 34);
             txt_Password.TabIndex = 2;
+            txt_Password.UseSystemPasswordChar = true; // Hide password by default
             txt_Password.IconRightClick += txt_Password_IconRightClick;
             // 
             // txt_Username
@@ -244,22 +193,18 @@
             txt_Username.Size = new Size(356, 32);
             txt_Username.TabIndex = 1;
             // 
-            // Minimize_Animation
-            // 
-            Minimize_Animation.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
-            Minimize_Animation.TargetForm = this;
-            // 
             // Login_Page
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.BackGround_1000x600;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1000, 600);
             Controls.Add(guna2GradientPanel1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.Sizable; // Enable standard title bar with minimize, maximize, close
             Name = "Login_Page";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Login_Page";
+            Text = "Login Page";
             guna2GradientPanel1.ResumeLayout(false);
             guna2GradientPanel1.PerformLayout();
             ResumeLayout(false);
@@ -272,9 +217,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_Username;
         private Guna.UI2.WinForms.Guna2TextBox txt_Password;
         private Label lb_Welcome;
-        private Guna.UI2.WinForms.Guna2Button btn_Close_LoginForm;
-        private Guna.UI2.WinForms.Guna2Button btn_Minimize;
-        private Guna.UI2.WinForms.Guna2AnimateWindow Minimize_Animation;
         private Panel panel1;
         private Panel panel2;
         private Label lbl_IncorrectPass;

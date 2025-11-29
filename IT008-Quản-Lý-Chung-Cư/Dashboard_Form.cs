@@ -1,87 +1,74 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
+using IT008_Quản_Lý_Chung_Cư.Controls;
 
 namespace IT008_Quản_Lý_Chung_Cư
 {
     public partial class Dashboard_Form : Form
     {
-        private ProgressBar progressBarLoad;
-        private Label lblLoadStatus;
-        public Dashboard_Form()
+        // Store the logged-in user's ID
+        private int _currentStaffId;
+
+        // Default constructor (for Designer support, though rarely used directly now)
+        public Dashboard_Form() : this(1) { }
+
+        // Main Constructor requiring ID
+        public Dashboard_Form(int staffId)
         {
             InitializeComponent();
-            progressBarLoad = new ProgressBar()
-            {
-                Name = "progressBarLoad",
-                Minimum = 0,
-                Maximum = 100,
-                Value = 0,
-                Size = new Size(300, 20),
-                Location = new Point(10, 10),
-                Style = ProgressBarStyle.Blocks,
-                Visible = false
-            };
-
-            lblLoadStatus = new Label()
-            {
-                Name = "lblLoadStatus",
-                Text = "",
-                AutoSize = true,
-                Location = new Point(progressBarLoad.Right + 8, progressBarLoad.Top - 2),
-                Visible = false
-            };
-            this.Controls.Add(progressBarLoad);
-            this.Controls.Add(lblLoadStatus);
-            this.Load += Dashboard_Form_Load;
-        }
-            
-                private async void Dashboard_Form_Load(object? sender, EventArgs e)
-        {
-            progressBarLoad.Visible = true;
-            lblLoadStatus.Visible = true;
-            progressBarLoad.Value = 0;
-            lblLoadStatus.Text = "Loading 0%";
-            var progress = new Progress<int>(percent =>
-            {
-                if (percent < progressBarLoad.Minimum) percent = progressBarLoad.Minimum;
-                if (percent > progressBarLoad.Maximum) percent = progressBarLoad.Maximum;
-                progressBarLoad.Value = percent;
-                lblLoadStatus.Text = $"Loading {percent}%";
-            });
-            try
-            {
-                await Task.Run(() => LoadDashboardData(progress));
-                lblLoadStatus.Text = "Load Complete!";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading dashboard data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                lblLoadStatus.Text = "Load Failed!";
-            }
-            finally
-            {
-                await Task.Delay(500);
-                progressBarLoad.Visible = false;
-                lblLoadStatus.Visible = false;
-            }
-        }
-        private void LoadDashboardData(IProgress<int> progress)
-        {
-            for (int i = 0; i <= 100; i += 10)
-            {
-                System.Threading.Thread.Sleep(200);
-                progress.Report(i);
-            }
+            _currentStaffId = staffId;
         }
 
-        private void btn_Close_Dashboard_Click(object sender, EventArgs e)
+        private void Dashboard_Form_Load(object sender, EventArgs e)
         {
-            Close();
+            // Load Unit view by default, or Profile if you prefer
+            btnUnit_Click(sender, e);
+        }
+
+        private void ShowControl(UserControl control)
+        {
+            panelContent.Controls.Clear();
+            control.Dock = DockStyle.Fill;
+            panelContent.Controls.Add(control);
+        }
+
+        // --- Button Events ---
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            // Show MY PROFILE instead of a list
+            ShowControl(new MyProfileControl(_currentStaffId));
+        }
+
+        private void btnUnit_Click(object sender, EventArgs e)
+        {
+            ShowControl(new UnitListControl());
+        }
+
+        private void btnHousehold_Click(object sender, EventArgs e)
+        {
+            ShowControl(new HouseholdListControl());
+        }
+        private void btnMeterReading_Click(object sender, EventArgs e)
+        {
+            // Pass the current staff ID to the control
+            ShowControl(new IT008_Quản_Lý_Chung_Cư.Controls.MeterReadingListControl(_currentStaffId));
+        }
+        private void btnMonthlyBill_Click(object sender, EventArgs e)
+        {
+            // Pass the _currentStaffId so creating bills works
+            ShowControl(new IT008_Quản_Lý_Chung_Cư.Controls.MonthlyBillListControl(_currentStaffId));
+        }
+        private void btnTicket_Click(object sender, EventArgs e)
+        {
+            // Make sure to use the full namespace if needed or just Controls.TicketListControl
+            ShowControl(new IT008_Quản_Lý_Chung_Cư.Controls.TicketListControl(_currentStaffId));
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Login_Page().Show();
         }
     }
 }
