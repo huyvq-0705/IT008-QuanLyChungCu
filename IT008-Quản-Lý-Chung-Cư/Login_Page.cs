@@ -1,15 +1,15 @@
+using BCrypt.Net;
+using Npgsql;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Npgsql;
-using BCrypt.Net;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace IT008_Quản_Lý_Chung_Cư
 {
     public partial class Login_Page : Form
     {
         private bool isPasswordVisible = false;
-
         public Login_Page()
         {
             InitializeComponent();
@@ -69,7 +69,6 @@ namespace IT008_Quản_Lý_Chung_Cư
                     {
                         lbl_IncorrectPass.Visible = false;
                         MessageBox.Show($"Welcome, {fullName}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                         // PASS THE ID TO THE DASHBOARD
                         new Dashboard_Form(id).Show();
 
@@ -78,7 +77,7 @@ namespace IT008_Quản_Lý_Chung_Cư
                         return;
                     }
                 }
-                ShowError("Username or Password is incorrect!");
+                ShowError("Username or Password is incorrect!");  
             }
             catch (Exception ex)
             {
@@ -90,6 +89,8 @@ namespace IT008_Quản_Lý_Chung_Cư
         private void ShowError(string message)
         {
             lbl_IncorrectPass.Text = message;
+            if (message == "Please enter your Username and Password!")
+                lbl_IncorrectPass.Location = new Point(110, 400);
             lbl_IncorrectPass.Visible = true;
         }
 
@@ -99,5 +100,6 @@ namespace IT008_Quản_Lý_Chung_Cư
             txt_Password.UseSystemPasswordChar = !isPasswordVisible;
             txt_Password.IconRight = isPasswordVisible ? Properties.Resources.Closed_Eye : Properties.Resources.Eye;
         }
+
     }
 }

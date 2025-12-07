@@ -28,9 +28,9 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             pnlStrip.BackColor = Color.FromArgb(52, 152, 219);
             pnlStrip.Dock = DockStyle.Left;
             pnlStrip.Location = new Point(0, 0);
-            pnlStrip.Margin = new Padding(3, 4, 3, 4);
+            pnlStrip.Margin = new Padding(3, 5, 3, 5);
             pnlStrip.Name = "pnlStrip";
-            pnlStrip.Size = new Size(7, 77);
+            pnlStrip.Size = new Size(8, 89);
             pnlStrip.TabIndex = 0;
             // 
             // lblInfo
@@ -38,7 +38,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             lblInfo.AutoSize = true;
             lblInfo.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             lblInfo.ForeColor = Color.FromArgb(44, 62, 80);
-            lblInfo.Location = new Point(64, 31);
+            lblInfo.Location = new Point(72, 36);
             lblInfo.Name = "lblInfo";
             lblInfo.Size = new Size(261, 25);
             lblInfo.TabIndex = 1;
@@ -48,13 +48,12 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // 
             lblStatus.AutoSize = true;
             lblStatus.BackColor = Color.White;
-            lblStatus.BorderStyle = BorderStyle.FixedSingle;
             lblStatus.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
-            lblStatus.ForeColor = Color.FromArgb(46, 204, 113);
-            lblStatus.Location = new Point(634, 31);
+            lblStatus.ForeColor = Color.White;
+            lblStatus.Location = new Point(713, 36);
             lblStatus.Name = "lblStatus";
-            lblStatus.Padding = new Padding(6, 3, 6, 3);
-            lblStatus.Size = new Size(63, 28);
+            lblStatus.Padding = new Padding(7, 3, 7, 3);
+            lblStatus.Size = new Size(63, 26);
             lblStatus.TabIndex = 2;
             lblStatus.Text = "OPEN";
             // 
@@ -62,21 +61,21 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // 
             lblDate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblDate.AutoSize = true;
-            lblDate.Font = new Font("Segoe UI", 9F);
+            lblDate.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lblDate.ForeColor = Color.Gray;
-            lblDate.Location = new Point(747, 33);
+            lblDate.Location = new Point(840, 42);
             lblDate.Name = "lblDate";
-            lblDate.Size = new Size(124, 20);
+            lblDate.Size = new Size(122, 20);
             lblDate.TabIndex = 3;
             lblDate.Text = "12/07/2025 14:30";
             // 
             // picTicketIcon
             // 
             picTicketIcon.Image = Properties.Resources.ticket_icon;
-            picTicketIcon.Location = new Point(21, 24);
-            picTicketIcon.Margin = new Padding(3, 4, 3, 4);
+            picTicketIcon.Location = new Point(24, 28);
+            picTicketIcon.Margin = new Padding(3, 5, 3, 5);
             picTicketIcon.Name = "picTicketIcon";
-            picTicketIcon.Size = new Size(37, 43);
+            picTicketIcon.Size = new Size(42, 49);
             picTicketIcon.SizeMode = PictureBoxSizeMode.Zoom;
             picTicketIcon.TabIndex = 4;
             picTicketIcon.TabStop = false;
@@ -85,10 +84,10 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // 
             picCalendarIcon.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             picCalendarIcon.Image = Properties.Resources.calendar_icon;
-            picCalendarIcon.Location = new Point(720, 32);
-            picCalendarIcon.Margin = new Padding(3, 4, 3, 4);
+            picCalendarIcon.Location = new Point(810, 35);
+            picCalendarIcon.Margin = new Padding(3, 5, 3, 5);
             picCalendarIcon.Name = "picCalendarIcon";
-            picCalendarIcon.Size = new Size(21, 24);
+            picCalendarIcon.Size = new Size(24, 28);
             picCalendarIcon.SizeMode = PictureBoxSizeMode.Zoom;
             picCalendarIcon.TabIndex = 5;
             picCalendarIcon.TabStop = false;
@@ -104,23 +103,23 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             pnlBackground.Controls.Add(picTicketIcon);
             pnlBackground.Controls.Add(pnlStrip);
             pnlBackground.Dock = DockStyle.Fill;
-            pnlBackground.Location = new Point(0, 7);
-            pnlBackground.Margin = new Padding(6, 7, 6, 7);
+            pnlBackground.Location = new Point(0, 8);
+            pnlBackground.Margin = new Padding(7, 8, 7, 8);
             pnlBackground.Name = "pnlBackground";
-            pnlBackground.Size = new Size(914, 79);
+            pnlBackground.Size = new Size(1028, 91);
             pnlBackground.TabIndex = 0;
             // 
             // TicketItemControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(240, 244, 248);
             Controls.Add(pnlBackground);
             Cursor = Cursors.Hand;
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(3, 5, 3, 5);
             Name = "TicketItemControl";
-            Padding = new Padding(0, 7, 0, 7);
-            Size = new Size(914, 93);
+            Padding = new Padding(0, 8, 0, 8);
+            Size = new Size(1028, 107);
             ((System.ComponentModel.ISupportInitialize)picTicketIcon).EndInit();
             ((System.ComponentModel.ISupportInitialize)picCalendarIcon).EndInit();
             pnlBackground.ResumeLayout(false);

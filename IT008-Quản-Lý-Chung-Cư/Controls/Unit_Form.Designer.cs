@@ -2,15 +2,8 @@ namespace IT008_Quản_Lý_Chung_Cư
 {
     partial class Unit_Form
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,336 +15,400 @@ namespace IT008_Quản_Lý_Chung_Cư
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.panelLeft = new System.Windows.Forms.Panel();
-            this.numBath = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numBed = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbType = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.numFloor = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtRent = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtArea = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelTop = new System.Windows.Forms.Panel();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.panelFill = new System.Windows.Forms.Panel();
-            this.dgvUnits = new System.Windows.Forms.DataGridView();
-            this.panelLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numBath)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numBed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numFloor)).BeginInit();
-            this.panelTop.SuspendLayout();
-            this.panelFill.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUnits)).BeginInit();
-            this.SuspendLayout();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            panelLeft = new Panel();
+            pn_Unit_Type = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            lblType = new Label();
+            lblBathValue = new Label();
+            lblTypeValue = new Label();
+            lblBath = new Label();
+            lblBedValue = new Label();
+            lblBed = new Label();
+            txtRent = new Guna.UI2.WinForms.Guna2TextBox();
+            lblRent = new Label();
+            lblStatus = new Label();
+            txtArea = new Guna.UI2.WinForms.Guna2TextBox();
+            lblArea = new Label();
+            txtFloor = new Guna.UI2.WinForms.Guna2TextBox();
+            lblFloor = new Label();
+            txtCode = new Guna.UI2.WinForms.Guna2TextBox();
+            lblCode = new Label();
+            pn_StatusValue = new Guna.UI2.WinForms.Guna2Panel();
+            lblStatusValue = new Label();
+            panelTop = new Panel();
+            labelTitle = new Label();
+            panelLeft.SuspendLayout();
+            pn_Unit_Type.SuspendLayout();
+            pn_StatusValue.SuspendLayout();
+            panelTop.SuspendLayout();
+            SuspendLayout();
             // 
             // panelLeft
             // 
-            this.panelLeft.BackColor = System.Drawing.Color.White;
-            this.panelLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelLeft.Controls.Add(this.numBath);
-            this.panelLeft.Controls.Add(this.label8);
-            this.panelLeft.Controls.Add(this.numBed);
-            this.panelLeft.Controls.Add(this.label7);
-            this.panelLeft.Controls.Add(this.cmbType);
-            this.panelLeft.Controls.Add(this.label6);
-            this.panelLeft.Controls.Add(this.numFloor);
-            this.panelLeft.Controls.Add(this.label5);
-            this.panelLeft.Controls.Add(this.btnClear);
-            this.panelLeft.Controls.Add(this.btnDelete);
-            this.panelLeft.Controls.Add(this.btnUpdate);
-            this.panelLeft.Controls.Add(this.btnAdd);
-            this.panelLeft.Controls.Add(this.cmbStatus);
-            this.panelLeft.Controls.Add(this.label4);
-            this.panelLeft.Controls.Add(this.txtRent);
-            this.panelLeft.Controls.Add(this.label3);
-            this.panelLeft.Controls.Add(this.txtArea);
-            this.panelLeft.Controls.Add(this.label2);
-            this.panelLeft.Controls.Add(this.txtCode);
-            this.panelLeft.Controls.Add(this.label1);
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(0, 60);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(300, 540);
-            this.panelLeft.TabIndex = 0;
+            panelLeft.BackColor = Color.White;
+            panelLeft.BorderStyle = BorderStyle.FixedSingle;
+            panelLeft.Controls.Add(pn_Unit_Type);
+            panelLeft.Controls.Add(txtRent);
+            panelLeft.Controls.Add(lblRent);
+            panelLeft.Controls.Add(lblStatus);
+            panelLeft.Controls.Add(txtArea);
+            panelLeft.Controls.Add(lblArea);
+            panelLeft.Controls.Add(txtFloor);
+            panelLeft.Controls.Add(lblFloor);
+            panelLeft.Controls.Add(txtCode);
+            panelLeft.Controls.Add(lblCode);
+            panelLeft.Controls.Add(pn_StatusValue);
+            panelLeft.Dock = DockStyle.Fill;
+            panelLeft.Location = new Point(0, 92);
+            panelLeft.Margin = new Padding(4, 5, 4, 5);
+            panelLeft.Name = "panelLeft";
+            panelLeft.Size = new Size(514, 481);
+            panelLeft.TabIndex = 0;
             // 
-            // numBath
+            // pn_Unit_Type
             // 
-            this.numBath.Location = new System.Drawing.Point(155, 250);
-            this.numBath.Name = "numBath";
-            this.numBath.Size = new System.Drawing.Size(120, 23);
-            this.numBath.TabIndex = 19;
+            pn_Unit_Type.BackColor = Color.Transparent;
+            pn_Unit_Type.BorderRadius = 15;
+            pn_Unit_Type.Controls.Add(lblType);
+            pn_Unit_Type.Controls.Add(lblBathValue);
+            pn_Unit_Type.Controls.Add(lblTypeValue);
+            pn_Unit_Type.Controls.Add(lblBath);
+            pn_Unit_Type.Controls.Add(lblBedValue);
+            pn_Unit_Type.Controls.Add(lblBed);
+            pn_Unit_Type.CustomizableEdges = customizableEdges1;
+            pn_Unit_Type.Location = new Point(202, 89);
+            pn_Unit_Type.Name = "pn_Unit_Type";
+            pn_Unit_Type.ShadowDecoration.BorderRadius = 15;
+            pn_Unit_Type.ShadowDecoration.Color = Color.DarkGray;
+            pn_Unit_Type.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            pn_Unit_Type.ShadowDecoration.Enabled = true;
+            pn_Unit_Type.ShadowDecoration.Shadow = new Padding(4, 2, 10, 10);
+            pn_Unit_Type.Size = new Size(286, 167);
+            pn_Unit_Type.TabIndex = 20;
             // 
-            // label8
+            // lblType
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(155, 230);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 15);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Bathrooms";
+            lblType.AutoSize = true;
+            lblType.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblType.ForeColor = Color.DimGray;
+            lblType.Location = new Point(17, 11);
+            lblType.Margin = new Padding(4, 0, 4, 0);
+            lblType.Name = "lblType";
+            lblType.Size = new Size(87, 23);
+            lblType.TabIndex = 14;
+            lblType.Text = "Unit Type";
             // 
-            // numBed
+            // lblBathValue
             // 
-            this.numBed.Location = new System.Drawing.Point(15, 250);
-            this.numBed.Name = "numBed";
-            this.numBed.Size = new System.Drawing.Size(120, 23);
-            this.numBed.TabIndex = 17;
+            lblBathValue.AutoSize = true;
+            lblBathValue.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblBathValue.ForeColor = Color.FromArgb(41, 50, 65);
+            lblBathValue.Location = new Point(234, 116);
+            lblBathValue.Margin = new Padding(4, 0, 4, 0);
+            lblBathValue.Name = "lblBathValue";
+            lblBathValue.Size = new Size(23, 25);
+            lblBathValue.TabIndex = 19;
+            lblBathValue.Text = "0";
             // 
-            // label7
+            // lblTypeValue
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 230);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 15);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Bedrooms";
+            lblTypeValue.AutoSize = true;
+            lblTypeValue.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblTypeValue.ForeColor = Color.FromArgb(41, 50, 65);
+            lblTypeValue.Location = new Point(17, 42);
+            lblTypeValue.Margin = new Padding(4, 0, 4, 0);
+            lblTypeValue.Name = "lblTypeValue";
+            lblTypeValue.Size = new Size(124, 25);
+            lblTypeValue.TabIndex = 15;
+            lblTypeValue.Text = "TYPE_VALUE";
             // 
-            // cmbType
+            // lblBath
             // 
-            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbType.FormattingEnabled = true;
-            this.cmbType.Items.AddRange(new object[] {
-            "Studio",
-            "1BR / 1Bathroom",
-            "2BR / 1Bathroom",
-            "2BR / 2Bathroom",
-            "3BR / 2Bathroom"});
-            this.cmbType.Location = new System.Drawing.Point(15, 195);
-            this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(260, 23);
-            this.cmbType.TabIndex = 15;
+            lblBath.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblBath.ForeColor = Color.DimGray;
+            lblBath.Image = Properties.Resources.Bathtub;
+            lblBath.Location = new Point(180, 106);
+            lblBath.Margin = new Padding(4, 0, 4, 0);
+            lblBath.Name = "lblBath";
+            lblBath.Size = new Size(35, 35);
+            lblBath.TabIndex = 18;
             // 
-            // label6
+            // lblBedValue
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 175);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 15);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Unit Type";
+            lblBedValue.AutoSize = true;
+            lblBedValue.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblBedValue.ForeColor = Color.FromArgb(41, 50, 65);
+            lblBedValue.Location = new Point(71, 116);
+            lblBedValue.Margin = new Padding(4, 0, 4, 0);
+            lblBedValue.Name = "lblBedValue";
+            lblBedValue.Size = new Size(23, 25);
+            lblBedValue.TabIndex = 17;
+            lblBedValue.Text = "0";
             // 
-            // numFloor
+            // lblBed
             // 
-            this.numFloor.Location = new System.Drawing.Point(15, 85);
-            this.numFloor.Name = "numFloor";
-            this.numFloor.Size = new System.Drawing.Size(260, 23);
-            this.numFloor.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 65);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 15);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Floor No";
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.Silver;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(15, 445);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(260, 35);
-            this.btnClear.TabIndex = 11;
-            this.btnClear.Text = "Clear Form";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(195, 400);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(80, 35);
-            this.btnDelete.TabIndex = 10;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(105, 400);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(80, 35);
-            this.btnUpdate.TabIndex = 9;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(15, 400);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(80, 35);
-            this.btnAdd.TabIndex = 8;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // cmbStatus
-            // 
-            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Items.AddRange(new object[] {
-            "VACANT",
-            "OCCUPIED",
-            "MAINTENANCE"});
-            this.cmbStatus.Location = new System.Drawing.Point(15, 360);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(260, 23);
-            this.cmbStatus.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 340);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 15);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Status";
+            lblBed.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblBed.ForeColor = Color.DimGray;
+            lblBed.Image = Properties.Resources.Bed1;
+            lblBed.Location = new Point(17, 106);
+            lblBed.Margin = new Padding(4, 0, 4, 0);
+            lblBed.Name = "lblBed";
+            lblBed.Size = new Size(35, 35);
+            lblBed.TabIndex = 16;
             // 
             // txtRent
             // 
-            this.txtRent.Location = new System.Drawing.Point(15, 305);
-            this.txtRent.Name = "txtRent";
-            this.txtRent.Size = new System.Drawing.Size(260, 23);
-            this.txtRent.TabIndex = 5;
+            txtRent.BorderRadius = 15;
+            txtRent.CustomizableEdges = customizableEdges3;
+            txtRent.DefaultText = "";
+            txtRent.DisabledState.BorderColor = Color.Gray;
+            txtRent.DisabledState.FillColor = Color.White;
+            txtRent.DisabledState.ForeColor = Color.Black;
+            txtRent.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtRent.Enabled = false;
+            txtRent.FillColor = Color.WhiteSmoke;
+            txtRent.FocusedState.BorderColor = Color.Transparent;
+            txtRent.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtRent.ForeColor = Color.FromArgb(41, 50, 65);
+            txtRent.HoverState.BorderColor = Color.Transparent;
+            txtRent.Location = new Point(14, 417);
+            txtRent.Margin = new Padding(4, 5, 4, 5);
+            txtRent.Name = "txtRent";
+            txtRent.PlaceholderText = "N/A";
+            txtRent.ReadOnly = true;
+            txtRent.SelectedText = "";
+            txtRent.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtRent.Size = new Size(457, 40);
+            txtRent.TabIndex = 5;
+            txtRent.Tag = "Rent";
             // 
-            // label3
+            // lblRent
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 285);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Monthly Rent";
+            lblRent.AutoSize = true;
+            lblRent.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblRent.ForeColor = Color.DimGray;
+            lblRent.Location = new Point(14, 389);
+            lblRent.Margin = new Padding(4, 0, 4, 0);
+            lblRent.Name = "lblRent";
+            lblRent.Size = new Size(173, 23);
+            lblRent.TabIndex = 4;
+            lblRent.Text = "Monthly Rent (VNĐ)";
+            // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblStatus.ForeColor = Color.DimGray;
+            lblStatus.Location = new Point(19, 29);
+            lblStatus.Margin = new Padding(4, 0, 4, 0);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(60, 23);
+            lblStatus.TabIndex = 6;
+            lblStatus.Text = "Status";
             // 
             // txtArea
             // 
-            this.txtArea.Location = new System.Drawing.Point(15, 140);
-            this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(260, 23);
-            this.txtArea.TabIndex = 3;
+            txtArea.AutoSize = true;
+            txtArea.BorderRadius = 15;
+            txtArea.CustomizableEdges = customizableEdges5;
+            txtArea.DefaultText = "";
+            txtArea.DisabledState.BorderColor = Color.Gray;
+            txtArea.DisabledState.FillColor = Color.White;
+            txtArea.DisabledState.ForeColor = Color.Black;
+            txtArea.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtArea.Enabled = false;
+            txtArea.FillColor = Color.WhiteSmoke;
+            txtArea.FocusedState.BorderColor = Color.Transparent;
+            txtArea.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtArea.ForeColor = Color.FromArgb(41, 50, 65);
+            txtArea.HoverState.BorderColor = Color.Transparent;
+            txtArea.Location = new Point(19, 310);
+            txtArea.Margin = new Padding(4, 5, 4, 5);
+            txtArea.Name = "txtArea";
+            txtArea.PlaceholderText = "N/A";
+            txtArea.ReadOnly = true;
+            txtArea.SelectedText = "";
+            txtArea.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtArea.Size = new Size(124, 40);
+            txtArea.TabIndex = 3;
+            txtArea.Tag = "Area";
             // 
-            // label2
+            // lblArea
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Area (m2)";
+            lblArea.AutoSize = true;
+            lblArea.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblArea.ForeColor = Color.DimGray;
+            lblArea.Location = new Point(19, 279);
+            lblArea.Margin = new Padding(4, 0, 4, 0);
+            lblArea.Name = "lblArea";
+            lblArea.Size = new Size(87, 23);
+            lblArea.TabIndex = 2;
+            lblArea.Text = "Area (m²)";
+            // 
+            // txtFloor
+            // 
+            txtFloor.AutoSize = true;
+            txtFloor.BorderRadius = 15;
+            txtFloor.CustomizableEdges = customizableEdges7;
+            txtFloor.DefaultText = "";
+            txtFloor.DisabledState.BorderColor = Color.Gray;
+            txtFloor.DisabledState.FillColor = Color.White;
+            txtFloor.DisabledState.ForeColor = Color.Black;
+            txtFloor.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtFloor.Enabled = false;
+            txtFloor.FillColor = Color.WhiteSmoke;
+            txtFloor.FocusedState.BorderColor = Color.Transparent;
+            txtFloor.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtFloor.ForeColor = Color.FromArgb(41, 50, 65);
+            txtFloor.HoverState.BorderColor = Color.Transparent;
+            txtFloor.Location = new Point(19, 213);
+            txtFloor.Margin = new Padding(4, 5, 4, 5);
+            txtFloor.Name = "txtFloor";
+            txtFloor.PlaceholderText = "N/A";
+            txtFloor.ReadOnly = true;
+            txtFloor.SelectedText = "";
+            txtFloor.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtFloor.Size = new Size(79, 40);
+            txtFloor.TabIndex = 13;
+            txtFloor.Tag = "Floor";
+            // 
+            // lblFloor
+            // 
+            lblFloor.AutoSize = true;
+            lblFloor.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblFloor.ForeColor = Color.DimGray;
+            lblFloor.Location = new Point(19, 183);
+            lblFloor.Margin = new Padding(4, 0, 4, 0);
+            lblFloor.Name = "lblFloor";
+            lblFloor.Size = new Size(79, 23);
+            lblFloor.TabIndex = 12;
+            lblFloor.Text = "Floor No";
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(15, 30);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(260, 23);
-            this.txtCode.TabIndex = 1;
+            txtCode.AutoSize = true;
+            txtCode.BorderRadius = 15;
+            txtCode.CustomizableEdges = customizableEdges9;
+            txtCode.DefaultText = "";
+            txtCode.DisabledState.BorderColor = Color.Gray;
+            txtCode.DisabledState.FillColor = Color.White;
+            txtCode.DisabledState.ForeColor = Color.Black;
+            txtCode.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtCode.Enabled = false;
+            txtCode.FillColor = Color.WhiteSmoke;
+            txtCode.FocusedState.BorderColor = Color.Transparent;
+            txtCode.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtCode.ForeColor = Color.FromArgb(41, 50, 65);
+            txtCode.HoverState.BorderColor = Color.Transparent;
+            txtCode.Location = new Point(19, 120);
+            txtCode.Margin = new Padding(4, 5, 4, 5);
+            txtCode.Name = "txtCode";
+            txtCode.PlaceholderText = "N/A";
+            txtCode.ReadOnly = true;
+            txtCode.SelectedText = "";
+            txtCode.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtCode.Size = new Size(95, 40);
+            txtCode.TabIndex = 1;
+            txtCode.Tag = "Code";
             // 
-            // label1
+            // lblCode
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Unit Code";
+            lblCode.AutoSize = true;
+            lblCode.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblCode.ForeColor = Color.DimGray;
+            lblCode.Location = new Point(19, 89);
+            lblCode.Margin = new Padding(4, 0, 4, 0);
+            lblCode.Name = "lblCode";
+            lblCode.Size = new Size(90, 23);
+            lblCode.TabIndex = 0;
+            lblCode.Text = "Unit Code";
+            // 
+            // pn_StatusValue
+            // 
+            pn_StatusValue.BackColor = Color.Transparent;
+            pn_StatusValue.BorderRadius = 8;
+            pn_StatusValue.Controls.Add(lblStatusValue);
+            pn_StatusValue.CustomizableEdges = customizableEdges11;
+            pn_StatusValue.FillColor = Color.SeaGreen;
+            pn_StatusValue.Location = new Point(106, 28);
+            pn_StatusValue.Name = "pn_StatusValue";
+            pn_StatusValue.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            pn_StatusValue.Size = new Size(100, 30);
+            pn_StatusValue.TabIndex = 21;
+            // 
+            // lblStatusValue
+            // 
+            lblStatusValue.AutoSize = true;
+            lblStatusValue.BackColor = Color.Transparent;
+            lblStatusValue.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblStatusValue.ForeColor = Color.White;
+            lblStatusValue.Location = new Point(8, 1);
+            lblStatusValue.Margin = new Padding(4, 0, 4, 0);
+            lblStatusValue.Name = "lblStatusValue";
+            lblStatusValue.Size = new Size(81, 25);
+            lblStatusValue.TabIndex = 7;
+            lblStatusValue.Text = "STATUS";
             // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panelTop.Controls.Add(this.labelTitle);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1000, 60);
-            this.panelTop.TabIndex = 1;
+            panelTop.BackColor = Color.FromArgb(230, 235, 240);
+            panelTop.Controls.Add(labelTitle);
+            panelTop.Dock = DockStyle.Top;
+            panelTop.Location = new Point(0, 0);
+            panelTop.Margin = new Padding(4, 5, 4, 5);
+            panelTop.Name = "panelTop";
+            panelTop.Size = new Size(514, 92);
+            panelTop.TabIndex = 1;
             // 
             // labelTitle
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelTitle.Location = new System.Drawing.Point(12, 9);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(247, 37);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "Unit Management";
-            // 
-            // panelFill
-            // 
-            this.panelFill.Controls.Add(this.dgvUnits);
-            this.panelFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFill.Location = new System.Drawing.Point(300, 60);
-            this.panelFill.Name = "panelFill";
-            this.panelFill.Padding = new System.Windows.Forms.Padding(10);
-            this.panelFill.Size = new System.Drawing.Size(700, 540);
-            this.panelFill.TabIndex = 2;
-            // 
-            // dgvUnits
-            // 
-            this.dgvUnits.AllowUserToAddRows = false;
-            this.dgvUnits.AllowUserToDeleteRows = false;
-            this.dgvUnits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUnits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUnits.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvUnits.Location = new System.Drawing.Point(10, 10);
-            this.dgvUnits.Name = "dgvUnits";
-            this.dgvUnits.ReadOnly = true;
-            this.dgvUnits.RowHeadersVisible = false;
-            this.dgvUnits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUnits.Size = new System.Drawing.Size(680, 520);
-            this.dgvUnits.TabIndex = 0;
-            this.dgvUnits.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUnits_CellClick);
+            labelTitle.AutoSize = true;
+            labelTitle.Font = new Font("Georgia", 19.8000011F, FontStyle.Bold);
+            labelTitle.ForeColor = Color.FromArgb(41, 50, 65);
+            labelTitle.Location = new Point(15, 26);
+            labelTitle.Margin = new Padding(4, 0, 4, 0);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(283, 39);
+            labelTitle.TabIndex = 0;
+            labelTitle.Text = "UNIT DETAILS";
             // 
             // Unit_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.panelFill);
-            this.Controls.Add(this.panelLeft);
-            this.Controls.Add(this.panelTop);
-            this.Name = "Unit_Form";
-            this.Text = "Unit Management";
-            this.Load += new System.EventHandler(this.Unit_Form_Load);
-            this.panelLeft.ResumeLayout(false);
-            this.panelLeft.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numBath)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numBed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numFloor)).EndInit();
-            this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
-            this.panelFill.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUnits)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(514, 573);
+            Controls.Add(panelLeft);
+            Controls.Add(panelTop);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "Unit_Form";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Unit Details";
+            Load += Unit_Form_Load;
+            panelLeft.ResumeLayout(false);
+            panelLeft.PerformLayout();
+            pn_Unit_Type.ResumeLayout(false);
+            pn_Unit_Type.PerformLayout();
+            pn_StatusValue.ResumeLayout(false);
+            pn_StatusValue.PerformLayout();
+            panelTop.ResumeLayout(false);
+            panelTop.PerformLayout();
+            ResumeLayout(false);
 
         }
 
@@ -359,28 +416,25 @@ namespace IT008_Quản_Lý_Chung_Cư
 
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.Panel panelFill;
-        private System.Windows.Forms.DataGridView dgvUnits;
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.TextBox txtCode;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbStatus;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtRent;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtArea;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.NumericUpDown numFloor;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numBath;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numBed;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cmbType;
-        private System.Windows.Forms.Label label6;
+
+        private Guna.UI2.WinForms.Guna2TextBox txtCode;
+        private System.Windows.Forms.Label lblCode;
+        private Guna.UI2.WinForms.Guna2TextBox txtArea;
+        private System.Windows.Forms.Label lblArea;
+        private Guna.UI2.WinForms.Guna2TextBox txtRent;
+        private System.Windows.Forms.Label lblRent;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblStatusValue;
+        private System.Windows.Forms.Label lblType;
+        private System.Windows.Forms.Label lblTypeValue;
+        private Guna.UI2.WinForms.Guna2TextBox txtFloor;
+        private System.Windows.Forms.Label lblFloor;
+        private System.Windows.Forms.Label lblBed;
+        private System.Windows.Forms.Label lblBedValue;
+        private System.Windows.Forms.Label lblBath;
+        private System.Windows.Forms.Label lblBathValue;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel pn_Unit_Type;
+        private Guna.UI2.WinForms.Guna2Panel pn_StatusValue;
     }
 }
