@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using Npgsql;
+using Guna.UI2.WinForms;
 
 namespace IT008_Quản_Lý_Chung_Cư
 {
@@ -96,80 +97,78 @@ namespace IT008_Quản_Lý_Chung_Cư
                     }
                 }
 
-                // Add Button
-                Button btnAdd = new Button();
+                Guna2Button btnAdd = new Guna2Button();
                 btnAdd.Text = "ADD NEW MEMBER +";
-                btnAdd.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-                btnAdd.BackColor = Color.Black;
+                btnAdd.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+                btnAdd.FillColor = Color.FromArgb(46, 204, 113);
                 btnAdd.ForeColor = Color.White;
-                btnAdd.FlatStyle = FlatStyle.Flat;
-                btnAdd.FlatAppearance.BorderSize = 0;
-                btnAdd.Size = new Size(200, 45);
-
+                btnAdd.BorderRadius = 10;
+                btnAdd.Size = new Size(250, 50);
+                btnAdd.Cursor = Cursors.Hand;
 
                 int leftMargin = (pnlMembers.ClientSize.Width - btnAdd.Width) / 2;
-                if (leftMargin < 0) leftMargin = 0; // Prevent negative margin crash
+                if (leftMargin < 0) leftMargin = 0;
 
                 btnAdd.Margin = new Padding(leftMargin, 20, 0, 30);
-                // -----------------------
 
-                btnAdd.Cursor = Cursors.Hand;
                 btnAdd.Click += BtnAddMember_Click;
                 pnlMembers.Controls.Add(btnAdd);
             }
             catch (Exception ex) { MessageBox.Show("Error loading members: " + ex.Message); }
         }
 
-        private Panel CreateMemberPanel(int id, string name, string rel, string phone, string cccd, DateTime dob, bool isPrimary)
+        private Guna2Panel CreateMemberPanel(int id, string name, string rel, string phone, string cccd, DateTime dob, bool isPrimary)
         {
-            // Main Card
-            Panel p = new Panel();
-            p.Size = new Size(640, 170);
-            p.BackColor = Color.White;
-            p.Margin = new Padding(0, 0, 0, 15);
+            Guna2Panel p = new Guna2Panel();
+            p.Size = new Size(850, 100);
+            p.Margin = new Padding(0, 0, 0, 10);
+            p.FillColor = Color.White;
+            p.BorderRadius = 12;
+            p.ShadowDecoration.Enabled = true;
+            p.ShadowDecoration.Depth = 5;
+            p.ShadowDecoration.BorderRadius = 12;
+            p.ShadowDecoration.Color = Color.LightGray;
 
-            // Add a subtle bottom border
-            Panel bottomBorder = new Panel();
-            bottomBorder.Height = 1;
-            bottomBorder.Dock = DockStyle.Bottom;
-            bottomBorder.BackColor = Color.LightGray;
-            p.Controls.Add(bottomBorder);
-
-            // Colored Strip on Left (Gold for Owner, Blue for Member)
-            Panel strip = new Panel();
-            strip.Width = 5;
-            strip.Dock = DockStyle.Left;
-            strip.BackColor = isPrimary ? Color.Goldenrod : Color.CornflowerBlue;
-            p.Controls.Add(strip);
-
-            // Role Badge (Text Color)
-            Color roleColor = isPrimary ? Color.Goldenrod : Color.CornflowerBlue;
+            Color primaryColor = isPrimary ? Color.FromArgb(255, 193, 7) : Color.FromArgb(52, 152, 219);
             string role = isPrimary ? "PRIMARY OWNER" : "MEMBER";
 
-            Label lblInfo = new Label();
-            lblInfo.AutoSize = true;
-            lblInfo.Font = new Font("Segoe UI", 11);
-            lblInfo.ForeColor = Color.FromArgb(64, 64, 64);
-            lblInfo.Location = new Point(20, 15);
-            // Rich formatted text workaround using standard label
-            lblInfo.Text = $"Fullname: {name.ToUpper()}\n" +
-                           $"Relationship: {rel}\n" +
-                           $"Phone: {phone}   |   CCCD: {cccd}\n" +
-                           $"DOB: {dob:dd/MM/yyyy}\n" +
-                           $"Role: {role}";
-            p.Controls.Add(lblInfo);
+            Guna2Panel strip = new Guna2Panel();
+            strip.Width = 8;
+            strip.Dock = DockStyle.Left;
+            strip.FillColor = primaryColor;
+            p.Controls.Add(strip);
 
-            // Edit Button
-            Button btnEdit = new Button();
+            Guna2HtmlLabel lblName = new Guna2HtmlLabel();
+            lblName.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblName.ForeColor = Color.FromArgb(41, 50, 65);
+            lblName.Location = new Point(25, 10);
+            lblName.Text = name.ToUpper();
+            p.Controls.Add(lblName);
+
+            Guna2HtmlLabel lblRole = new Guna2HtmlLabel();
+            lblRole.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            lblRole.ForeColor = primaryColor;
+            lblRole.Location = new Point(25, 38);
+            lblRole.Text = $"Role: {role}";
+            p.Controls.Add(lblRole);
+
+            Guna2HtmlLabel lblDetails = new Guna2HtmlLabel();
+            lblDetails.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
+            lblDetails.ForeColor = Color.Gray;
+            lblDetails.Location = new Point(25, 65);
+            lblDetails.Text = $"Relationship: {rel} | Phone: {phone} | CCCD: {cccd} | DOB: {dob:dd/MM/yyyy}";
+            p.Controls.Add(lblDetails);
+
+            Guna2Button btnEdit = new Guna2Button();
             btnEdit.Text = "EDIT";
-            btnEdit.Font = new Font("Segoe UI", 9, FontStyle.Bold);
-            btnEdit.ForeColor = Color.DimGray;
-            btnEdit.BackColor = Color.WhiteSmoke;
-            btnEdit.FlatStyle = FlatStyle.Flat;
-            btnEdit.FlatAppearance.BorderSize = 0;
-            btnEdit.Size = new Size(80, 30);
-            btnEdit.Location = new Point(540, 20);
+            btnEdit.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnEdit.ForeColor = Color.White;
+            btnEdit.FillColor = Color.FromArgb(52, 152, 219);
+            btnEdit.BorderRadius = 8;
+            btnEdit.Size = new Size(90, 40);
+            btnEdit.Location = new Point(p.Width - 110, 30);
             btnEdit.Cursor = Cursors.Hand;
+
             btnEdit.Click += (s, e) => EditMember(id);
             p.Controls.Add(btnEdit);
 
@@ -178,13 +177,13 @@ namespace IT008_Quản_Lý_Chung_Cư
 
         private void EditMember(int memberId)
         {
-            Member_Form f = new Member_Form(_householdId, memberId);
+            Form f = new Member_Form(_householdId, memberId);
             if (f.ShowDialog() == DialogResult.OK) LoadMembers();
         }
 
         private void BtnAddMember_Click(object? sender, EventArgs e)
         {
-            Member_Form f = new Member_Form(_householdId);
+            Form f = new Member_Form(_householdId);
             if (f.ShowDialog() == DialogResult.OK) LoadMembers();
         }
 

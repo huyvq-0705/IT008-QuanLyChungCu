@@ -35,18 +35,18 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             pnlCard.Controls.Add(btnView);
             pnlCard.Dock = DockStyle.Fill;
             pnlCard.Location = new Point(0, 0);
-            pnlCard.Margin = new Padding(3, 4, 3, 4);
+            pnlCard.Margin = new Padding(3, 5, 3, 5);
             pnlCard.Name = "pnlCard";
-            pnlCard.Size = new Size(971, 127);
+            pnlCard.Size = new Size(1092, 146);
             pnlCard.TabIndex = 0;
             // 
             // picUserIcon
             // 
             picUserIcon.Image = Properties.Resources.User_Icon;
-            picUserIcon.Location = new Point(91, 64);
-            picUserIcon.Margin = new Padding(3, 4, 3, 4);
+            picUserIcon.Location = new Point(102, 74);
+            picUserIcon.Margin = new Padding(3, 5, 3, 5);
             picUserIcon.Name = "picUserIcon";
-            picUserIcon.Size = new Size(18, 21);
+            picUserIcon.Size = new Size(20, 24);
             picUserIcon.SizeMode = PictureBoxSizeMode.Zoom;
             picUserIcon.TabIndex = 3;
             picUserIcon.TabStop = false;
@@ -54,10 +54,10 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // picMeterIcon
             // 
             picMeterIcon.Image = Properties.Resources.meter_icon;
-            picMeterIcon.Location = new Point(29, 29);
-            picMeterIcon.Margin = new Padding(3, 4, 3, 4);
+            picMeterIcon.Location = new Point(33, 33);
+            picMeterIcon.Margin = new Padding(3, 5, 3, 5);
             picMeterIcon.Name = "picMeterIcon";
-            picMeterIcon.Size = new Size(46, 53);
+            picMeterIcon.Size = new Size(52, 61);
             picMeterIcon.SizeMode = PictureBoxSizeMode.Zoom;
             picMeterIcon.TabIndex = 2;
             picMeterIcon.TabStop = false;
@@ -67,9 +67,9 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             panelLeftStrip.BackColor = Color.FromArgb(52, 152, 219);
             panelLeftStrip.Dock = DockStyle.Left;
             panelLeftStrip.Location = new Point(0, 0);
-            panelLeftStrip.Margin = new Padding(3, 4, 3, 4);
+            panelLeftStrip.Margin = new Padding(3, 5, 3, 5);
             panelLeftStrip.Name = "panelLeftStrip";
-            panelLeftStrip.Size = new Size(7, 127);
+            panelLeftStrip.Size = new Size(8, 146);
             panelLeftStrip.TabIndex = 0;
             // 
             // lblUnitCode
@@ -77,7 +77,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             lblUnitCode.AutoSize = true;
             lblUnitCode.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             lblUnitCode.ForeColor = Color.FromArgb(44, 62, 80);
-            lblUnitCode.Location = new Point(91, 24);
+            lblUnitCode.Location = new Point(102, 28);
             lblUnitCode.Name = "lblUnitCode";
             lblUnitCode.Size = new Size(182, 30);
             lblUnitCode.TabIndex = 1;
@@ -86,11 +86,11 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // lblOwner
             // 
             lblOwner.AutoSize = true;
-            lblOwner.Font = new Font("Segoe UI", 10F);
+            lblOwner.Font = new Font("Georgia", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblOwner.ForeColor = Color.Gray;
-            lblOwner.Location = new Point(114, 61);
+            lblOwner.Location = new Point(128, 70);
             lblOwner.Name = "lblOwner";
-            lblOwner.Size = new Size(161, 23);
+            lblOwner.Size = new Size(173, 21);
             lblOwner.TabIndex = 4;
             lblOwner.Text = "Owner: Truong Sinh";
             // 
@@ -103,23 +103,23 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             btnView.FlatStyle = FlatStyle.Flat;
             btnView.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             btnView.ForeColor = Color.White;
-            btnView.Location = new Point(817, 33);
-            btnView.Margin = new Padding(3, 4, 3, 4);
+            btnView.Location = new Point(919, 38);
+            btnView.Margin = new Padding(3, 5, 3, 5);
             btnView.Name = "btnView";
-            btnView.Size = new Size(137, 47);
+            btnView.Size = new Size(154, 54);
             btnView.TabIndex = 2;
             btnView.Text = "VIEW MORE";
             btnView.UseVisualStyleBackColor = false;
             // 
             // MeterReadingUnitItemControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(pnlCard);
-            Margin = new Padding(0, 0, 0, 13);
+            Margin = new Padding(0, 0, 0, 15);
             Name = "MeterReadingUnitItemControl";
-            Size = new Size(971, 127);
+            Size = new Size(1092, 146);
             pnlCard.ResumeLayout(false);
             pnlCard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picUserIcon).EndInit();

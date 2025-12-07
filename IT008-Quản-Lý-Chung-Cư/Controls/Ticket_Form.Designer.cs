@@ -7,157 +7,169 @@ namespace IT008_Quản_Lý_Chung_Cư
 
         private void InitializeComponent()
         {
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbUnit = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTitle = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDesc = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbStatus = new System.Windows.Forms.ComboBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            lblTitle = new Label();
+            label1 = new Label();
+            cbUnit = new ComboBox();
+            label2 = new Label();
+            txtTitle = new TextBox();
+            label3 = new Label();
+            txtDesc = new TextBox();
+            label4 = new Label();
+            cbStatus = new ComboBox();
+            btnSave = new Button();
+            btnCancel = new Button();
+            SuspendLayout();
             // 
             // lblTitle
             // 
-            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(400, 50);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "New Ticket";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblTitle.Dock = DockStyle.Top;
+            lblTitle.Font = new Font("Georgia", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.Location = new Point(0, 0);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(514, 77);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "New Ticket";
+            lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Unit";
+            label1.AutoSize = true;
+            label1.Font = new Font("Georgia", 10.8F);
+            label1.Location = new Point(39, 92);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(46, 21);
+            label1.TabIndex = 1;
+            label1.Text = "Unit";
             // 
             // cbUnit
             // 
-            this.cbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbUnit.FormattingEnabled = true;
-            this.cbUnit.Location = new System.Drawing.Point(30, 80);
-            this.cbUnit.Name = "cbUnit";
-            this.cbUnit.Size = new System.Drawing.Size(150, 23);
-            this.cbUnit.TabIndex = 2;
+            cbUnit.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbUnit.FormattingEnabled = true;
+            cbUnit.Location = new Point(39, 123);
+            cbUnit.Margin = new Padding(4, 5, 4, 5);
+            cbUnit.Name = "cbUnit";
+            cbUnit.Size = new Size(129, 31);
+            cbUnit.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Title";
+            label2.AutoSize = true;
+            label2.Font = new Font("Georgia", 10.8F);
+            label2.Location = new Point(39, 184);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(46, 21);
+            label2.TabIndex = 3;
+            label2.Text = "Title";
             // 
             // txtTitle
             // 
-            this.txtTitle.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTitle.Location = new System.Drawing.Point(30, 140);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(330, 25);
-            this.txtTitle.TabIndex = 4;
+            txtTitle.Font = new Font("Segoe UI", 10F);
+            txtTitle.Location = new Point(39, 215);
+            txtTitle.Margin = new Padding(4, 5, 4, 5);
+            txtTitle.Name = "txtTitle";
+            txtTitle.Size = new Size(423, 30);
+            txtTitle.TabIndex = 4;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 180);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Description";
+            label3.AutoSize = true;
+            label3.Font = new Font("Georgia", 10.8F);
+            label3.Location = new Point(39, 276);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(102, 21);
+            label3.TabIndex = 5;
+            label3.Text = "Description";
             // 
             // txtDesc
             // 
-            this.txtDesc.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtDesc.Location = new System.Drawing.Point(30, 200);
-            this.txtDesc.Multiline = true;
-            this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(330, 100);
-            this.txtDesc.TabIndex = 6;
+            txtDesc.Font = new Font("Segoe UI", 10F);
+            txtDesc.Location = new Point(39, 307);
+            txtDesc.Margin = new Padding(4, 5, 4, 5);
+            txtDesc.Multiline = true;
+            txtDesc.Name = "txtDesc";
+            txtDesc.Size = new Size(423, 151);
+            txtDesc.TabIndex = 6;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(200, 60);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 15);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Status";
+            label4.AutoSize = true;
+            label4.Font = new Font("Georgia", 10.8F);
+            label4.Location = new Point(257, 92);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(60, 21);
+            label4.TabIndex = 7;
+            label4.Text = "Status";
             // 
             // cbStatus
             // 
-            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Items.AddRange(new object[] {
-            "OPEN",
-            "IN_PROGRESS",
-            "CLOSED",
-            "CANCELLED"});
-            this.cbStatus.Location = new System.Drawing.Point(200, 80);
-            this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(160, 23);
-            this.cbStatus.TabIndex = 8;
+            cbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbStatus.FormattingEnabled = true;
+            cbStatus.Items.AddRange(new object[] { "OPEN", "IN_PROGRESS", "CLOSED", "CANCELLED" });
+            cbStatus.Location = new Point(257, 123);
+            cbStatus.Margin = new Padding(4, 5, 4, 5);
+            cbStatus.Name = "cbStatus";
+            cbStatus.Size = new Size(205, 31);
+            cbStatus.TabIndex = 8;
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(240, 330);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(120, 40);
-            this.btnSave.TabIndex = 9;
-            this.btnSave.Text = "SAVE";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            btnSave.BackColor = Color.FromArgb(0, 123, 255);
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(309, 506);
+            btnSave.Margin = new Padding(4, 5, 4, 5);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(154, 61);
+            btnSave.TabIndex = 9;
+            btnSave.Text = "SAVE";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(30, 330);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 40);
-            this.btnCancel.TabIndex = 10;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.BackColor = Color.WhiteSmoke;
+            btnCancel.FlatStyle = FlatStyle.Flat;
+            btnCancel.Location = new Point(39, 506);
+            btnCancel.Margin = new Padding(4, 5, 4, 5);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(129, 61);
+            btnCancel.TabIndex = 10;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // Ticket_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(400, 400);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.cbStatus);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtDesc);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtTitle);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbUnit);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblTitle);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Ticket_Form";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Ticket";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(514, 613);
+            Controls.Add(btnCancel);
+            Controls.Add(btnSave);
+            Controls.Add(cbStatus);
+            Controls.Add(label4);
+            Controls.Add(txtDesc);
+            Controls.Add(label3);
+            Controls.Add(txtTitle);
+            Controls.Add(label2);
+            Controls.Add(cbUnit);
+            Controls.Add(label1);
+            Controls.Add(lblTitle);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "Ticket_Form";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Ticket";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         private System.Windows.Forms.Label lblTitle;

@@ -12,140 +12,150 @@ namespace IT008_Quản_Lý_Chung_Cư
 
         private void InitializeComponent()
         {
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtpMonth = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtElec = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtWater = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            lblTitle = new Label();
+            label1 = new Label();
+            dtpMonth = new DateTimePicker();
+            label2 = new Label();
+            txtElec = new TextBox();
+            label3 = new Label();
+            txtWater = new TextBox();
+            btnSave = new Button();
+            btnCancel = new Button();
+            SuspendLayout();
             // 
             // lblTitle
             // 
-            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(350, 50);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "New Meter Reading";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblTitle.Dock = DockStyle.Top;
+            lblTitle.Font = new Font("Georgia", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.Location = new Point(0, 0);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(450, 77);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "New Meter Reading";
+            lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(30, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Select Month";
+            label1.AutoSize = true;
+            label1.Font = new Font("Georgia", 10.2F);
+            label1.ForeColor = Color.Gray;
+            label1.Location = new Point(39, 107);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(109, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Select Month";
             // 
             // dtpMonth
             // 
-            this.dtpMonth.CustomFormat = "MM/yyyy";
-            this.dtpMonth.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dtpMonth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpMonth.Location = new System.Drawing.Point(30, 90);
-            this.dtpMonth.Name = "dtpMonth";
-            this.dtpMonth.Size = new System.Drawing.Size(280, 25);
-            this.dtpMonth.TabIndex = 2;
+            dtpMonth.CustomFormat = "MM/yyyy";
+            dtpMonth.Font = new Font("Segoe UI", 10F);
+            dtpMonth.Format = DateTimePickerFormat.Custom;
+            dtpMonth.Location = new Point(39, 138);
+            dtpMonth.Margin = new Padding(4, 5, 4, 5);
+            dtpMonth.Name = "dtpMonth";
+            dtpMonth.Size = new Size(359, 30);
+            dtpMonth.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(30, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Electricity Consumption (KWh)";
+            label2.AutoSize = true;
+            label2.Font = new Font("Georgia", 10.2F);
+            label2.ForeColor = Color.Gray;
+            label2.Location = new Point(39, 215);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(247, 20);
+            label2.TabIndex = 3;
+            label2.Text = "Electricity Consumption (KWh)";
             // 
             // txtElec
             // 
-            this.txtElec.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtElec.Location = new System.Drawing.Point(30, 160);
-            this.txtElec.Name = "txtElec";
-            this.txtElec.Size = new System.Drawing.Size(280, 25);
-            this.txtElec.TabIndex = 4;
+            txtElec.Font = new Font("Segoe UI", 10F);
+            txtElec.Location = new Point(39, 245);
+            txtElec.Margin = new Padding(4, 5, 4, 5);
+            txtElec.Name = "txtElec";
+            txtElec.Size = new Size(359, 30);
+            txtElec.TabIndex = 4;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(30, 210);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Water Consumption (m3)";
+            label3.AutoSize = true;
+            label3.Font = new Font("Georgia", 10.2F);
+            label3.ForeColor = Color.Gray;
+            label3.Location = new Point(39, 322);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(202, 20);
+            label3.TabIndex = 5;
+            label3.Text = "Water Consumption (m3)";
             // 
             // txtWater
             // 
-            this.txtWater.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtWater.Location = new System.Drawing.Point(30, 230);
-            this.txtWater.Name = "txtWater";
-            this.txtWater.Size = new System.Drawing.Size(280, 25);
-            this.txtWater.TabIndex = 6;
+            txtWater.Font = new Font("Segoe UI", 10F);
+            txtWater.Location = new Point(39, 353);
+            txtWater.Margin = new Padding(4, 5, 4, 5);
+            txtWater.Name = "txtWater";
+            txtWater.Size = new Size(359, 30);
+            txtWater.TabIndex = 6;
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(190, 300);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(120, 40);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "SAVE";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            btnSave.BackColor = Color.FromArgb(0, 123, 255);
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(244, 460);
+            btnSave.Margin = new Padding(4, 5, 4, 5);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(154, 61);
+            btnSave.TabIndex = 7;
+            btnSave.Text = "SAVE";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(30, 300);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 40);
-            this.btnCancel.TabIndex = 8;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.BackColor = Color.WhiteSmoke;
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.FlatStyle = FlatStyle.Flat;
+            btnCancel.Font = new Font("Segoe UI", 10F);
+            btnCancel.ForeColor = Color.Black;
+            btnCancel.Location = new Point(39, 460);
+            btnCancel.Margin = new Padding(4, 5, 4, 5);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(129, 61);
+            btnCancel.TabIndex = 8;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // NewMeterReading_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(350, 380);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtWater);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtElec);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dtpMonth);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblTitle);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "NewMeterReading_Form";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "New Reading";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(450, 583);
+            Controls.Add(btnCancel);
+            Controls.Add(btnSave);
+            Controls.Add(txtWater);
+            Controls.Add(label3);
+            Controls.Add(txtElec);
+            Controls.Add(label2);
+            Controls.Add(dtpMonth);
+            Controls.Add(label1);
+            Controls.Add(lblTitle);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "NewMeterReading_Form";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "New Reading";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         private System.Windows.Forms.Label lblTitle;

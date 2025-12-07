@@ -7,61 +7,63 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
 
         private void InitializeComponent()
         {
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            labelTitle = new Label();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            btnCreate = new Button();
+            SuspendLayout();
             // 
             // labelTitle
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.labelTitle.Location = new System.Drawing.Point(20, 20);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(188, 30);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "SERVICE TICKETS";
+            labelTitle.AutoSize = true;
+            labelTitle.Font = new Font("Georgia", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelTitle.Location = new Point(26, 31);
+            labelTitle.Margin = new Padding(4, 0, 4, 0);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(285, 32);
+            labelTitle.TabIndex = 0;
+            labelTitle.Text = "SERVICE TICKETS";
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 70);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(860, 510);
-            this.flowLayoutPanel1.TabIndex = 1;
+            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Location = new Point(26, 107);
+            flowLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1106, 782);
+            flowLayoutPanel1.TabIndex = 1;
             // 
             // btnCreate
             // 
-            this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCreate.BackColor = System.Drawing.Color.Black;
-            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCreate.FlatAppearance.BorderSize = 0;
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(700, 15);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(180, 40);
-            this.btnCreate.TabIndex = 2;
-            this.btnCreate.Text = "CREATE NEW +";
-            this.btnCreate.UseVisualStyleBackColor = false;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            btnCreate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnCreate.BackColor = Color.ForestGreen;
+            btnCreate.Cursor = Cursors.Hand;
+            btnCreate.FlatAppearance.BorderSize = 0;
+            btnCreate.FlatStyle = FlatStyle.Flat;
+            btnCreate.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnCreate.ForeColor = Color.White;
+            btnCreate.Location = new Point(900, 23);
+            btnCreate.Margin = new Padding(4, 5, 4, 5);
+            btnCreate.Name = "btnCreate";
+            btnCreate.Size = new Size(231, 61);
+            btnCreate.TabIndex = 2;
+            btnCreate.Text = "CREATE NEW +";
+            btnCreate.UseVisualStyleBackColor = false;
+            btnCreate.Click += btnCreate_Click;
             // 
             // TicketListControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.labelTitle);
-            this.Name = "TicketListControl";
-            this.Size = new System.Drawing.Size(900, 600);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
+            Controls.Add(btnCreate);
+            Controls.Add(flowLayoutPanel1);
+            Controls.Add(labelTitle);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "TicketListControl";
+            Size = new Size(1157, 920);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         private System.Windows.Forms.Label labelTitle;

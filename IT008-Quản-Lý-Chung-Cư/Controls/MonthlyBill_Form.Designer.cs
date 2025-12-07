@@ -11,435 +11,466 @@ namespace IT008_Quản_Lý_Chung_Cư
 
         private void InitializeComponent()
         {
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbUnit = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtpMonth = new System.Windows.Forms.DateTimePicker();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtRent = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtElecUsage = new System.Windows.Forms.TextBox();
-            this.lblElecRate = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtElecTotal = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtWaterUsage = new System.Windows.Forms.TextBox();
-            this.lblWaterRate = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtWaterTotal = new System.Windows.Forms.TextBox();
-            this.pnlSummary = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtAdjust = new System.Windows.Forms.TextBox();
-            this.labelTotal = new System.Windows.Forms.Label();
-            this.lblTotalAmount = new System.Windows.Forms.Label();
-            this.pnlFooter = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.pnlHeader.SuspendLayout();
-            this.pnlMain.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.pnlSummary.SuspendLayout();
-            this.pnlFooter.SuspendLayout();
-            this.SuspendLayout();
+            pnlHeader = new Panel();
+            lblTitle = new Label();
+            pnlMain = new Panel();
+            label1 = new Label();
+            cbUnit = new ComboBox();
+            label2 = new Label();
+            dtpMonth = new DateTimePicker();
+            groupBox1 = new GroupBox();
+            label3 = new Label();
+            txtRent = new TextBox();
+            groupBox2 = new GroupBox();
+            label4 = new Label();
+            txtElecUsage = new TextBox();
+            lblElecRate = new Label();
+            label5 = new Label();
+            txtElecTotal = new TextBox();
+            groupBox3 = new GroupBox();
+            label8 = new Label();
+            txtWaterUsage = new TextBox();
+            lblWaterRate = new Label();
+            label7 = new Label();
+            txtWaterTotal = new TextBox();
+            pnlSummary = new Panel();
+            label9 = new Label();
+            txtAdjust = new TextBox();
+            labelTotal = new Label();
+            lblTotalAmount = new Label();
+            pnlFooter = new Panel();
+            btnCancel = new Button();
+            btnSave = new Button();
+            pnlHeader.SuspendLayout();
+            pnlMain.SuspendLayout();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            pnlSummary.SuspendLayout();
+            pnlFooter.SuspendLayout();
+            SuspendLayout();
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.White;
-            this.pnlHeader.Controls.Add(this.lblTitle);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(500, 60);
-            this.pnlHeader.TabIndex = 0;
+            pnlHeader.BackColor = Color.White;
+            pnlHeader.Controls.Add(lblTitle);
+            pnlHeader.Dock = DockStyle.Top;
+            pnlHeader.Location = new Point(0, 0);
+            pnlHeader.Margin = new Padding(4, 5, 4, 5);
+            pnlHeader.Name = "pnlHeader";
+            pnlHeader.Size = new Size(643, 92);
+            pnlHeader.TabIndex = 0;
             // 
             // lblTitle
             // 
-            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.lblTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(500, 60);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Create Monthly Bill";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblTitle.Dock = DockStyle.Fill;
+            lblTitle.Font = new Font("Georgia", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.FromArgb(30, 30, 30);
+            lblTitle.Location = new Point(0, 0);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(643, 92);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Create Monthly Bill";
+            lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pnlMain
             // 
-            this.pnlMain.AutoScroll = true;
-            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.pnlMain.Controls.Add(this.label1);
-            this.pnlMain.Controls.Add(this.cbUnit);
-            this.pnlMain.Controls.Add(this.label2);
-            this.pnlMain.Controls.Add(this.dtpMonth);
-            this.pnlMain.Controls.Add(this.groupBox1);
-            this.pnlMain.Controls.Add(this.groupBox2);
-            this.pnlMain.Controls.Add(this.groupBox3);
-            this.pnlMain.Controls.Add(this.pnlSummary);
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(0, 60);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Padding = new System.Windows.Forms.Padding(30, 20, 30, 20);
-            this.pnlMain.Size = new System.Drawing.Size(500, 490);
-            this.pnlMain.TabIndex = 1;
+            pnlMain.AutoScroll = true;
+            pnlMain.BackColor = Color.FromArgb(248, 249, 250);
+            pnlMain.Controls.Add(label1);
+            pnlMain.Controls.Add(cbUnit);
+            pnlMain.Controls.Add(label2);
+            pnlMain.Controls.Add(dtpMonth);
+            pnlMain.Controls.Add(groupBox1);
+            pnlMain.Controls.Add(groupBox2);
+            pnlMain.Controls.Add(groupBox3);
+            pnlMain.Controls.Add(pnlSummary);
+            pnlMain.Dock = DockStyle.Fill;
+            pnlMain.Location = new Point(0, 92);
+            pnlMain.Margin = new Padding(4, 5, 4, 5);
+            pnlMain.Name = "pnlMain";
+            pnlMain.Padding = new Padding(39, 31, 39, 31);
+            pnlMain.Size = new Size(643, 752);
+            pnlMain.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label1.Location = new System.Drawing.Point(30, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Unit";
+            label1.AutoSize = true;
+            label1.Font = new Font("Georgia", 9F);
+            label1.ForeColor = Color.FromArgb(80, 80, 80);
+            label1.Location = new Point(39, 31);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 18);
+            label1.TabIndex = 0;
+            label1.Text = "Unit";
             // 
             // cbUnit
             // 
-            this.cbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbUnit.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbUnit.FormattingEnabled = true;
-            this.cbUnit.Location = new System.Drawing.Point(30, 40);
-            this.cbUnit.Name = "cbUnit";
-            this.cbUnit.Size = new System.Drawing.Size(200, 25);
-            this.cbUnit.TabIndex = 1;
-            this.cbUnit.SelectedIndexChanged += new System.EventHandler(this.cbUnit_SelectedIndexChanged);
+            cbUnit.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbUnit.Font = new Font("Segoe UI", 10F);
+            cbUnit.FormattingEnabled = true;
+            cbUnit.Location = new Point(39, 61);
+            cbUnit.Margin = new Padding(4, 5, 4, 5);
+            cbUnit.Name = "cbUnit";
+            cbUnit.Size = new Size(169, 31);
+            cbUnit.TabIndex = 1;
+            cbUnit.SelectedIndexChanged += cbUnit_SelectedIndexChanged;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label2.Location = new System.Drawing.Point(270, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Month";
+            label2.AutoSize = true;
+            label2.Font = new Font("Georgia", 9F);
+            label2.ForeColor = Color.FromArgb(80, 80, 80);
+            label2.Location = new Point(347, 31);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(53, 18);
+            label2.TabIndex = 2;
+            label2.Text = "Month";
             // 
             // dtpMonth
             // 
-            this.dtpMonth.CustomFormat = "MM/yyyy";
-            this.dtpMonth.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dtpMonth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpMonth.Location = new System.Drawing.Point(270, 40);
-            this.dtpMonth.Name = "dtpMonth";
-            this.dtpMonth.Size = new System.Drawing.Size(170, 25);
-            this.dtpMonth.TabIndex = 3;
+            dtpMonth.CustomFormat = "MM/yyyy";
+            dtpMonth.Font = new Font("Segoe UI", 10F);
+            dtpMonth.Format = DateTimePickerFormat.Custom;
+            dtpMonth.Location = new Point(347, 61);
+            dtpMonth.Margin = new Padding(4, 5, 4, 5);
+            dtpMonth.Name = "dtpMonth";
+            dtpMonth.Size = new Size(156, 30);
+            dtpMonth.TabIndex = 3;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtRent);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.groupBox1.Location = new System.Drawing.Point(30, 85);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(15, 10, 15, 15);
-            this.groupBox1.Size = new System.Drawing.Size(410, 75);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Monthly Rent";
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(txtRent);
+            groupBox1.Font = new Font("Georgia", 9F);
+            groupBox1.ForeColor = Color.FromArgb(40, 40, 40);
+            groupBox1.Location = new Point(39, 130);
+            groupBox1.Margin = new Padding(4, 5, 4, 5);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(19, 15, 19, 23);
+            groupBox1.Size = new Size(527, 115);
+            groupBox1.TabIndex = 4;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Monthly Rent";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label3.Location = new System.Drawing.Point(15, 35);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Amount";
+            label3.AutoSize = true;
+            label3.Font = new Font("Georgia", 9F);
+            label3.ForeColor = Color.FromArgb(80, 80, 80);
+            label3.Location = new Point(19, 54);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(63, 18);
+            label3.TabIndex = 0;
+            label3.Text = "Amount";
             // 
             // txtRent
             // 
-            this.txtRent.Enabled = false;
-            this.txtRent.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.txtRent.Location = new System.Drawing.Point(120, 32);
-            this.txtRent.Name = "txtRent";
-            this.txtRent.Size = new System.Drawing.Size(270, 27);
-            this.txtRent.TabIndex = 1;
-            this.txtRent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtRent.TextChanged += new System.EventHandler(this.CalculateTotal);
+            txtRent.Enabled = false;
+            txtRent.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtRent.Location = new Point(154, 49);
+            txtRent.Margin = new Padding(4, 5, 4, 5);
+            txtRent.Name = "txtRent";
+            txtRent.Size = new Size(346, 32);
+            txtRent.TabIndex = 1;
+            txtRent.TextAlign = HorizontalAlignment.Right;
+            txtRent.TextChanged += CalculateTotal;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtElecUsage);
-            this.groupBox2.Controls.Add(this.lblElecRate);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.txtElecTotal);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.groupBox2.Location = new System.Drawing.Point(30, 175);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(15, 10, 15, 15);
-            this.groupBox2.Size = new System.Drawing.Size(410, 105);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Electricity";
+            groupBox2.Controls.Add(label4);
+            groupBox2.Controls.Add(txtElecUsage);
+            groupBox2.Controls.Add(lblElecRate);
+            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(txtElecTotal);
+            groupBox2.Font = new Font("Georgia", 9F);
+            groupBox2.ForeColor = Color.FromArgb(40, 40, 40);
+            groupBox2.Location = new Point(39, 268);
+            groupBox2.Margin = new Padding(4, 5, 4, 5);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(19, 15, 19, 23);
+            groupBox2.Size = new Size(527, 161);
+            groupBox2.TabIndex = 5;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Electricity";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label4.Location = new System.Drawing.Point(15, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Usage (kWh)";
+            label4.AutoSize = true;
+            label4.Font = new Font("Georgia", 9F);
+            label4.ForeColor = Color.FromArgb(80, 80, 80);
+            label4.Location = new Point(19, 54);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(97, 18);
+            label4.TabIndex = 0;
+            label4.Text = "Usage (kWh)";
             // 
             // txtElecUsage
             // 
-            this.txtElecUsage.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtElecUsage.Location = new System.Drawing.Point(120, 32);
-            this.txtElecUsage.Name = "txtElecUsage";
-            this.txtElecUsage.Size = new System.Drawing.Size(100, 25);
-            this.txtElecUsage.TabIndex = 1;
-            this.txtElecUsage.Text = "0";
-            this.txtElecUsage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtElecUsage.TextChanged += new System.EventHandler(this.CalculateTotal);
+            txtElecUsage.Font = new Font("Segoe UI", 10F);
+            txtElecUsage.Location = new Point(154, 49);
+            txtElecUsage.Margin = new Padding(4, 5, 4, 5);
+            txtElecUsage.Name = "txtElecUsage";
+            txtElecUsage.PlaceholderText = "0";
+            txtElecUsage.Size = new Size(127, 30);
+            txtElecUsage.TabIndex = 1;
+            txtElecUsage.TextAlign = HorizontalAlignment.Right;
+            txtElecUsage.TextChanged += CalculateTotal;
             // 
             // lblElecRate
             // 
-            this.lblElecRate.AutoSize = true;
-            this.lblElecRate.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Italic);
-            this.lblElecRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.lblElecRate.Location = new System.Drawing.Point(120, 62);
-            this.lblElecRate.Name = "lblElecRate";
-            this.lblElecRate.Size = new System.Drawing.Size(91, 13);
-            this.lblElecRate.TabIndex = 2;
-            this.lblElecRate.Text = "Rate: 0 VND/kWh";
+            lblElecRate.AutoSize = true;
+            lblElecRate.Font = new Font("Segoe UI", 8F, FontStyle.Italic);
+            lblElecRate.ForeColor = Color.FromArgb(108, 117, 125);
+            lblElecRate.Location = new Point(154, 95);
+            lblElecRate.Margin = new Padding(4, 0, 4, 0);
+            lblElecRate.Name = "lblElecRate";
+            lblElecRate.Size = new Size(120, 19);
+            lblElecRate.TabIndex = 2;
+            lblElecRate.Text = "Rate: 0 VND/kWh";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label5.Location = new System.Drawing.Point(240, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 15);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Total";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F);
+            label5.ForeColor = Color.FromArgb(80, 80, 80);
+            label5.Location = new Point(309, 54);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(42, 20);
+            label5.TabIndex = 3;
+            label5.Text = "Total";
             // 
             // txtElecTotal
             // 
-            this.txtElecTotal.Enabled = false;
-            this.txtElecTotal.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.txtElecTotal.Location = new System.Drawing.Point(280, 32);
-            this.txtElecTotal.Name = "txtElecTotal";
-            this.txtElecTotal.Size = new System.Drawing.Size(110, 25);
-            this.txtElecTotal.TabIndex = 4;
-            this.txtElecTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtElecTotal.Enabled = false;
+            txtElecTotal.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            txtElecTotal.Location = new Point(360, 49);
+            txtElecTotal.Margin = new Padding(4, 5, 4, 5);
+            txtElecTotal.Name = "txtElecTotal";
+            txtElecTotal.Size = new Size(140, 30);
+            txtElecTotal.TabIndex = 4;
+            txtElecTotal.TextAlign = HorizontalAlignment.Right;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.txtWaterUsage);
-            this.groupBox3.Controls.Add(this.lblWaterRate);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.txtWaterTotal);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.groupBox3.Location = new System.Drawing.Point(30, 295);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(15, 10, 15, 15);
-            this.groupBox3.Size = new System.Drawing.Size(410, 105);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Water";
+            groupBox3.Controls.Add(label8);
+            groupBox3.Controls.Add(txtWaterUsage);
+            groupBox3.Controls.Add(lblWaterRate);
+            groupBox3.Controls.Add(label7);
+            groupBox3.Controls.Add(txtWaterTotal);
+            groupBox3.Font = new Font("Georgia", 9F);
+            groupBox3.ForeColor = Color.FromArgb(40, 40, 40);
+            groupBox3.Location = new Point(39, 452);
+            groupBox3.Margin = new Padding(4, 5, 4, 5);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Padding = new Padding(19, 15, 19, 23);
+            groupBox3.Size = new Size(527, 161);
+            groupBox3.TabIndex = 6;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Water";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label8.Location = new System.Drawing.Point(15, 35);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 15);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Usage (m³)";
+            label8.AutoSize = true;
+            label8.Font = new Font("Georgia", 9F);
+            label8.ForeColor = Color.FromArgb(80, 80, 80);
+            label8.Location = new Point(19, 54);
+            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(87, 18);
+            label8.TabIndex = 0;
+            label8.Text = "Usage (m³)";
             // 
             // txtWaterUsage
             // 
-            this.txtWaterUsage.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtWaterUsage.Location = new System.Drawing.Point(120, 32);
-            this.txtWaterUsage.Name = "txtWaterUsage";
-            this.txtWaterUsage.Size = new System.Drawing.Size(100, 25);
-            this.txtWaterUsage.TabIndex = 1;
-            this.txtWaterUsage.Text = "0";
-            this.txtWaterUsage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtWaterUsage.TextChanged += new System.EventHandler(this.CalculateTotal);
+            txtWaterUsage.Font = new Font("Segoe UI", 10F);
+            txtWaterUsage.Location = new Point(154, 49);
+            txtWaterUsage.Margin = new Padding(4, 5, 4, 5);
+            txtWaterUsage.Name = "txtWaterUsage";
+            txtWaterUsage.PlaceholderText = "0";
+            txtWaterUsage.Size = new Size(127, 30);
+            txtWaterUsage.TabIndex = 1;
+            txtWaterUsage.TextAlign = HorizontalAlignment.Right;
+            txtWaterUsage.TextChanged += CalculateTotal;
             // 
             // lblWaterRate
             // 
-            this.lblWaterRate.AutoSize = true;
-            this.lblWaterRate.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Italic);
-            this.lblWaterRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.lblWaterRate.Location = new System.Drawing.Point(120, 62);
-            this.lblWaterRate.Name = "lblWaterRate";
-            this.lblWaterRate.Size = new System.Drawing.Size(83, 13);
-            this.lblWaterRate.TabIndex = 2;
-            this.lblWaterRate.Text = "Rate: 0 VND/m³";
+            lblWaterRate.AutoSize = true;
+            lblWaterRate.Font = new Font("Segoe UI", 8F, FontStyle.Italic);
+            lblWaterRate.ForeColor = Color.FromArgb(108, 117, 125);
+            lblWaterRate.Location = new Point(154, 95);
+            lblWaterRate.Margin = new Padding(4, 0, 4, 0);
+            lblWaterRate.Name = "lblWaterRate";
+            lblWaterRate.Size = new Size(109, 19);
+            lblWaterRate.TabIndex = 2;
+            lblWaterRate.Text = "Rate: 0 VND/m³";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label7.Location = new System.Drawing.Point(240, 35);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 15);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Total";
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F);
+            label7.ForeColor = Color.FromArgb(80, 80, 80);
+            label7.Location = new Point(309, 54);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(42, 20);
+            label7.TabIndex = 3;
+            label7.Text = "Total";
             // 
             // txtWaterTotal
             // 
-            this.txtWaterTotal.Enabled = false;
-            this.txtWaterTotal.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.txtWaterTotal.Location = new System.Drawing.Point(280, 32);
-            this.txtWaterTotal.Name = "txtWaterTotal";
-            this.txtWaterTotal.Size = new System.Drawing.Size(110, 25);
-            this.txtWaterTotal.TabIndex = 4;
-            this.txtWaterTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtWaterTotal.Enabled = false;
+            txtWaterTotal.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            txtWaterTotal.Location = new Point(360, 49);
+            txtWaterTotal.Margin = new Padding(4, 5, 4, 5);
+            txtWaterTotal.Name = "txtWaterTotal";
+            txtWaterTotal.Size = new Size(140, 30);
+            txtWaterTotal.TabIndex = 4;
+            txtWaterTotal.TextAlign = HorizontalAlignment.Right;
             // 
             // pnlSummary
             // 
-            this.pnlSummary.BackColor = System.Drawing.Color.White;
-            this.pnlSummary.Controls.Add(this.label9);
-            this.pnlSummary.Controls.Add(this.txtAdjust);
-            this.pnlSummary.Controls.Add(this.labelTotal);
-            this.pnlSummary.Controls.Add(this.lblTotalAmount);
-            this.pnlSummary.Location = new System.Drawing.Point(30, 415);
-            this.pnlSummary.Name = "pnlSummary";
-            this.pnlSummary.Padding = new System.Windows.Forms.Padding(15);
-            this.pnlSummary.Size = new System.Drawing.Size(410, 80);
-            this.pnlSummary.TabIndex = 7;
+            pnlSummary.BackColor = Color.White;
+            pnlSummary.Controls.Add(label9);
+            pnlSummary.Controls.Add(txtAdjust);
+            pnlSummary.Controls.Add(labelTotal);
+            pnlSummary.Controls.Add(lblTotalAmount);
+            pnlSummary.Location = new Point(39, 636);
+            pnlSummary.Margin = new Padding(4, 5, 4, 5);
+            pnlSummary.Name = "pnlSummary";
+            pnlSummary.Padding = new Padding(19, 23, 19, 23);
+            pnlSummary.Size = new Size(527, 123);
+            pnlSummary.TabIndex = 7;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label9.Location = new System.Drawing.Point(15, 20);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 15);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Adjustments";
+            label9.AutoSize = true;
+            label9.Font = new Font("Georgia", 9F);
+            label9.ForeColor = Color.FromArgb(80, 80, 80);
+            label9.Location = new Point(19, 31);
+            label9.Margin = new Padding(4, 0, 4, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(91, 18);
+            label9.TabIndex = 0;
+            label9.Text = "Adjustments";
             // 
             // txtAdjust
             // 
-            this.txtAdjust.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtAdjust.Location = new System.Drawing.Point(105, 17);
-            this.txtAdjust.Name = "txtAdjust";
-            this.txtAdjust.Size = new System.Drawing.Size(100, 25);
-            this.txtAdjust.TabIndex = 1;
-            this.txtAdjust.Text = "0";
-            this.txtAdjust.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtAdjust.TextChanged += new System.EventHandler(this.CalculateTotal);
+            txtAdjust.Font = new Font("Segoe UI", 10F);
+            txtAdjust.Location = new Point(135, 26);
+            txtAdjust.Margin = new Padding(4, 5, 4, 5);
+            txtAdjust.Name = "txtAdjust";
+            txtAdjust.PlaceholderText = "0";
+            txtAdjust.Size = new Size(127, 30);
+            txtAdjust.TabIndex = 1;
+            txtAdjust.TextAlign = HorizontalAlignment.Right;
+            txtAdjust.TextChanged += CalculateTotal;
             // 
             // labelTotal
             // 
-            this.labelTotal.AutoSize = true;
-            this.labelTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.labelTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.labelTotal.Location = new System.Drawing.Point(15, 50);
-            this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(60, 21);
-            this.labelTotal.TabIndex = 2;
-            this.labelTotal.Text = "TOTAL:";
+            labelTotal.AutoSize = true;
+            labelTotal.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            labelTotal.ForeColor = Color.FromArgb(40, 40, 40);
+            labelTotal.Location = new Point(19, 77);
+            labelTotal.Margin = new Padding(4, 0, 4, 0);
+            labelTotal.Name = "labelTotal";
+            labelTotal.Size = new Size(77, 28);
+            labelTotal.TabIndex = 2;
+            labelTotal.Text = "TOTAL:";
             // 
             // lblTotalAmount
             // 
-            this.lblTotalAmount.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTotalAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.lblTotalAmount.Location = new System.Drawing.Point(105, 45);
-            this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(285, 30);
-            this.lblTotalAmount.TabIndex = 3;
-            this.lblTotalAmount.Text = "0 VND";
-            this.lblTotalAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblTotalAmount.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            lblTotalAmount.ForeColor = Color.FromArgb(0, 123, 255);
+            lblTotalAmount.Location = new Point(135, 69);
+            lblTotalAmount.Margin = new Padding(4, 0, 4, 0);
+            lblTotalAmount.Name = "lblTotalAmount";
+            lblTotalAmount.Size = new Size(366, 46);
+            lblTotalAmount.TabIndex = 3;
+            lblTotalAmount.Text = "0 VND";
+            lblTotalAmount.TextAlign = ContentAlignment.MiddleRight;
             // 
             // pnlFooter
             // 
-            this.pnlFooter.BackColor = System.Drawing.Color.White;
-            this.pnlFooter.Controls.Add(this.btnCancel);
-            this.pnlFooter.Controls.Add(this.btnSave);
-            this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 550);
-            this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Padding = new System.Windows.Forms.Padding(30, 15, 30, 15);
-            this.pnlFooter.Size = new System.Drawing.Size(500, 70);
-            this.pnlFooter.TabIndex = 2;
+            pnlFooter.BackColor = Color.White;
+            pnlFooter.Controls.Add(btnCancel);
+            pnlFooter.Controls.Add(btnSave);
+            pnlFooter.Dock = DockStyle.Bottom;
+            pnlFooter.Location = new Point(0, 844);
+            pnlFooter.Margin = new Padding(4, 5, 4, 5);
+            pnlFooter.Name = "pnlFooter";
+            pnlFooter.Padding = new Padding(39, 23, 39, 23);
+            pnlFooter.Size = new Size(643, 107);
+            pnlFooter.TabIndex = 2;
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(230)))));
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnCancel.Location = new System.Drawing.Point(30, 15);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 40);
-            this.btnCancel.TabIndex = 0;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.BackColor = Color.FromArgb(248, 249, 250);
+            btnCancel.FlatAppearance.BorderColor = Color.FromArgb(222, 226, 230);
+            btnCancel.FlatStyle = FlatStyle.Flat;
+            btnCancel.Font = new Font("Segoe UI", 10F);
+            btnCancel.ForeColor = Color.FromArgb(80, 80, 80);
+            btnCancel.Location = new Point(39, 23);
+            btnCancel.Margin = new Padding(4, 5, 4, 5);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(129, 61);
+            btnCancel.TabIndex = 0;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(350, 15);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(120, 40);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "SAVE BILL";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSave.BackColor = Color.FromArgb(0, 123, 255);
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(450, 23);
+            btnSave.Margin = new Padding(4, 5, 4, 5);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(154, 61);
+            btnSave.TabIndex = 1;
+            btnSave.Text = "SAVE BILL";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
             // MonthlyBill_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(500, 620);
-            this.Controls.Add(this.pnlMain);
-            this.Controls.Add(this.pnlFooter);
-            this.Controls.Add(this.pnlHeader);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "MonthlyBill_Form";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Monthly Bill";
-            this.pnlHeader.ResumeLayout(false);
-            this.pnlMain.ResumeLayout(false);
-            this.pnlMain.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.pnlSummary.ResumeLayout(false);
-            this.pnlSummary.PerformLayout();
-            this.pnlFooter.ResumeLayout(false);
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(643, 951);
+            Controls.Add(pnlMain);
+            Controls.Add(pnlFooter);
+            Controls.Add(pnlHeader);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "MonthlyBill_Form";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Monthly Bill";
+            pnlHeader.ResumeLayout(false);
+            pnlMain.ResumeLayout(false);
+            pnlMain.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            pnlSummary.ResumeLayout(false);
+            pnlSummary.PerformLayout();
+            pnlFooter.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         private System.Windows.Forms.Panel pnlHeader;
