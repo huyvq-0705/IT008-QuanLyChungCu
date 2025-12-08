@@ -31,7 +31,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard_Form));
             panelSidebar = new Panel();
             panelButtons = new Panel();
             btnTicket = new Guna.UI2.WinForms.Guna2Button();
@@ -76,7 +75,7 @@
             panelButtons.Location = new Point(0, 144);
             panelButtons.Name = "panelButtons";
             panelButtons.Padding = new Padding(15, 20, 15, 20);
-            panelButtons.Size = new Size(195, 594);
+            panelButtons.Size = new Size(198, 594);
             panelButtons.TabIndex = 8;
             // 
             // btnTicket
@@ -96,7 +95,7 @@
             btnTicket.Margin = new Padding(0, 0, 0, 10);
             btnTicket.Name = "btnTicket";
             btnTicket.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnTicket.Size = new Size(170, 80);
+            btnTicket.Size = new Size(168, 80);
             btnTicket.TabIndex = 0;
             btnTicket.Text = "Ticket";
             btnTicket.TextAlign = HorizontalAlignment.Left;
@@ -119,7 +118,7 @@
             btnMonthlyBill.Margin = new Padding(0, 0, 0, 10);
             btnMonthlyBill.Name = "btnMonthlyBill";
             btnMonthlyBill.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnMonthlyBill.Size = new Size(170, 80);
+            btnMonthlyBill.Size = new Size(168, 80);
             btnMonthlyBill.TabIndex = 1;
             btnMonthlyBill.Text = "Monthly Bill";
             btnMonthlyBill.TextAlign = HorizontalAlignment.Left;
@@ -142,7 +141,7 @@
             btnMeterReading.Margin = new Padding(0, 0, 0, 10);
             btnMeterReading.Name = "btnMeterReading";
             btnMeterReading.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnMeterReading.Size = new Size(170, 80);
+            btnMeterReading.Size = new Size(168, 80);
             btnMeterReading.TabIndex = 2;
             btnMeterReading.Text = "Meter Reading";
             btnMeterReading.TextAlign = HorizontalAlignment.Left;
@@ -165,7 +164,7 @@
             btnHousehold.Margin = new Padding(0, 0, 0, 10);
             btnHousehold.Name = "btnHousehold";
             btnHousehold.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnHousehold.Size = new Size(170, 80);
+            btnHousehold.Size = new Size(168, 80);
             btnHousehold.TabIndex = 3;
             btnHousehold.Text = "Household";
             btnHousehold.TextAlign = HorizontalAlignment.Left;
@@ -192,7 +191,7 @@
             btnUnit.Margin = new Padding(0, 0, 0, 10);
             btnUnit.Name = "btnUnit";
             btnUnit.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnUnit.Size = new Size(170, 80);
+            btnUnit.Size = new Size(168, 80);
             btnUnit.TabIndex = 1;
             btnUnit.Text = "Unit";
             btnUnit.TextAlign = HorizontalAlignment.Left;
@@ -219,7 +218,7 @@
             btnStaff.Margin = new Padding(0);
             btnStaff.Name = "btnStaff";
             btnStaff.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnStaff.Size = new Size(170, 80);
+            btnStaff.Size = new Size(168, 80);
             btnStaff.TabIndex = 0;
             btnStaff.Text = "Staff";
             btnStaff.TextAlign = HorizontalAlignment.Left;
@@ -240,7 +239,7 @@
             btnLogout.Location = new Point(0, 738);
             btnLogout.Name = "btnLogout";
             btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnLogout.Size = new Size(193, 60);
+            btnLogout.Size = new Size(198, 60);
             btnLogout.TabIndex = 6;
             btnLogout.Text = "LOGOUT";
             btnLogout.Click += btnLogout_Click;
@@ -252,18 +251,19 @@
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
             panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(193, 144);
+            panelLogo.Size = new Size(198, 144);
             panelLogo.TabIndex = 7;
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.BackColor = Color.FromArgb(234, 246, 255);
+            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
             pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.ErrorImage = null;
+            pictureBox1.Image = Properties.Resources.Logo1;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(193, 144);
+            pictureBox1.Size = new Size(198, 144);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -271,10 +271,10 @@
             // panelContent
             // 
             panelContent.Dock = DockStyle.Fill;
-            panelContent.Location = new Point(195, 0);
+            panelContent.Location = new Point(200, 0);
             panelContent.Name = "panelContent";
             panelContent.Padding = new Padding(10);
-            panelContent.Size = new Size(1205, 800);
+            panelContent.Size = new Size(1200, 800);
             panelContent.TabIndex = 3;
             // 
             // Dashboard_Form
