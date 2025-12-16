@@ -506,7 +506,6 @@ namespace IT008_Quản_Lý_Chung_Cư
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
 
-        private System.Windows.Forms.ComboBox cmbMonthFilter;
 
     }
 }

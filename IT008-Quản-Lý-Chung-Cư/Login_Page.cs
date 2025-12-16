@@ -13,6 +13,7 @@ namespace IT008_Quản_Lý_Chung_Cư
         public Login_Page()
         {
             InitializeComponent();
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             txt_Password.UseSystemPasswordChar = true;
             this.Resize += Login_Page_Resize;
             UpdateFormAppearance();
@@ -77,7 +78,7 @@ namespace IT008_Quản_Lý_Chung_Cư
                         return;
                     }
                 }
-                ShowError("Username or Password is incorrect!");  
+                ShowError("Username or Password is incorrect!");
             }
             catch (Exception ex)
             {
