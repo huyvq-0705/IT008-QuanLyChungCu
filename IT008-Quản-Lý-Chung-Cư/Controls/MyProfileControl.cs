@@ -104,11 +104,28 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
                 }
 
                 MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtPassword.Clear(); // Clear password field after save for security
+                txtPassword.Clear();
+                btn_Back_Click(sender, e);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error updating profile: " + ex.Message);
+            }
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            if (this.Parent is Control parentContainer)
+            {
+                parentContainer.Controls.Clear();
+
+                ViewProfile_Control viewControl = new ViewProfile_Control(_staffId);
+                viewControl.Dock = DockStyle.Fill;
+                parentContainer.Controls.Add(viewControl);
+            }
+            else
+            {
+                MessageBox.Show("Could not find the parent container to switch screens.", "Switching Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

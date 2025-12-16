@@ -12,115 +12,123 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
 
         private void InitializeComponent()
         {
-            this.pnlCard = new System.Windows.Forms.Panel();
-            this.picUserIcon = new System.Windows.Forms.PictureBox();
-            this.picHouseholdIcon = new System.Windows.Forms.PictureBox();
-            this.pnlLeftStrip = new System.Windows.Forms.Panel();
-            this.lblUnitCode = new System.Windows.Forms.Label();
-            this.lblOwner = new System.Windows.Forms.Label();
-            this.btnView = new System.Windows.Forms.Button();
-            this.pnlCard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picUserIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picHouseholdIcon)).BeginInit();
-            this.SuspendLayout();
+            pnlCard = new Panel();
+            picUserIcon = new PictureBox();
+            picHouseholdIcon = new PictureBox();
+            pnlLeftStrip = new Panel();
+            lblUnitCode = new Label();
+            lblOwner = new Label();
+            btnView = new Button();
+            pnlCard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picUserIcon).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picHouseholdIcon).BeginInit();
+            SuspendLayout();
             // 
             // pnlCard
             // 
-            this.pnlCard.BackColor = System.Drawing.Color.White;
-            this.pnlCard.Controls.Add(this.picUserIcon);
-            this.pnlCard.Controls.Add(this.picHouseholdIcon);
-            this.pnlCard.Controls.Add(this.pnlLeftStrip);
-            this.pnlCard.Controls.Add(this.lblUnitCode);
-            this.pnlCard.Controls.Add(this.lblOwner);
-            this.pnlCard.Controls.Add(this.btnView);
-            this.pnlCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCard.Location = new System.Drawing.Point(0, 0);
-            this.pnlCard.Name = "pnlCard";
-            this.pnlCard.Size = new System.Drawing.Size(750, 85);
-            this.pnlCard.TabIndex = 0;
+            pnlCard.BackColor = Color.White;
+            pnlCard.Controls.Add(picUserIcon);
+            pnlCard.Controls.Add(picHouseholdIcon);
+            pnlCard.Controls.Add(pnlLeftStrip);
+            pnlCard.Controls.Add(lblUnitCode);
+            pnlCard.Controls.Add(lblOwner);
+            pnlCard.Controls.Add(btnView);
+            pnlCard.Dock = DockStyle.Fill;
+            pnlCard.Location = new Point(0, 0);
+            pnlCard.Margin = new Padding(4, 5, 4, 5);
+            pnlCard.Name = "pnlCard";
+            pnlCard.Size = new Size(964, 131);
+            pnlCard.TabIndex = 0;
             // 
             // picUserIcon
             // 
-            this.picUserIcon.Image = global::IT008_Quản_Lý_Chung_Cư.Properties.Resources.staff_icon;
-            this.picUserIcon.Location = new System.Drawing.Point(80, 48);
-            this.picUserIcon.Name = "picUserIcon";
-            this.picUserIcon.Size = new System.Drawing.Size(16, 16);
-            this.picUserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picUserIcon.TabIndex = 3;
-            this.picUserIcon.TabStop = false;
+            picUserIcon.Image = Properties.Resources.staff_icon;
+            picUserIcon.Location = new Point(112, 74);
+            picUserIcon.Margin = new Padding(4, 5, 4, 5);
+            picUserIcon.Name = "picUserIcon";
+            picUserIcon.Size = new Size(21, 25);
+            picUserIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            picUserIcon.TabIndex = 3;
+            picUserIcon.TabStop = false;
             // 
             // picHouseholdIcon
             // 
-            this.picHouseholdIcon.Image = global::IT008_Quản_Lý_Chung_Cư.Properties.Resources.household_icon;
-            this.picHouseholdIcon.Location = new System.Drawing.Point(25, 22);
-            this.picHouseholdIcon.Name = "picHouseholdIcon";
-            this.picHouseholdIcon.Size = new System.Drawing.Size(40, 40);
-            this.picHouseholdIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picHouseholdIcon.TabIndex = 2;
-            this.picHouseholdIcon.TabStop = false;
+            picHouseholdIcon.Image = Properties.Resources.household_icon;
+            picHouseholdIcon.Location = new Point(32, 34);
+            picHouseholdIcon.Margin = new Padding(4, 5, 4, 5);
+            picHouseholdIcon.Name = "picHouseholdIcon";
+            picHouseholdIcon.Size = new Size(51, 61);
+            picHouseholdIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            picHouseholdIcon.TabIndex = 2;
+            picHouseholdIcon.TabStop = false;
             // 
             // pnlLeftStrip
             // 
-            this.pnlLeftStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.pnlLeftStrip.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLeftStrip.Location = new System.Drawing.Point(0, 0);
-            this.pnlLeftStrip.Name = "pnlLeftStrip";
-            this.pnlLeftStrip.Size = new System.Drawing.Size(6, 85);
-            this.pnlLeftStrip.TabIndex = 0;
+            pnlLeftStrip.BackColor = Color.FromArgb(52, 152, 219);
+            pnlLeftStrip.Dock = DockStyle.Left;
+            pnlLeftStrip.Location = new Point(0, 0);
+            pnlLeftStrip.Margin = new Padding(4, 5, 4, 5);
+            pnlLeftStrip.Name = "pnlLeftStrip";
+            pnlLeftStrip.Size = new Size(8, 131);
+            pnlLeftStrip.TabIndex = 0;
             // 
             // lblUnitCode
             // 
-            this.lblUnitCode.AutoSize = true;
-            this.lblUnitCode.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.lblUnitCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblUnitCode.Location = new System.Drawing.Point(80, 18);
-            this.lblUnitCode.Name = "lblUnitCode";
-            this.lblUnitCode.Size = new System.Drawing.Size(149, 25);
-            this.lblUnitCode.TabIndex = 1;
-            this.lblUnitCode.Text = "Unit Code: A101";
+            lblUnitCode.AutoSize = true;
+            lblUnitCode.Font = new Font("Arial", 13F, FontStyle.Bold);
+            lblUnitCode.ForeColor = Color.FromArgb(44, 62, 80);
+            lblUnitCode.Location = new Point(103, 28);
+            lblUnitCode.Margin = new Padding(4, 0, 4, 0);
+            lblUnitCode.Name = "lblUnitCode";
+            lblUnitCode.Size = new Size(182, 30);
+            lblUnitCode.TabIndex = 1;
+            lblUnitCode.Text = "Unit Code: A101";
             // 
             // lblOwner
             // 
-            this.lblOwner.AutoSize = true;
-            this.lblOwner.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblOwner.ForeColor = System.Drawing.Color.Gray;
-            this.lblOwner.Location = new System.Drawing.Point(100, 46);
-            this.lblOwner.Name = "lblOwner";
-            this.lblOwner.Size = new System.Drawing.Size(133, 19);
-            this.lblOwner.TabIndex = 4;
-            this.lblOwner.Text = "Owner: Truong Sinh";
+            lblOwner.AutoSize = true;
+            lblOwner.Font = new Font("Georgia", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblOwner.ForeColor = Color.Gray;
+            lblOwner.Location = new Point(142, 78);
+            lblOwner.Margin = new Padding(4, 0, 4, 0);
+            lblOwner.Name = "lblOwner";
+            lblOwner.Size = new Size(164, 20);
+            lblOwner.TabIndex = 4;
+            lblOwner.Text = "Owner: Truong Sinh";
             // 
             // btnView
             // 
-            this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnView.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnView.FlatAppearance.BorderSize = 0;
-            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(600, 25);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(120, 35);
-            this.btnView.TabIndex = 2;
-            this.btnView.Text = "VIEW MORE";
-            this.btnView.UseVisualStyleBackColor = false;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            btnView.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnView.BackColor = Color.FromArgb(52, 152, 219);
+            btnView.Cursor = Cursors.Hand;
+            btnView.FlatAppearance.BorderSize = 0;
+            btnView.FlatStyle = FlatStyle.Flat;
+            btnView.Font = new Font("Arial", 9.5F, FontStyle.Bold);
+            btnView.ForeColor = Color.White;
+            btnView.Location = new Point(771, 38);
+            btnView.Margin = new Padding(4, 5, 4, 5);
+            btnView.Name = "btnView";
+            btnView.Size = new Size(154, 54);
+            btnView.TabIndex = 2;
+            btnView.Text = "VIEW MORE";
+            btnView.UseVisualStyleBackColor = false;
+            btnView.Click += btnView_Click;
             // 
             // HouseholdItemControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.pnlCard);
-            this.Name = "HouseholdItemControl";
-            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.Size = new System.Drawing.Size(750, 95);
-            this.pnlCard.ResumeLayout(false);
-            this.pnlCard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picUserIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picHouseholdIcon)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Transparent;
+            Controls.Add(pnlCard);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "HouseholdItemControl";
+            Padding = new Padding(0, 0, 0, 15);
+            Size = new Size(964, 146);
+            pnlCard.ResumeLayout(false);
+            pnlCard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picUserIcon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picHouseholdIcon).EndInit();
+            ResumeLayout(false);
 
         }
 

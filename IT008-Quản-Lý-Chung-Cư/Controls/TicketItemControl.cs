@@ -23,12 +23,12 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
 
             // Color coding based on status
             Color stripColor = Color.Gray;
-            if (status == "OPEN") stripColor = Color.OrangeRed;
+            if (status == "OPEN") stripColor = Color.MediumSeaGreen;
             else if (status == "IN_PROGRESS") stripColor = Color.DodgerBlue;
-            else if (status == "CLOSED") stripColor = Color.SeaGreen;
+            else if (status == "CLOSED") stripColor = Color.OrangeRed;
 
             pnlStrip.BackColor = stripColor;
-            lblStatus.ForeColor = stripColor;
+            lblStatus.BackColor = stripColor;
 
             // Click events
             this.Click += Item_Click;
