@@ -29,32 +29,32 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             pnlHeader.Controls.Add(labelTitle);
             pnlHeader.Dock = DockStyle.Top;
             pnlHeader.Location = new Point(0, 0);
-            pnlHeader.Margin = new Padding(4, 5, 4, 5);
+            pnlHeader.Margin = new Padding(4, 4, 4, 4);
             pnlHeader.Name = "pnlHeader";
-            pnlHeader.Size = new Size(1157, 107);
+            pnlHeader.Size = new Size(1028, 93);
             pnlHeader.TabIndex = 2;
             // 
             // cmbFilter
             // 
             cmbFilter.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cmbFilter.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbFilter.Font = new Font("Segoe UI", 11F);
+            cmbFilter.Font = new Font("Arial", 11F);
             cmbFilter.FormattingEnabled = true;
             cmbFilter.Items.AddRange(new object[] { "ALL STATUS", "VACANT", "OCCUPIED", "MAINTENANCE" });
-            cmbFilter.Location = new Point(913, 34);
-            cmbFilter.Margin = new Padding(4, 5, 4, 5);
+            cmbFilter.Location = new Point(812, 30);
+            cmbFilter.Margin = new Padding(4, 4, 4, 4);
             cmbFilter.Name = "cmbFilter";
-            cmbFilter.Size = new Size(96, 33);
+            cmbFilter.Size = new Size(194, 33);
             cmbFilter.TabIndex = 2;
             // 
             // picFilter
             // 
             picFilter.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             picFilter.Image = Properties.Resources.filter_icon;
-            picFilter.Location = new Point(868, 34);
-            picFilter.Margin = new Padding(4, 5, 4, 5);
+            picFilter.Location = new Point(772, 30);
+            picFilter.Margin = new Padding(4, 4, 4, 4);
             picFilter.Name = "picFilter";
-            picFilter.Size = new Size(36, 43);
+            picFilter.Size = new Size(32, 37);
             picFilter.SizeMode = PictureBoxSizeMode.Zoom;
             picFilter.TabIndex = 1;
             picFilter.TabStop = false;
@@ -64,7 +64,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             labelTitle.AutoSize = true;
             labelTitle.Font = new Font("Georgia", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelTitle.ForeColor = Color.FromArgb(44, 62, 80);
-            labelTitle.Location = new Point(26, 31);
+            labelTitle.Location = new Point(23, 27);
             labelTitle.Margin = new Padding(4, 0, 4, 0);
             labelTitle.Name = "labelTitle";
             labelTitle.Size = new Size(191, 35);
@@ -75,23 +75,23 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // 
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.Location = new Point(0, 107);
-            flowLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
+            flowLayoutPanel1.Location = new Point(0, 93);
+            flowLayoutPanel1.Margin = new Padding(4, 4, 4, 4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Padding = new Padding(26, 0, 0, 0);
-            flowLayoutPanel1.Size = new Size(1157, 813);
+            flowLayoutPanel1.Padding = new Padding(23, 0, 0, 0);
+            flowLayoutPanel1.Size = new Size(1028, 707);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // UnitListControl
             // 
-            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             Controls.Add(flowLayoutPanel1);
             Controls.Add(pnlHeader);
-            Margin = new Padding(4, 5, 4, 5);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "UnitListControl";
-            Size = new Size(1157, 920);
+            Size = new Size(1028, 800);
             pnlHeader.ResumeLayout(false);
             pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picFilter).EndInit();

@@ -52,7 +52,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             btnViewMore.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
             btnViewMore.FlatAppearance.BorderSize = 4;
             btnViewMore.FlatStyle = FlatStyle.Flat;
-            btnViewMore.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            btnViewMore.Font = new Font("Arial Semibold", 9F, FontStyle.Bold);
             btnViewMore.ForeColor = Color.Black;
             btnViewMore.Location = new Point(33, 48);
             btnViewMore.Margin = new Padding(4, 5, 4, 5);
@@ -91,7 +91,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // lblDetails
             // 
             lblDetails.AutoEllipsis = true;
-            lblDetails.Font = new Font("Segoe UI", 10F);
+            lblDetails.Font = new Font("Arial", 10F);
             lblDetails.ForeColor = Color.Gray;
             lblDetails.Location = new Point(90, 69);
             lblDetails.Margin = new Padding(4, 0, 4, 0);
@@ -103,7 +103,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // lblStatus
             // 
             lblStatus.AutoSize = true;
-            lblStatus.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblStatus.Font = new Font("Arial", 9F, FontStyle.Bold);
             lblStatus.ForeColor = Color.FromArgb(64, 64, 64);
             lblStatus.Location = new Point(90, 112);
             lblStatus.Margin = new Padding(4, 0, 4, 0);
@@ -115,7 +115,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // lblUnitCode
             // 
             lblUnitCode.AutoEllipsis = true;
-            lblUnitCode.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            lblUnitCode.Font = new Font("Arial", 15.75F, FontStyle.Bold);
             lblUnitCode.ForeColor = Color.FromArgb(50, 50, 50);
             lblUnitCode.Location = new Point(90, 15);
             lblUnitCode.Margin = new Padding(4, 0, 4, 0);

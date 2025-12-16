@@ -109,7 +109,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // cbUnit
             // 
             cbUnit.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbUnit.Font = new Font("Segoe UI", 10F);
+            cbUnit.Font = new Font("Arial", 10F);
             cbUnit.FormattingEnabled = true;
             cbUnit.Location = new Point(39, 61);
             cbUnit.Margin = new Padding(4, 5, 4, 5);
@@ -133,7 +133,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // dtpMonth
             // 
             dtpMonth.CustomFormat = "MM/yyyy";
-            dtpMonth.Font = new Font("Segoe UI", 10F);
+            dtpMonth.Font = new Font("Arial", 10F);
             dtpMonth.Format = DateTimePickerFormat.Custom;
             dtpMonth.Location = new Point(347, 61);
             dtpMonth.Margin = new Padding(4, 5, 4, 5);
@@ -171,7 +171,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // txtRent
             // 
             txtRent.Enabled = false;
-            txtRent.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtRent.Font = new Font("Arial", 11F, FontStyle.Bold);
             txtRent.Location = new Point(154, 49);
             txtRent.Margin = new Padding(4, 5, 4, 5);
             txtRent.Name = "txtRent";
@@ -212,7 +212,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // txtElecUsage
             // 
-            txtElecUsage.Font = new Font("Segoe UI", 10F);
+            txtElecUsage.Font = new Font("Arial", 10F);
             txtElecUsage.Location = new Point(154, 49);
             txtElecUsage.Margin = new Padding(4, 5, 4, 5);
             txtElecUsage.Name = "txtElecUsage";
@@ -225,7 +225,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblElecRate
             // 
             lblElecRate.AutoSize = true;
-            lblElecRate.Font = new Font("Segoe UI", 8F, FontStyle.Italic);
+            lblElecRate.Font = new Font("Arial", 8F, FontStyle.Italic);
             lblElecRate.ForeColor = Color.FromArgb(108, 117, 125);
             lblElecRate.Location = new Point(154, 95);
             lblElecRate.Margin = new Padding(4, 0, 4, 0);
@@ -237,7 +237,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9F);
+            label5.Font = new Font("Arial", 9F);
             label5.ForeColor = Color.FromArgb(80, 80, 80);
             label5.Location = new Point(309, 54);
             label5.Margin = new Padding(4, 0, 4, 0);
@@ -249,7 +249,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // txtElecTotal
             // 
             txtElecTotal.Enabled = false;
-            txtElecTotal.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            txtElecTotal.Font = new Font("Arial", 10F, FontStyle.Bold);
             txtElecTotal.Location = new Point(360, 49);
             txtElecTotal.Margin = new Padding(4, 5, 4, 5);
             txtElecTotal.Name = "txtElecTotal";
@@ -289,7 +289,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // txtWaterUsage
             // 
-            txtWaterUsage.Font = new Font("Segoe UI", 10F);
+            txtWaterUsage.Font = new Font("Arial", 10F);
             txtWaterUsage.Location = new Point(154, 49);
             txtWaterUsage.Margin = new Padding(4, 5, 4, 5);
             txtWaterUsage.Name = "txtWaterUsage";
@@ -302,7 +302,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblWaterRate
             // 
             lblWaterRate.AutoSize = true;
-            lblWaterRate.Font = new Font("Segoe UI", 8F, FontStyle.Italic);
+            lblWaterRate.Font = new Font("Arial", 8F, FontStyle.Italic);
             lblWaterRate.ForeColor = Color.FromArgb(108, 117, 125);
             lblWaterRate.Location = new Point(154, 95);
             lblWaterRate.Margin = new Padding(4, 0, 4, 0);
@@ -314,7 +314,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 9F);
+            label7.Font = new Font("Arial", 9F);
             label7.ForeColor = Color.FromArgb(80, 80, 80);
             label7.Location = new Point(309, 54);
             label7.Margin = new Padding(4, 0, 4, 0);
@@ -326,7 +326,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // txtWaterTotal
             // 
             txtWaterTotal.Enabled = false;
-            txtWaterTotal.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            txtWaterTotal.Font = new Font("Arial", 10F, FontStyle.Bold);
             txtWaterTotal.Location = new Point(360, 49);
             txtWaterTotal.Margin = new Padding(4, 5, 4, 5);
             txtWaterTotal.Name = "txtWaterTotal";
@@ -362,7 +362,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // txtAdjust
             // 
-            txtAdjust.Font = new Font("Segoe UI", 10F);
+            txtAdjust.Font = new Font("Arial", 10F);
             txtAdjust.Location = new Point(135, 26);
             txtAdjust.Margin = new Padding(4, 5, 4, 5);
             txtAdjust.Name = "txtAdjust";
@@ -375,7 +375,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // labelTotal
             // 
             labelTotal.AutoSize = true;
-            labelTotal.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            labelTotal.Font = new Font("Arial", 12F, FontStyle.Bold);
             labelTotal.ForeColor = Color.FromArgb(40, 40, 40);
             labelTotal.Location = new Point(19, 77);
             labelTotal.Margin = new Padding(4, 0, 4, 0);
@@ -386,7 +386,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // lblTotalAmount
             // 
-            lblTotalAmount.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            lblTotalAmount.Font = new Font("Arial", 16F, FontStyle.Bold);
             lblTotalAmount.ForeColor = Color.FromArgb(0, 123, 255);
             lblTotalAmount.Location = new Point(135, 69);
             lblTotalAmount.Margin = new Padding(4, 0, 4, 0);
@@ -414,7 +414,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             btnCancel.BackColor = Color.FromArgb(248, 249, 250);
             btnCancel.FlatAppearance.BorderColor = Color.FromArgb(222, 226, 230);
             btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.Font = new Font("Segoe UI", 10F);
+            btnCancel.Font = new Font("Arial", 10F);
             btnCancel.ForeColor = Color.FromArgb(80, 80, 80);
             btnCancel.Location = new Point(39, 23);
             btnCancel.Margin = new Padding(4, 5, 4, 5);
@@ -431,7 +431,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             btnSave.BackColor = Color.FromArgb(0, 123, 255);
             btnSave.FlatAppearance.BorderSize = 0;
             btnSave.FlatStyle = FlatStyle.Flat;
-            btnSave.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnSave.Font = new Font("Arial", 10F, FontStyle.Bold);
             btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(450, 23);
             btnSave.Margin = new Padding(4, 5, 4, 5);
@@ -471,6 +471,8 @@ namespace IT008_Quản_Lý_Chung_Cư
             pnlSummary.PerformLayout();
             pnlFooter.ResumeLayout(false);
             ResumeLayout(false);
+
+
         }
 
         private System.Windows.Forms.Panel pnlHeader;
@@ -503,5 +505,8 @@ namespace IT008_Quản_Lý_Chung_Cư
         private System.Windows.Forms.Panel pnlFooter;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
+
+        private System.Windows.Forms.ComboBox cmbMonthFilter;
+
     }
 }

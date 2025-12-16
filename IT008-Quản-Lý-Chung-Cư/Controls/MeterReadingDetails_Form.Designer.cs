@@ -24,8 +24,8 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             lblReturn.BackColor = Color.Transparent;
             lblReturn.Cursor = Cursors.Hand;
-            lblReturn.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblReturn.Location = new Point(26, 31);
+            lblReturn.Font = new Font("Arial", 10F, FontStyle.Bold);
+            lblReturn.Location = new Point(23, 27);
             lblReturn.Name = "lblReturn";
             lblReturn.Size = new Size(89, 25);
             lblReturn.TabIndex = 0;
@@ -35,9 +35,9 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblUnitCode
             // 
             lblUnitCode.AutoSize = true;
-            lblUnitCode.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblUnitCode.Font = new Font("Arial", 20F, FontStyle.Bold);
             lblUnitCode.ForeColor = Color.FromArgb(41, 50, 65);
-            lblUnitCode.Location = new Point(26, 85);
+            lblUnitCode.Location = new Point(23, 74);
             lblUnitCode.Name = "lblUnitCode";
             lblUnitCode.Size = new Size(310, 46);
             lblUnitCode.TabIndex = 1;
@@ -48,11 +48,11 @@ namespace IT008_Quản_Lý_Chung_Cư
             pnlHistory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnlHistory.AutoScroll = true;
             pnlHistory.FlowDirection = FlowDirection.TopDown;
-            pnlHistory.Location = new Point(32, 184);
-            pnlHistory.Margin = new Padding(4, 5, 4, 5);
+            pnlHistory.Location = new Point(28, 160);
+            pnlHistory.Margin = new Padding(4);
             pnlHistory.Name = "pnlHistory";
-            pnlHistory.Padding = new Padding(5);
-            pnlHistory.Size = new Size(964, 460);
+            pnlHistory.Padding = new Padding(4);
+            pnlHistory.Size = new Size(954, 400);
             pnlHistory.TabIndex = 2;
             pnlHistory.WrapContents = false;
             // 
@@ -66,29 +66,29 @@ namespace IT008_Quản_Lý_Chung_Cư
             btnCreate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnCreate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnCreate.FillColor = Color.ForestGreen;
-            btnCreate.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnCreate.Font = new Font("Arial", 12F, FontStyle.Bold);
             btnCreate.ForeColor = Color.White;
-            btnCreate.Location = new Point(321, 690);
-            btnCreate.Margin = new Padding(4, 5, 4, 5);
+            btnCreate.Location = new Point(334, 600);
+            btnCreate.Margin = new Padding(4);
             btnCreate.Name = "btnCreate";
             btnCreate.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnCreate.Size = new Size(386, 77);
+            btnCreate.Size = new Size(343, 67);
             btnCreate.TabIndex = 3;
             btnCreate.Text = "CREATE NEW +";
             btnCreate.Click += btnCreate_Click;
             // 
             // MeterReadingDetails_Form
             // 
-            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1029, 813);
+            ClientSize = new Size(1012, 707);
             Controls.Add(btnCreate);
             Controls.Add(pnlHistory);
             Controls.Add(lblUnitCode);
             Controls.Add(lblReturn);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(4, 5, 4, 5);
+            Margin = new Padding(4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "MeterReadingDetails_Form";

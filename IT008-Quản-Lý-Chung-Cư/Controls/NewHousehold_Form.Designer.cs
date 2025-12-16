@@ -51,7 +51,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // cbUnits
             // 
             cbUnits.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbUnits.Font = new Font("Segoe UI", 10F);
+            cbUnits.Font = new Font("Arial", 10F);
             cbUnits.FormattingEnabled = true;
             cbUnits.Location = new Point(45, 153);
             cbUnits.Margin = new Padding(4, 5, 4, 5);
@@ -73,7 +73,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // dtpStart
             // 
-            dtpStart.Font = new Font("Segoe UI", 10F);
+            dtpStart.Font = new Font("Arial", 10F);
             dtpStart.Format = DateTimePickerFormat.Short;
             dtpStart.Location = new Point(45, 245);
             dtpStart.Margin = new Padding(4, 5, 4, 5);
@@ -95,7 +95,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // txtNote
             // 
-            txtNote.Font = new Font("Segoe UI", 10F);
+            txtNote.Font = new Font("Arial", 10F);
             txtNote.Location = new Point(45, 337);
             txtNote.Margin = new Padding(4, 5, 4, 5);
             txtNote.Multiline = true;
@@ -109,7 +109,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             btnSave.Cursor = Cursors.Hand;
             btnSave.FlatAppearance.BorderSize = 0;
             btnSave.FlatStyle = FlatStyle.Flat;
-            btnSave.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnSave.Font = new Font("Arial", 10F, FontStyle.Bold);
             btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(315, 506);
             btnSave.Margin = new Padding(4, 5, 4, 5);
@@ -126,7 +126,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             btnCancel.Cursor = Cursors.Hand;
             btnCancel.FlatAppearance.BorderColor = Color.FromArgb(222, 226, 230);
             btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.Font = new Font("Segoe UI", 10F);
+            btnCancel.Font = new Font("Arial", 10F);
             btnCancel.ForeColor = Color.FromArgb(80, 80, 80);
             btnCancel.Location = new Point(45, 506);
             btnCancel.Margin = new Padding(4, 5, 4, 5);

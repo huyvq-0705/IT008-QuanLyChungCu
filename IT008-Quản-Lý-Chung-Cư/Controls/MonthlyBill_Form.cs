@@ -79,7 +79,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             lblStatusTitle = new Label();
             lblStatusTitle.Text = "Payment Status:";
             lblStatusTitle.AutoSize = true;
-            lblStatusTitle.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
+            lblStatusTitle.Font = new Font("Arial", 10F, FontStyle.Regular);
             lblStatusTitle.ForeColor = Color.Gray;
             lblStatusTitle.Location = new Point(pnlSummary.Left + 15, sliderY + 5);
             pnlMain.Controls.Add(lblStatusTitle);
@@ -97,7 +97,7 @@ namespace IT008_Quản_Lý_Chung_Cư
 
             lblStatusDisplay = new Label();
             lblStatusDisplay.AutoSize = true;
-            lblStatusDisplay.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblStatusDisplay.Font = new Font("Arial", 10F, FontStyle.Bold);
             lblStatusDisplay.Location = new Point(trackStatus.Right + 5, sliderY + 5);
             pnlMain.Controls.Add(lblStatusDisplay);
 
@@ -207,10 +207,70 @@ namespace IT008_Quản_Lý_Chung_Cư
 
         private void cbUnit_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbUnit.SelectedItem is UnitItem u)
+            if (cbUnit.SelectedItem is UnitItem selectedUnit)
             {
-                txtRent.Text = u.Rent.ToString("N0");
-                CalculateTotal();
+                txtRent.Text = selectedUnit.Rent.ToString("N0");
+                FetchAndFillMeterReadings(selectedUnit.Id, dtpMonth.Value);
+            }
+        }
+
+        private void dtpMonth_ValueChanged(object sender, EventArgs e)
+        {
+            if (cbUnit.SelectedItem is UnitItem selectedUnit)
+            {
+                FetchAndFillMeterReadings(selectedUnit.Id, dtpMonth.Value);
+            }
+        }
+
+        private void FetchAndFillMeterReadings(int unitId, DateTime selectedMonth)
+        {
+            try
+            {
+                using (var conn = Db.Open())
+                {
+                    string sql = @"
+                SELECT tariff_type, consumption
+                FROM meter_reading
+                WHERE unit_id = @unitId AND period_month = @month";
+
+                    using (var cmd = new NpgsqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@unitId", unitId);
+                        cmd.Parameters.AddWithValue("@month", new DateTime(selectedMonth.Year, selectedMonth.Month, 1));
+
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            decimal electricity = 0;
+                            decimal water = 0;
+
+                            while (reader.Read())
+                            {
+                                string tariffType = reader.GetString(0);
+                                decimal consumption = reader.GetDecimal(1);
+
+                                if (tariffType == "ELECTRICITY")
+                                {
+                                    electricity = consumption;
+                                }
+                                else if (tariffType == "WATER")
+                                {
+                                    water = consumption;
+                                }
+                            }
+
+                            // Populate the fields with the fetched values
+                            txtElecUsage.Text = electricity > 0 ? electricity.ToString("0.###") : string.Empty;
+                            txtWaterUsage.Text = water > 0 ? water.ToString("0.###") : string.Empty;
+
+                            // Trigger calculation of total
+                            CalculateTotal();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error fetching meter readings: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

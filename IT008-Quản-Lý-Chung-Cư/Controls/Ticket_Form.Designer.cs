@@ -66,7 +66,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // txtTitle
             // 
-            txtTitle.Font = new Font("Segoe UI", 10F);
+            txtTitle.Font = new Font("Arial", 10F);
             txtTitle.Location = new Point(39, 215);
             txtTitle.Margin = new Padding(4, 5, 4, 5);
             txtTitle.Name = "txtTitle";
@@ -86,7 +86,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // txtDesc
             // 
-            txtDesc.Font = new Font("Segoe UI", 10F);
+            txtDesc.Font = new Font("Arial", 10F);
             txtDesc.Location = new Point(39, 307);
             txtDesc.Margin = new Padding(4, 5, 4, 5);
             txtDesc.Multiline = true;
@@ -120,7 +120,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             btnSave.BackColor = Color.FromArgb(0, 123, 255);
             btnSave.FlatStyle = FlatStyle.Flat;
-            btnSave.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnSave.Font = new Font("Arial", 10F, FontStyle.Bold);
             btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(309, 506);
             btnSave.Margin = new Padding(4, 5, 4, 5);

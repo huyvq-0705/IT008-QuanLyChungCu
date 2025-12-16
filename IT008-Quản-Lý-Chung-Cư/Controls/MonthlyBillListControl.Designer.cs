@@ -43,7 +43,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // 
             cmbFilter.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cmbFilter.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbFilter.Font = new Font("Segoe UI", 11F);
+            cmbFilter.Font = new Font("Arial", 11F);
             cmbFilter.FormattingEnabled = true;
             cmbFilter.Items.AddRange(new object[] { "ALL STATUS", "PAID", "UNPAID" });
             cmbFilter.Location = new Point(655, 53);
@@ -94,7 +94,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             btnCreate.Cursor = Cursors.Hand;
             btnCreate.FlatAppearance.BorderSize = 0;
             btnCreate.FlatStyle = FlatStyle.Flat;
-            btnCreate.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCreate.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCreate.ForeColor = Color.White;
             btnCreate.Location = new Point(900, 31);
             btnCreate.Margin = new Padding(4, 5, 4, 5);

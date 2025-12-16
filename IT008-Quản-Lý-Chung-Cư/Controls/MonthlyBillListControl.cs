@@ -131,7 +131,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // --- TITLE: Unit & Period ---
             Label lblTitle = new Label();
             lblTitle.Text = $"Unit: {code}  |  Period: {period:MM/yyyy}";
-            lblTitle.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            lblTitle.Font = new Font("Arial", 12, FontStyle.Bold);
             lblTitle.ForeColor = Color.FromArgb(44, 62, 80);
             lblTitle.AutoSize = true;
             lblTitle.Location = new Point(80, 18);
@@ -141,7 +141,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // --- SUBTITLE: Amount ---
             Label lblAmount = new Label();
             lblAmount.Text = $"Total Amount: {total:N0} VND";
-            lblAmount.Font = new Font("Segoe UI", 10);
+            lblAmount.Font = new Font("Arial", 10);
             lblAmount.ForeColor = Color.Gray;
             lblAmount.AutoSize = true;
             lblAmount.Location = new Point(80, 46);
@@ -151,7 +151,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // --- STATUS BADGE (RIGHT) ---
             Label lblStatus = new Label();
             lblStatus.Text = status;
-            lblStatus.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            lblStatus.Font = new Font("Arial", 10, FontStyle.Bold);
             lblStatus.AutoSize = true;
 
             // Color Logic
