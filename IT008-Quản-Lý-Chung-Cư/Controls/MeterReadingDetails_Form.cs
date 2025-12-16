@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using Npgsql;
+using Guna.UI2.WinForms;
 
 namespace IT008_Quản_Lý_Chung_Cư
 {
@@ -43,7 +44,6 @@ namespace IT008_Quản_Lý_Chung_Cư
                                 DateTime date = reader.GetDateTime(1);
                                 decimal consumption = reader.GetDecimal(2);
 
-                                // Key must allow retrieving the original Date object later
                                 string key = date.ToString("yyyy-MM-dd");
 
                                 if (!monthlyData.ContainsKey(key))
@@ -67,30 +67,36 @@ namespace IT008_Quản_Lý_Chung_Cư
 
         private Panel CreateHistoryItem(MonthlyReadingDisplay data)
         {
-            Panel p = new Panel();
-            p.Size = new Size(700, 50);
+            Guna2Panel p = new Guna2Panel();
+            p.Size = new Size(950, 60);
             p.Margin = new Padding(0, 0, 0, 10);
-            p.BackColor = Color.WhiteSmoke; // Slight bg to distinguish rows
+            p.FillColor = Color.FromArgb(245, 248, 250);
+            p.BorderRadius = 8;
+            p.ShadowDecoration.Enabled = true;
+            p.ShadowDecoration.Depth = 5;
+            p.ShadowDecoration.BorderRadius = 8;
 
-            Label lbl = new Label();
+            Guna2HtmlLabel lbl = new Guna2HtmlLabel();
             lbl.AutoSize = true;
-            lbl.Font = new Font("Segoe UI", 11F, FontStyle.Regular);
-            lbl.Location = new Point(10, 12);
-            lbl.Text = $"MONTH: {data.Date:MMMM yyyy}  |  ELEC: {data.Elec:N0} KWH  |  WATER: {data.Water:N0} M3";
+            lbl.BackColor = Color.Transparent;
+            lbl.Font = new Font("Arial", 12F, FontStyle.Bold);
+            lbl.ForeColor = Color.FromArgb(44, 62, 80);
+            lbl.Location = new Point(20, 15);
+            lbl.Text = $"MONTH: {data.Date:MM/yyyy} | ELECTRICITY: {data.Elec:N0} KWH | WATER: {data.Water:N0} M³";
             p.Controls.Add(lbl);
 
-            Button btnEdit = new Button();
+            Guna2Button btnEdit = new Guna2Button();
             btnEdit.Text = "EDIT";
-            btnEdit.Size = new Size(80, 30);
-            btnEdit.Location = new Point(600, 10);
-            btnEdit.BackColor = Color.White;
-            btnEdit.FlatStyle = FlatStyle.Flat;
+            btnEdit.Size = new Size(120, 40);
+            btnEdit.Location = new Point(800, 10);
+            btnEdit.FillColor = Color.FromArgb(52, 152, 219);
+            btnEdit.ForeColor = Color.White;
+            btnEdit.BorderRadius = 6;
             btnEdit.Cursor = Cursors.Hand;
 
-            // Pass data to Edit Form
             btnEdit.Click += (s, e) =>
             {
-                NewMeterReading_Form f = new NewMeterReading_Form(_unitId, _unitCode, _staffId, data.Date, data.Elec, data.Water);
+                Form f = new NewMeterReading_Form(_unitId, _unitCode, _staffId, data.Date, data.Elec, data.Water);
                 if (f.ShowDialog() == DialogResult.OK) LoadHistory();
             };
             p.Controls.Add(btnEdit);
@@ -100,7 +106,7 @@ namespace IT008_Quản_Lý_Chung_Cư
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            NewMeterReading_Form form = new NewMeterReading_Form(_unitId, _unitCode, _staffId);
+            Form form = new NewMeterReading_Form(_unitId, _unitCode, _staffId);
             if (form.ShowDialog() == DialogResult.OK) LoadHistory();
         }
 

@@ -29,19 +29,14 @@ namespace IT008_Quản_Lý_Chung_Cư
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Page));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             lbl_IncorrectPass = new Label();
             panel2 = new Panel();
@@ -63,21 +58,21 @@ namespace IT008_Quản_Lý_Chung_Cư
             guna2GradientPanel1.Controls.Add(btn_Login);
             guna2GradientPanel1.Controls.Add(txt_Password);
             guna2GradientPanel1.Controls.Add(txt_Username);
-            guna2GradientPanel1.CustomizableEdges = customizableEdges11;
+            guna2GradientPanel1.CustomizableEdges = customizableEdges7;
             guna2GradientPanel1.Location = new Point(462, 0);
             guna2GradientPanel1.Name = "guna2GradientPanel1";
-            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2GradientPanel1.Size = new Size(538, 600);
             guna2GradientPanel1.TabIndex = 0;
             // 
             // lbl_IncorrectPass
             // 
             lbl_IncorrectPass.AutoSize = true;
-            lbl_IncorrectPass.Font = new Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lbl_IncorrectPass.Font = new Font("Arial", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
             lbl_IncorrectPass.ForeColor = Color.Crimson;
-            lbl_IncorrectPass.Location = new Point(135, 400);
+            lbl_IncorrectPass.Location = new Point(140, 400);
             lbl_IncorrectPass.Name = "lbl_IncorrectPass";
-            lbl_IncorrectPass.Size = new Size(269, 19);
+            lbl_IncorrectPass.Size = new Size(261, 19);
             lbl_IncorrectPass.TabIndex = 8;
             lbl_IncorrectPass.Text = "Username or Password is incorrect!";
             lbl_IncorrectPass.Visible = false;
@@ -101,16 +96,17 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lb_Welcome
             // 
             lb_Welcome.AutoSize = true;
-            lb_Welcome.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
-            lb_Welcome.ForeColor = Color.Black;
+            lb_Welcome.Font = new Font("Georgia", 28.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lb_Welcome.ForeColor = Color.FromArgb(255, 128, 0);
             lb_Welcome.Location = new Point(124, 80);
             lb_Welcome.Name = "lb_Welcome";
-            lb_Welcome.Size = new Size(290, 51);
+            lb_Welcome.Size = new Size(298, 54);
             lb_Welcome.TabIndex = 3;
             lb_Welcome.Text = "WELCOME";
             // 
             // btn_Login
             // 
+            btn_Login.BackColor = Color.Transparent;
             btn_Login.BorderRadius = 20;
             btn_Login.CustomizableEdges = customizableEdges1;
             btn_Login.DisabledState.BorderColor = Color.DarkGray;
@@ -125,7 +121,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             btn_Login.Location = new Point(92, 429);
             btn_Login.Name = "btn_Login";
             btn_Login.ShadowDecoration.BorderRadius = 20;
-            btn_Login.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btn_Login.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btn_Login.ShadowDecoration.Enabled = true;
             btn_Login.ShadowDecoration.Shadow = new Padding(3);
             btn_Login.Size = new Size(351, 78);
@@ -139,14 +135,14 @@ namespace IT008_Quản_Lý_Chung_Cư
             txt_Password.BorderColor = Color.DarkGray;
             txt_Password.BorderRadius = 6;
             txt_Password.BorderThickness = 0;
-            txt_Password.CustomizableEdges = customizableEdges7;
+            txt_Password.CustomizableEdges = customizableEdges3;
             txt_Password.DefaultText = "";
             txt_Password.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txt_Password.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txt_Password.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txt_Password.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txt_Password.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_Password.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold);
+            txt_Password.Font = new Font("Arial", 10.2F, FontStyle.Bold);
             txt_Password.ForeColor = Color.Black;
             txt_Password.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txt_Password.IconLeft = Properties.Resources.Password_icon;
@@ -158,11 +154,11 @@ namespace IT008_Quản_Lý_Chung_Cư
             txt_Password.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
             txt_Password.PlaceholderText = "Password";
             txt_Password.SelectedText = "";
-            txt_Password.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txt_Password.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txt_Password.ShadowDecoration.Shadow = new Padding(2);
             txt_Password.Size = new Size(356, 34);
             txt_Password.TabIndex = 2;
-            txt_Password.UseSystemPasswordChar = true; // Hide password by default
+            txt_Password.UseSystemPasswordChar = true;
             txt_Password.IconRightClick += txt_Password_IconRightClick;
             // 
             // txt_Username
@@ -171,14 +167,14 @@ namespace IT008_Quản_Lý_Chung_Cư
             txt_Username.BorderColor = Color.Transparent;
             txt_Username.BorderRadius = 6;
             txt_Username.BorderThickness = 0;
-            txt_Username.CustomizableEdges = customizableEdges9;
+            txt_Username.CustomizableEdges = customizableEdges5;
             txt_Username.DefaultText = "";
             txt_Username.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txt_Username.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txt_Username.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txt_Username.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txt_Username.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_Username.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold);
+            txt_Username.Font = new Font("Arial", 10.2F, FontStyle.Bold);
             txt_Username.ForeColor = Color.Black;
             txt_Username.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txt_Username.IconLeft = Properties.Resources.User_Icon;
@@ -188,7 +184,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             txt_Username.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
             txt_Username.PlaceholderText = "Username";
             txt_Username.SelectedText = "";
-            txt_Username.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txt_Username.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txt_Username.ShadowDecoration.Shadow = new Padding(2);
             txt_Username.Size = new Size(356, 32);
             txt_Username.TabIndex = 1;
@@ -201,7 +197,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1000, 600);
             Controls.Add(guna2GradientPanel1);
-            FormBorderStyle = FormBorderStyle.Sizable; // Enable standard title bar with minimize, maximize, close
+            DoubleBuffered = true;
             Name = "Login_Page";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login Page";

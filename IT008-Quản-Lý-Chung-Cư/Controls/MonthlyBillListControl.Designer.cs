@@ -6,135 +6,140 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null)) components.Dispose();
+            if (disposing && (components != null))
+                components.Dispose();
             base.Dispose(disposing);
         }
 
         private void InitializeComponent()
         {
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.cmbFilter = new System.Windows.Forms.ComboBox();
-            this.picFilter = new System.Windows.Forms.PictureBox();
-            this.picTitleIcon = new System.Windows.Forms.PictureBox();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picFilter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTitleIcon)).BeginInit();
-            this.SuspendLayout();
+            pnlHeader = new Panel();
+            btnMonthToggle = new Button();
+            cmbFilter = new ComboBox();
+            picFilter = new PictureBox();
+            picTitleIcon = new PictureBox();
+            labelTitle = new Label();
+            btnCreate = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picFilter).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picTitleIcon).BeginInit();
+            SuspendLayout();
             // 
             // pnlHeader
             // 
-            this.pnlHeader.Controls.Add(this.cmbFilter);
-            this.pnlHeader.Controls.Add(this.picFilter);
-            this.pnlHeader.Controls.Add(this.picTitleIcon);
-            this.pnlHeader.Controls.Add(this.labelTitle);
-            this.pnlHeader.Controls.Add(this.btnCreate);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(900, 80);
-            this.pnlHeader.TabIndex = 0;
+            pnlHeader.BackColor = Color.WhiteSmoke;
+            pnlHeader.Controls.Add(btnMonthToggle);
+            pnlHeader.Controls.Add(cmbFilter);
+            pnlHeader.Controls.Add(picFilter);
+            pnlHeader.Controls.Add(picTitleIcon);
+            pnlHeader.Controls.Add(labelTitle);
+            pnlHeader.Controls.Add(btnCreate);
+            pnlHeader.Dock = DockStyle.Top;
+            pnlHeader.Location = new Point(0, 0);
+            pnlHeader.Name = "pnlHeader";
+            pnlHeader.Size = new Size(1028, 107);
+            pnlHeader.TabIndex = 1;
+            // 
+            // btnMonthToggle
+            // 
+            btnMonthToggle.FlatStyle = FlatStyle.Flat;
+            btnMonthToggle.Font = new Font("Arial", 10F, FontStyle.Bold);
+            btnMonthToggle.Location = new Point(418, 46);
+            btnMonthToggle.Name = "btnMonthToggle";
+            btnMonthToggle.Size = new Size(124, 31);
+            btnMonthToggle.TabIndex = 0;
+            btnMonthToggle.Click += btnMonthToggle_Click;
             // 
             // cmbFilter
             // 
-            this.cmbFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFilter.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.cmbFilter.FormattingEnabled = true;
-            this.cmbFilter.Items.AddRange(new object[] {
-            "ALL STATUS",
-            "PAID",
-            "UNPAID"});
-            this.cmbFilter.Location = new System.Drawing.Point(510, 28);
-            this.cmbFilter.Name = "cmbFilter";
-            this.cmbFilter.Size = new System.Drawing.Size(170, 28);
-            this.cmbFilter.TabIndex = 4;
+            cmbFilter.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cmbFilter.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbFilter.Font = new Font("Arial", 11F);
+            cmbFilter.Items.AddRange(new object[] { "ALL STATUS", "PAID", "UNPAID" });
+            cmbFilter.Location = new Point(582, 46);
+            cmbFilter.Name = "cmbFilter";
+            cmbFilter.Size = new Size(193, 29);
+            cmbFilter.TabIndex = 1;
             // 
             // picFilter
             // 
-            this.picFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picFilter.Image = global::IT008_Quản_Lý_Chung_Cư.Properties.Resources.filter_icon;
-            this.picFilter.Location = new System.Drawing.Point(475, 28);
-            this.picFilter.Name = "picFilter";
-            this.picFilter.Size = new System.Drawing.Size(28, 28);
-            this.picFilter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picFilter.TabIndex = 3;
-            this.picFilter.TabStop = false;
+            picFilter.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            picFilter.Image = Properties.Resources.filter_icon;
+            picFilter.Location = new Point(548, 44);
+            picFilter.Name = "picFilter";
+            picFilter.Size = new Size(25, 31);
+            picFilter.SizeMode = PictureBoxSizeMode.Zoom;
+            picFilter.TabIndex = 2;
+            picFilter.TabStop = false;
             // 
             // picTitleIcon
             // 
-            this.picTitleIcon.Image = global::IT008_Quản_Lý_Chung_Cư.Properties.Resources.bill_icon;
-            this.picTitleIcon.Location = new System.Drawing.Point(20, 20);
-            this.picTitleIcon.Name = "picTitleIcon";
-            this.picTitleIcon.Size = new System.Drawing.Size(40, 40);
-            this.picTitleIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picTitleIcon.TabIndex = 1;
-            this.picTitleIcon.TabStop = false;
+            picTitleIcon.Image = Properties.Resources.bill_icon;
+            picTitleIcon.Location = new Point(23, 27);
+            picTitleIcon.Name = "picTitleIcon";
+            picTitleIcon.Size = new Size(45, 53);
+            picTitleIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            picTitleIcon.TabIndex = 3;
+            picTitleIcon.TabStop = false;
             // 
             // labelTitle
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.labelTitle.Location = new System.Drawing.Point(70, 24);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(205, 32);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "MONTHLY BILLS";
+            labelTitle.AutoSize = true;
+            labelTitle.Font = new Font("Georgia", 19.8F, FontStyle.Bold);
+            labelTitle.ForeColor = Color.FromArgb(44, 62, 80);
+            labelTitle.Location = new Point(80, 43);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(321, 38);
+            labelTitle.TabIndex = 4;
+            labelTitle.Text = "MONTHLY BILLS";
             // 
             // btnCreate
             // 
-            this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCreate.FlatAppearance.BorderSize = 0;
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(700, 20);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(180, 45);
-            this.btnCreate.TabIndex = 2;
-            this.btnCreate.Text = "CREATE NEW +";
-            this.btnCreate.UseVisualStyleBackColor = false;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            btnCreate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnCreate.BackColor = Color.ForestGreen;
+            btnCreate.FlatStyle = FlatStyle.Flat;
+            btnCreate.Font = new Font("Arial", 13.8F, FontStyle.Bold);
+            btnCreate.ForeColor = Color.White;
+            btnCreate.Location = new Point(800, 27);
+            btnCreate.Name = "btnCreate";
+            btnCreate.Size = new Size(205, 60);
+            btnCreate.TabIndex = 5;
+            btnCreate.Text = "CREATE NEW +";
+            btnCreate.UseVisualStyleBackColor = false;
+            btnCreate.Click += btnCreate_Click;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 80);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(20, 10, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(900, 520);
-            this.flowLayoutPanel1.TabIndex = 1;
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.BackColor = Color.FromArgb(240, 244, 248);
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.Location = new Point(0, 107);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Padding = new Padding(23, 13, 0, 0);
+            flowLayoutPanel1.Size = new Size(1028, 693);
+            flowLayoutPanel1.TabIndex = 0;
             // 
             // MonthlyBillListControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.pnlHeader);
-            this.Name = "MonthlyBillListControl";
-            this.Size = new System.Drawing.Size(900, 600);
-            this.pnlHeader.ResumeLayout(false);
-            this.pnlHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picFilter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTitleIcon)).EndInit();
-            this.ResumeLayout(false);
-
+            Controls.Add(flowLayoutPanel1);
+            Controls.Add(pnlHeader);
+            Name = "MonthlyBillListControl";
+            Size = new Size(1028, 800);
+            pnlHeader.ResumeLayout(false);
+            pnlHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picFilter).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picTitleIcon).EndInit();
+            ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Panel pnlHeader;
-        private System.Windows.Forms.PictureBox picTitleIcon;
-        private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.PictureBox picFilter;
-        private System.Windows.Forms.ComboBox cmbFilter;
+        private Panel pnlHeader;
+        private PictureBox picTitleIcon;
+        private Label labelTitle;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Button btnCreate;
+        private PictureBox picFilter;
+        private ComboBox cmbFilter;
+        private Button btnMonthToggle;
     }
 }
