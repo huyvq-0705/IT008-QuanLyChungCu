@@ -70,5 +70,10 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
                 MessageBox.Show("Could not find the parent container to switch screens.", "Switching Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void pB_Username_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

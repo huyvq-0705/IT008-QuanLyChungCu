@@ -42,7 +42,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // txtName
             // 
-            txtName.Font = new Font("Segoe UI", 10F);
+            txtName.Font = new Font("Arial", 10F);
             txtName.Location = new Point(32, 138);
             txtName.Margin = new Padding(4, 5, 4, 5);
             txtName.Name = "txtName";
@@ -75,7 +75,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // txtRelation
             // 
-            txtRelation.Font = new Font("Segoe UI", 10F);
+            txtRelation.Font = new Font("Arial", 10F);
             txtRelation.Location = new Point(32, 230);
             txtRelation.Margin = new Padding(4, 5, 4, 5);
             txtRelation.Name = "txtRelation";
@@ -96,7 +96,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // txtPhone
             // 
-            txtPhone.Font = new Font("Segoe UI", 10F);
+            txtPhone.Font = new Font("Arial", 10F);
             txtPhone.Location = new Point(32, 322);
             txtPhone.Margin = new Padding(4, 5, 4, 5);
             txtPhone.Name = "txtPhone";
@@ -117,7 +117,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // txtCCCD
             // 
-            txtCCCD.Font = new Font("Segoe UI", 10F);
+            txtCCCD.Font = new Font("Arial", 10F);
             txtCCCD.Location = new Point(32, 414);
             txtCCCD.Margin = new Padding(4, 5, 4, 5);
             txtCCCD.Name = "txtCCCD";
@@ -138,7 +138,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // dtpDob
             // 
-            dtpDob.Font = new Font("Segoe UI", 10F);
+            dtpDob.Font = new Font("Arial", 10F);
             dtpDob.Format = DateTimePickerFormat.Short;
             dtpDob.Location = new Point(32, 506);
             dtpDob.Margin = new Padding(4, 5, 4, 5);
@@ -149,7 +149,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // chkPrimary
             // 
             chkPrimary.AutoSize = true;
-            chkPrimary.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            chkPrimary.Font = new Font("Arial", 10F, FontStyle.Bold);
             chkPrimary.ForeColor = Color.FromArgb(30, 30, 30);
             chkPrimary.Location = new Point(32, 583);
             chkPrimary.Margin = new Padding(4, 5, 4, 5);
@@ -164,7 +164,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             btnSave.BackColor = Color.FromArgb(0, 123, 255);
             btnSave.FlatAppearance.BorderSize = 0;
             btnSave.FlatStyle = FlatStyle.Flat;
-            btnSave.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnSave.Font = new Font("Arial", 10F, FontStyle.Bold);
             btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(302, 659);
             btnSave.Margin = new Padding(4, 5, 4, 5);
@@ -180,7 +180,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             btnCancel.BackColor = Color.FromArgb(248, 249, 250);
             btnCancel.FlatAppearance.BorderColor = Color.FromArgb(222, 226, 230);
             btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.Font = new Font("Segoe UI", 10F);
+            btnCancel.Font = new Font("Arial", 10F);
             btnCancel.ForeColor = Color.FromArgb(80, 80, 80);
             btnCancel.Location = new Point(32, 659);
             btnCancel.Margin = new Padding(4, 5, 4, 5);

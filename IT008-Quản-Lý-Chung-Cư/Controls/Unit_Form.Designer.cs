@@ -102,7 +102,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblType
             // 
             lblType.AutoSize = true;
-            lblType.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblType.Font = new Font("Arial", 10F, FontStyle.Bold);
             lblType.ForeColor = Color.DimGray;
             lblType.Location = new Point(17, 11);
             lblType.Margin = new Padding(4, 0, 4, 0);
@@ -114,7 +114,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblBathValue
             // 
             lblBathValue.AutoSize = true;
-            lblBathValue.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblBathValue.Font = new Font("Arial", 11F, FontStyle.Bold);
             lblBathValue.ForeColor = Color.FromArgb(41, 50, 65);
             lblBathValue.Location = new Point(234, 116);
             lblBathValue.Margin = new Padding(4, 0, 4, 0);
@@ -126,7 +126,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblTypeValue
             // 
             lblTypeValue.AutoSize = true;
-            lblTypeValue.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblTypeValue.Font = new Font("Arial", 11F, FontStyle.Bold);
             lblTypeValue.ForeColor = Color.FromArgb(41, 50, 65);
             lblTypeValue.Location = new Point(17, 42);
             lblTypeValue.Margin = new Padding(4, 0, 4, 0);
@@ -137,7 +137,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // lblBath
             // 
-            lblBath.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblBath.Font = new Font("Arial", 10F, FontStyle.Bold);
             lblBath.ForeColor = Color.DimGray;
             lblBath.Image = Properties.Resources.Bathtub;
             lblBath.Location = new Point(180, 106);
@@ -149,7 +149,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblBedValue
             // 
             lblBedValue.AutoSize = true;
-            lblBedValue.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblBedValue.Font = new Font("Arial", 11F, FontStyle.Bold);
             lblBedValue.ForeColor = Color.FromArgb(41, 50, 65);
             lblBedValue.Location = new Point(71, 116);
             lblBedValue.Margin = new Padding(4, 0, 4, 0);
@@ -160,7 +160,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // lblBed
             // 
-            lblBed.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblBed.Font = new Font("Arial", 10F, FontStyle.Bold);
             lblBed.ForeColor = Color.DimGray;
             lblBed.Image = Properties.Resources.Bed1;
             lblBed.Location = new Point(17, 106);
@@ -181,7 +181,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             txtRent.Enabled = false;
             txtRent.FillColor = Color.WhiteSmoke;
             txtRent.FocusedState.BorderColor = Color.Transparent;
-            txtRent.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtRent.Font = new Font("Arial", 11F, FontStyle.Bold);
             txtRent.ForeColor = Color.FromArgb(41, 50, 65);
             txtRent.HoverState.BorderColor = Color.Transparent;
             txtRent.Location = new Point(14, 417);
@@ -198,7 +198,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblRent
             // 
             lblRent.AutoSize = true;
-            lblRent.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblRent.Font = new Font("Arial", 10F, FontStyle.Bold);
             lblRent.ForeColor = Color.DimGray;
             lblRent.Location = new Point(14, 389);
             lblRent.Margin = new Padding(4, 0, 4, 0);
@@ -210,7 +210,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblStatus
             // 
             lblStatus.AutoSize = true;
-            lblStatus.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblStatus.Font = new Font("Arial", 10F, FontStyle.Bold);
             lblStatus.ForeColor = Color.DimGray;
             lblStatus.Location = new Point(19, 29);
             lblStatus.Margin = new Padding(4, 0, 4, 0);
@@ -232,7 +232,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             txtArea.Enabled = false;
             txtArea.FillColor = Color.WhiteSmoke;
             txtArea.FocusedState.BorderColor = Color.Transparent;
-            txtArea.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtArea.Font = new Font("Arial", 11F, FontStyle.Bold);
             txtArea.ForeColor = Color.FromArgb(41, 50, 65);
             txtArea.HoverState.BorderColor = Color.Transparent;
             txtArea.Location = new Point(19, 310);
@@ -249,7 +249,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblArea
             // 
             lblArea.AutoSize = true;
-            lblArea.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblArea.Font = new Font("Arial", 10F, FontStyle.Bold);
             lblArea.ForeColor = Color.DimGray;
             lblArea.Location = new Point(19, 279);
             lblArea.Margin = new Padding(4, 0, 4, 0);
@@ -271,7 +271,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             txtFloor.Enabled = false;
             txtFloor.FillColor = Color.WhiteSmoke;
             txtFloor.FocusedState.BorderColor = Color.Transparent;
-            txtFloor.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtFloor.Font = new Font("Arial", 11F, FontStyle.Bold);
             txtFloor.ForeColor = Color.FromArgb(41, 50, 65);
             txtFloor.HoverState.BorderColor = Color.Transparent;
             txtFloor.Location = new Point(19, 213);
@@ -288,7 +288,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblFloor
             // 
             lblFloor.AutoSize = true;
-            lblFloor.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblFloor.Font = new Font("Arial", 10F, FontStyle.Bold);
             lblFloor.ForeColor = Color.DimGray;
             lblFloor.Location = new Point(19, 183);
             lblFloor.Margin = new Padding(4, 0, 4, 0);
@@ -310,7 +310,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             txtCode.Enabled = false;
             txtCode.FillColor = Color.WhiteSmoke;
             txtCode.FocusedState.BorderColor = Color.Transparent;
-            txtCode.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtCode.Font = new Font("Arial", 11F, FontStyle.Bold);
             txtCode.ForeColor = Color.FromArgb(41, 50, 65);
             txtCode.HoverState.BorderColor = Color.Transparent;
             txtCode.Location = new Point(19, 120);
@@ -327,7 +327,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblCode
             // 
             lblCode.AutoSize = true;
-            lblCode.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblCode.Font = new Font("Arial", 10F, FontStyle.Bold);
             lblCode.ForeColor = Color.DimGray;
             lblCode.Location = new Point(19, 89);
             lblCode.Margin = new Padding(4, 0, 4, 0);
@@ -353,7 +353,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             lblStatusValue.AutoSize = true;
             lblStatusValue.BackColor = Color.Transparent;
-            lblStatusValue.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblStatusValue.Font = new Font("Arial", 11F, FontStyle.Bold);
             lblStatusValue.ForeColor = Color.White;
             lblStatusValue.Location = new Point(8, 1);
             lblStatusValue.Margin = new Padding(4, 0, 4, 0);

@@ -45,7 +45,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             btnCreate.Cursor = Cursors.Hand;
             btnCreate.FlatAppearance.BorderSize = 0;
             btnCreate.FlatStyle = FlatStyle.Flat;
-            btnCreate.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnCreate.Font = new Font("Arial", 10F, FontStyle.Bold);
             btnCreate.ForeColor = Color.White;
             btnCreate.Location = new Point(900, 23);
             btnCreate.Margin = new Padding(4, 5, 4, 5);

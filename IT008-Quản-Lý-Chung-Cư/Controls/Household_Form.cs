@@ -99,7 +99,7 @@ namespace IT008_Quản_Lý_Chung_Cư
 
                 Guna2Button btnAdd = new Guna2Button();
                 btnAdd.Text = "ADD NEW MEMBER +";
-                btnAdd.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+                btnAdd.Font = new Font("Arial", 11, FontStyle.Bold);
                 btnAdd.FillColor = Color.FromArgb(46, 204, 113);
                 btnAdd.ForeColor = Color.White;
                 btnAdd.BorderRadius = 10;
@@ -139,21 +139,21 @@ namespace IT008_Quản_Lý_Chung_Cư
             p.Controls.Add(strip);
 
             Guna2HtmlLabel lblName = new Guna2HtmlLabel();
-            lblName.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblName.Font = new Font("Arial", 12F, FontStyle.Bold);
             lblName.ForeColor = Color.FromArgb(41, 50, 65);
             lblName.Location = new Point(25, 10);
             lblName.Text = name.ToUpper();
             p.Controls.Add(lblName);
 
             Guna2HtmlLabel lblRole = new Guna2HtmlLabel();
-            lblRole.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            lblRole.Font = new Font("Arial", 9.5F, FontStyle.Bold);
             lblRole.ForeColor = primaryColor;
             lblRole.Location = new Point(25, 38);
             lblRole.Text = $"Role: {role}";
             p.Controls.Add(lblRole);
 
             Guna2HtmlLabel lblDetails = new Guna2HtmlLabel();
-            lblDetails.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
+            lblDetails.Font = new Font("Arial", 10F, FontStyle.Regular);
             lblDetails.ForeColor = Color.Gray;
             lblDetails.Location = new Point(25, 65);
             lblDetails.Text = $"Relationship: {rel} | Phone: {phone} | CCCD: {cccd} | DOB: {dob:dd/MM/yyyy}";
@@ -161,7 +161,7 @@ namespace IT008_Quản_Lý_Chung_Cư
 
             Guna2Button btnEdit = new Guna2Button();
             btnEdit.Text = "EDIT";
-            btnEdit.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnEdit.Font = new Font("Arial", 10F, FontStyle.Bold);
             btnEdit.ForeColor = Color.White;
             btnEdit.FillColor = Color.FromArgb(52, 152, 219);
             btnEdit.BorderRadius = 8;

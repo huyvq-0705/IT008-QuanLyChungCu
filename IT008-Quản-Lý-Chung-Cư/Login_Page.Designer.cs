@@ -68,7 +68,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lbl_IncorrectPass
             // 
             lbl_IncorrectPass.AutoSize = true;
-            lbl_IncorrectPass.Font = new Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lbl_IncorrectPass.Font = new Font("Arial", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
             lbl_IncorrectPass.ForeColor = Color.Crimson;
             lbl_IncorrectPass.Location = new Point(140, 400);
             lbl_IncorrectPass.Name = "lbl_IncorrectPass";
@@ -142,7 +142,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             txt_Password.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txt_Password.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txt_Password.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_Password.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold);
+            txt_Password.Font = new Font("Arial", 10.2F, FontStyle.Bold);
             txt_Password.ForeColor = Color.Black;
             txt_Password.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txt_Password.IconLeft = Properties.Resources.Password_icon;
@@ -174,7 +174,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             txt_Username.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txt_Username.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txt_Username.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_Username.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold);
+            txt_Username.Font = new Font("Arial", 10.2F, FontStyle.Bold);
             txt_Username.ForeColor = Color.Black;
             txt_Username.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txt_Username.IconLeft = Properties.Resources.User_Icon;

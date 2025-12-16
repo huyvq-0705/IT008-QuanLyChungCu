@@ -141,7 +141,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             btnSave.Cursor = Cursors.Hand;
             btnSave.FlatAppearance.BorderSize = 0;
             btnSave.FlatStyle = FlatStyle.Flat;
-            btnSave.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSave.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(38, 535);
             btnSave.Margin = new Padding(3, 5, 3, 5);
@@ -164,7 +164,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             txtEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtEmail.FillColor = Color.WhiteSmoke;
             txtEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmail.Font = new Font("Segoe UI", 11F);
+            txtEmail.Font = new Font("Arial", 11F);
             txtEmail.ForeColor = Color.Black;
             txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtEmail.Location = new Point(424, 447);
@@ -199,7 +199,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             txtPhone.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtPhone.FillColor = Color.WhiteSmoke;
             txtPhone.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPhone.Font = new Font("Segoe UI", 11F);
+            txtPhone.Font = new Font("Arial", 11F);
             txtPhone.ForeColor = Color.Black;
             txtPhone.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPhone.Location = new Point(38, 447);
@@ -234,7 +234,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             txtFullName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtFullName.FillColor = Color.WhiteSmoke;
             txtFullName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtFullName.Font = new Font("Segoe UI", 11F);
+            txtFullName.Font = new Font("Arial", 11F);
             txtFullName.ForeColor = Color.Black;
             txtFullName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtFullName.Location = new Point(38, 340);
@@ -269,7 +269,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtPassword.FillColor = Color.WhiteSmoke;
             txtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPassword.Font = new Font("Segoe UI", 11F);
+            txtPassword.Font = new Font("Arial", 11F);
             txtPassword.ForeColor = Color.Black;
             txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPassword.Location = new Point(424, 233);
@@ -305,7 +305,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             txtUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtUsername.FillColor = Color.WhiteSmoke;
             txtUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUsername.Font = new Font("Segoe UI", 11F);
+            txtUsername.Font = new Font("Arial", 11F);
             txtUsername.ForeColor = Color.Black;
             txtUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUsername.Location = new Point(38, 233);
@@ -331,7 +331,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // lblRoleValue
             // 
             lblRoleValue.AutoSize = true;
-            lblRoleValue.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblRoleValue.Font = new Font("Arial", 12F, FontStyle.Bold);
             lblRoleValue.ForeColor = Color.FromArgb(52, 152, 219);
             lblRoleValue.Location = new Point(476, 72);
             lblRoleValue.Name = "lblRoleValue";
@@ -353,7 +353,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // lblIdValue
             // 
             lblIdValue.AutoSize = true;
-            lblIdValue.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblIdValue.Font = new Font("Arial", 12F, FontStyle.Bold);
             lblIdValue.ForeColor = Color.FromArgb(44, 62, 80);
             lblIdValue.Location = new Point(128, 70);
             lblIdValue.Name = "lblIdValue";
@@ -382,7 +382,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             btn_Back.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btn_Back.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btn_Back.FillColor = Color.Transparent;
-            btn_Back.Font = new Font("Segoe UI", 9F);
+            btn_Back.Font = new Font("Arial", 9F);
             btn_Back.ForeColor = Color.White;
             btn_Back.HoverState.FillColor = Color.White;
             btn_Back.Image = Properties.Resources.Back;

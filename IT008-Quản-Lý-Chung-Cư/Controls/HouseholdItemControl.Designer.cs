@@ -75,7 +75,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // lblUnitCode
             // 
             lblUnitCode.AutoSize = true;
-            lblUnitCode.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lblUnitCode.Font = new Font("Arial", 13F, FontStyle.Bold);
             lblUnitCode.ForeColor = Color.FromArgb(44, 62, 80);
             lblUnitCode.Location = new Point(103, 28);
             lblUnitCode.Margin = new Padding(4, 0, 4, 0);
@@ -103,7 +103,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             btnView.Cursor = Cursors.Hand;
             btnView.FlatAppearance.BorderSize = 0;
             btnView.FlatStyle = FlatStyle.Flat;
-            btnView.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnView.Font = new Font("Arial", 9.5F, FontStyle.Bold);
             btnView.ForeColor = Color.White;
             btnView.Location = new Point(771, 38);
             btnView.Margin = new Padding(4, 5, 4, 5);

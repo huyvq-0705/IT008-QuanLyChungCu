@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using Npgsql;
-using Guna.UI2.WinForms; 
+using Guna.UI2.WinForms;
 
 namespace IT008_Quản_Lý_Chung_Cư
 {
@@ -30,7 +30,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             {
                 var monthlyData = new Dictionary<string, MonthlyReadingDisplay>();
 
-                using (var conn = Db.Open()) 
+                using (var conn = Db.Open())
                 {
                     string sql = "SELECT tariff_type, period_month, consumption FROM meter_reading WHERE unit_id = @uid ORDER BY period_month DESC";
                     using (var cmd = new NpgsqlCommand(sql, conn))
@@ -68,9 +68,9 @@ namespace IT008_Quản_Lý_Chung_Cư
         private Panel CreateHistoryItem(MonthlyReadingDisplay data)
         {
             Guna2Panel p = new Guna2Panel();
-            p.Size = new Size(950, 60); 
+            p.Size = new Size(950, 60);
             p.Margin = new Padding(0, 0, 0, 10);
-            p.FillColor = Color.FromArgb(245, 248, 250); 
+            p.FillColor = Color.FromArgb(245, 248, 250);
             p.BorderRadius = 8;
             p.ShadowDecoration.Enabled = true;
             p.ShadowDecoration.Depth = 5;
@@ -79,7 +79,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             Guna2HtmlLabel lbl = new Guna2HtmlLabel();
             lbl.AutoSize = true;
             lbl.BackColor = Color.Transparent;
-            lbl.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lbl.Font = new Font("Arial", 12F, FontStyle.Bold);
             lbl.ForeColor = Color.FromArgb(44, 62, 80);
             lbl.Location = new Point(20, 15);
             lbl.Text = $"MONTH: {data.Date:MM/yyyy} | ELECTRICITY: {data.Elec:N0} KWH | WATER: {data.Water:N0} M³";
@@ -88,8 +88,8 @@ namespace IT008_Quản_Lý_Chung_Cư
             Guna2Button btnEdit = new Guna2Button();
             btnEdit.Text = "EDIT";
             btnEdit.Size = new Size(120, 40);
-            btnEdit.Location = new Point(800, 10); 
-            btnEdit.FillColor = Color.FromArgb(52, 152, 219); 
+            btnEdit.Location = new Point(800, 10);
+            btnEdit.FillColor = Color.FromArgb(52, 152, 219);
             btnEdit.ForeColor = Color.White;
             btnEdit.BorderRadius = 6;
             btnEdit.Cursor = Cursors.Hand;

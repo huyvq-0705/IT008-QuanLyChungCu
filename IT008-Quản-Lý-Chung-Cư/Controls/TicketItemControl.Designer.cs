@@ -36,7 +36,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // lblInfo
             // 
             lblInfo.AutoSize = true;
-            lblInfo.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblInfo.Font = new Font("Arial", 11F, FontStyle.Bold);
             lblInfo.ForeColor = Color.FromArgb(44, 62, 80);
             lblInfo.Location = new Point(72, 36);
             lblInfo.Name = "lblInfo";
@@ -48,7 +48,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // 
             lblStatus.AutoSize = true;
             lblStatus.BackColor = Color.White;
-            lblStatus.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            lblStatus.Font = new Font("Arial", 8.5F, FontStyle.Bold);
             lblStatus.ForeColor = Color.White;
             lblStatus.Location = new Point(713, 36);
             lblStatus.Name = "lblStatus";
@@ -61,7 +61,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // 
             lblDate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblDate.AutoSize = true;
-            lblDate.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblDate.Font = new Font("Arial Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lblDate.ForeColor = Color.Gray;
             lblDate.Location = new Point(840, 42);
             lblDate.Name = "lblDate";

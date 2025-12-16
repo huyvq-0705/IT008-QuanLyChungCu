@@ -50,7 +50,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // dtpMonth
             // 
             dtpMonth.CustomFormat = "MM/yyyy";
-            dtpMonth.Font = new Font("Segoe UI", 10F);
+            dtpMonth.Font = new Font("Arial", 10F);
             dtpMonth.Format = DateTimePickerFormat.Custom;
             dtpMonth.Location = new Point(39, 138);
             dtpMonth.Margin = new Padding(4, 5, 4, 5);
@@ -72,7 +72,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // txtElec
             // 
-            txtElec.Font = new Font("Segoe UI", 10F);
+            txtElec.Font = new Font("Arial", 10F);
             txtElec.Location = new Point(39, 245);
             txtElec.Margin = new Padding(4, 5, 4, 5);
             txtElec.Name = "txtElec";
@@ -93,7 +93,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // txtWater
             // 
-            txtWater.Font = new Font("Segoe UI", 10F);
+            txtWater.Font = new Font("Arial", 10F);
             txtWater.Location = new Point(39, 353);
             txtWater.Margin = new Padding(4, 5, 4, 5);
             txtWater.Name = "txtWater";
@@ -105,7 +105,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             btnSave.BackColor = Color.FromArgb(0, 123, 255);
             btnSave.FlatAppearance.BorderSize = 0;
             btnSave.FlatStyle = FlatStyle.Flat;
-            btnSave.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnSave.Font = new Font("Arial", 10F, FontStyle.Bold);
             btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(244, 460);
             btnSave.Margin = new Padding(4, 5, 4, 5);
@@ -121,7 +121,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             btnCancel.BackColor = Color.WhiteSmoke;
             btnCancel.FlatAppearance.BorderSize = 0;
             btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.Font = new Font("Segoe UI", 10F);
+            btnCancel.Font = new Font("Arial", 10F);
             btnCancel.ForeColor = Color.Black;
             btnCancel.Location = new Point(39, 460);
             btnCancel.Margin = new Padding(4, 5, 4, 5);
