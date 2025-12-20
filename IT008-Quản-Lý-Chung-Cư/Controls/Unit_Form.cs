@@ -1,6 +1,6 @@
 using System;
-using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using Npgsql;
 
@@ -8,20 +8,16 @@ namespace IT008_Quản_Lý_Chung_Cư
 {
     public partial class Unit_Form : Form
     {
-        // Giữ lại _selectedUnitId và _isViewOnly để đảm bảo Form này chỉ dùng cho mục đích View
         private int _selectedUnitId = -1;
         private bool _isViewOnly = false;
 
-        // Constructor mặc định (có thể bị loại bỏ nếu bạn chỉ dùng Unit_Form(int unitId))
         public Unit_Form()
         {
             InitializeComponent();
-            // Đặt mặc định là View Only vì giao diện đã được thiết kế lại như vậy
             _isViewOnly = true;
             SetupViewOnlyMode();
         }
 
-        // Constructor chính để xem chi tiết một Unit
         public Unit_Form(int unitId)
         {
             InitializeComponent();
@@ -35,22 +31,18 @@ namespace IT008_Quản_Lý_Chung_Cư
             LoadUnitDetails(_selectedUnitId);
         }
 
-        // ==================== VIEW ONLY SETUP ====================
+        // ==================== VIEW ONLY ====================
 
         private void SetupViewOnlyMode()
         {
-            // Thiết lập cửa sổ đơn giản, không có nút Minimize/Maximize
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.StartPosition = FormStartPosition.CenterScreen;
-
-            // Đảm bảo panelLeft lấp đầy toàn bộ Form
+            MaximizeBox = false;
+            MinimizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            StartPosition = FormStartPosition.CenterScreen;
             panelLeft.Dock = DockStyle.Fill;
-            // Kích thước Form đã được đặt trong Designer để phù hợp với panelLeft
         }
 
-        // ==================== DATA LOADING (ĐÃ CẬP NHẬT CONTROL) ====================
+        // ==================== DATA LOADING ====================
 
         private void LoadUnitDetails(int id)
         {
@@ -58,62 +50,109 @@ namespace IT008_Quản_Lý_Chung_Cư
             {
                 using (var conn = Db.Open())
                 {
-                    string sql = "SELECT * FROM unit WHERE id = @id";
+                    string sql = @"
+                        SELECT 
+                            u.unit_code,
+                            u.floor_no,
+                            u.area_m2,
+                            u.monthly_rent,
+                            u.status,
+                            ut.label AS unit_type_label
+                        FROM unit u
+                        JOIN unit_type ut ON ut.id = u.unit_type_id
+                        WHERE u.id = @id
+                    ";
+
                     using (var cmd = new NpgsqlCommand(sql, conn))
                     {
                         cmd.Parameters.AddWithValue("@id", id);
+
                         using (var reader = cmd.ExecuteReader())
                         {
-                            if (reader.Read())
+                            if (!reader.Read())
                             {
-                                txtCode.Text = reader["unit_code"].ToString();
-                                txtFloor.Text = reader["floor_no"].ToString();
-                                txtArea.Text = reader["area_m2"].ToString() + " m²";
-                                txtRent.Text = $"{reader["monthly_rent"]:N0} VND";
+                                MessageBox.Show("Unit not found.");
+                                return;
+                            }
 
-                                lblBedValue.Text = reader["bedrooms"].ToString();
-                                lblBathValue.Text = reader["bathrooms"].ToString();
-                                lblTypeValue.Text = reader["unit_type"].ToString();
+                            // ===== Basic info =====
+                            txtCode.Text = reader["unit_code"].ToString();
+                            txtFloor.Text = reader["floor_no"].ToString();
+                            txtArea.Text = reader["area_m2"] + " m²";
+                            txtRent.Text = $"{reader["monthly_rent"]:N0} VND";
 
-                                string status = reader["status"].ToString() ?? "N/A";
-                                lblStatusValue.Text = status;
+                            string status = reader["status"]?.ToString() ?? "N/A";
+                            lblStatusValue.Text = status;
 
-                                Color statusColor;
+                            // ===== Unit Type Parsing =====
+                            string unitTypeLabel = reader["unit_type_label"]?.ToString() ?? "";
+                            lblTypeValue.Text = unitTypeLabel;
 
-                                if (status == "OCCUPIED")
+                            int bedrooms = 0;
+                            int bathrooms = 0;
+
+                            string type = unitTypeLabel.ToUpper();
+
+                            // Studio
+                            if (type.Contains("STUDIO"))
+                            {
+                                bedrooms = 0;
+                                bathrooms = 0;
+                            }
+                            // Other types (1BR, 2BR / 2Bathroom, etc.)
+                            else if (type.Contains("BR"))
+                            {
+                                // Bedrooms
+                                int brIndex = type.IndexOf("BR");
+                                if (brIndex > 0 &&
+                                    int.TryParse(type.Substring(0, brIndex), out int br))
                                 {
-                                    statusColor = Color.SeaGreen;
+                                    bedrooms = br;
                                 }
-                                else if (status == "VACANT")
+
+                                // Bathrooms
+                                if (type.Contains("BATH"))
                                 {
-                                    statusColor = Color.Goldenrod;
+                                    string[] parts = type.Split('/');
+                                    foreach (var p in parts)
+                                    {
+                                        if (p.Contains("BATH"))
+                                        {
+                                            string num = new string(p.Where(char.IsDigit).ToArray());
+                                            if (int.TryParse(num, out int bath))
+                                                bathrooms = bath;
+                                        }
+                                    }
                                 }
-                                else if (status == "MAINTENANCE")
-                                {
-                                    statusColor = Color.Crimson; 
-                                }    
                                 else
                                 {
-                                    statusColor = Color.Gray;
-                                }
-
-                                pn_StatusValue.FillColor = statusColor;
-                                lblStatusValue.ForeColor = Color.White;
-
-                                using (Graphics g = this.CreateGraphics())
-                                {
-                                    SizeF textSize = g.MeasureString(lblStatusValue.Text, lblStatusValue.Font);
-                                    int newWidth = (int)Math.Ceiling(textSize.Width) + 20;
-
-                                    pn_StatusValue.Size = new Size(newWidth, 30);
-
-                                    lblStatusValue.Location = new Point((pn_StatusValue.Width - (int)Math.Ceiling(textSize.Width)) / 2,
-                                                                        (pn_StatusValue.Height - (int)Math.Ceiling(textSize.Height)) / 2);
+                                    bathrooms = 1; // default rule
                                 }
                             }
-                            else
+
+                            lblBedValue.Text = bedrooms.ToString();
+                            lblBathValue.Text = bathrooms.ToString();
+
+                            // ===== Status Color =====
+                            Color statusColor = status switch
                             {
-                                MessageBox.Show("Unit ID not found.");
+                                "OCCUPIED" => Color.SeaGreen,
+                                "VACANT" => Color.Goldenrod,
+                                "MAINTENANCE" => Color.Crimson,
+                                _ => Color.Gray
+                            };
+
+                            pn_StatusValue.FillColor = statusColor;
+                            lblStatusValue.ForeColor = Color.White;
+
+                            using (Graphics g = CreateGraphics())
+                            {
+                                SizeF textSize = g.MeasureString(lblStatusValue.Text, lblStatusValue.Font);
+                                pn_StatusValue.Size = new Size((int)textSize.Width + 20, 30);
+                                lblStatusValue.Location = new Point(
+                                    (pn_StatusValue.Width - (int)textSize.Width) / 2,
+                                    (pn_StatusValue.Height - (int)textSize.Height) / 2
+                                );
                             }
                         }
                     }
@@ -121,9 +160,8 @@ namespace IT008_Quản_Lý_Chung_Cư
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading details: " + ex.Message);
+                MessageBox.Show("Error loading unit details: " + ex.Message);
             }
         }
-
     }
 }

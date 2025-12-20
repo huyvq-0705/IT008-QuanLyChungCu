@@ -11,7 +11,7 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
 
         public event EventHandler StatusUpdated;
 
-        public TicketItemControl(int id, string code, string title, string status, DateTime date, int staffId)
+        public TicketItemControl(int id, string code, string title, string status, DateTime date, int staffId, string creatorName)
         {
             InitializeComponent();
             _ticketId = id;
@@ -33,6 +33,11 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             // Click events
             this.Click += Item_Click;
             foreach (Control c in this.Controls) c.Click += Item_Click;
+
+            lblInfo.Text += "\nCreated by: " + creatorName;
+
+            lblStatus.Text = status;
+            lblDate.Text = date.ToString("dd/MM/yyyy HH:mm");
         }
 
         private void Item_Click(object sender, EventArgs e)
