@@ -36,15 +36,15 @@ namespace IT008_Quản_Lý_Chung_Cư
             pnlTop.Location = new Point(0, 0);
             pnlTop.Margin = new Padding(3, 4, 3, 4);
             pnlTop.Name = "pnlTop";
-            pnlTop.Size = new Size(800, 338);
+            pnlTop.Size = new Size(932, 338);
             pnlTop.TabIndex = 0;
             // 
             // labelMembers
             // 
             labelMembers.Anchor = AnchorStyles.Top;
-            labelMembers.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            labelMembers.Font = new Font("Arial", 11F, FontStyle.Bold);
             labelMembers.ForeColor = Color.FromArgb(40, 40, 40);
-            labelMembers.Location = new Point(0, 289);
+            labelMembers.Location = new Point(66, 289);
             labelMembers.Name = "labelMembers";
             labelMembers.Size = new Size(800, 27);
             labelMembers.TabIndex = 5;
@@ -54,9 +54,9 @@ namespace IT008_Quản_Lý_Chung_Cư
             // txtNote
             // 
             txtNote.Anchor = AnchorStyles.Top;
-            txtNote.Font = new Font("Segoe UI", 10F, FontStyle.Italic);
+            txtNote.Font = new Font("Arial", 10F, FontStyle.Italic);
             txtNote.ForeColor = Color.FromArgb(120, 120, 120);
-            txtNote.Location = new Point(0, 230);
+            txtNote.Location = new Point(66, 230);
             txtNote.Name = "txtNote";
             txtNote.Size = new Size(800, 25);
             txtNote.TabIndex = 4;
@@ -66,9 +66,9 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblEndDate
             // 
             lblEndDate.Anchor = AnchorStyles.Top;
-            lblEndDate.Font = new Font("Segoe UI", 11F);
+            lblEndDate.Font = new Font("Arial", 11F);
             lblEndDate.ForeColor = Color.FromArgb(80, 80, 80);
-            lblEndDate.Location = new Point(0, 173);
+            lblEndDate.Location = new Point(66, 173);
             lblEndDate.Name = "lblEndDate";
             lblEndDate.Size = new Size(800, 27);
             lblEndDate.TabIndex = 3;
@@ -78,9 +78,9 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblStartDate
             // 
             lblStartDate.Anchor = AnchorStyles.Top;
-            lblStartDate.Font = new Font("Segoe UI", 11F);
+            lblStartDate.Font = new Font("Arial", 11F);
             lblStartDate.ForeColor = Color.FromArgb(80, 80, 80);
-            lblStartDate.Location = new Point(0, 140);
+            lblStartDate.Location = new Point(66, 140);
             lblStartDate.Name = "lblStartDate";
             lblStartDate.Size = new Size(800, 27);
             lblStartDate.TabIndex = 2;
@@ -91,9 +91,9 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblUnitCode
             // 
             lblUnitCode.Anchor = AnchorStyles.Top;
-            lblUnitCode.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            lblUnitCode.Font = new Font("Arial", 24F, FontStyle.Bold);
             lblUnitCode.ForeColor = Color.FromArgb(30, 30, 30);
-            lblUnitCode.Location = new Point(0, 67);
+            lblUnitCode.Location = new Point(66, 67);
             lblUnitCode.Name = "lblUnitCode";
             lblUnitCode.Size = new Size(800, 60);
             lblUnitCode.TabIndex = 1;
@@ -104,7 +104,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             btnClose.AutoSize = true;
             btnClose.Cursor = Cursors.Hand;
-            btnClose.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnClose.Font = new Font("Arial", 10F, FontStyle.Bold);
             btnClose.ForeColor = Color.FromArgb(100, 100, 100);
             btnClose.Location = new Point(23, 27);
             btnClose.Name = "btnClose";
@@ -123,7 +123,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             pnlMembers.Margin = new Padding(3, 4, 3, 4);
             pnlMembers.Name = "pnlMembers";
             pnlMembers.Padding = new Padding(34, 27, 0, 0);
-            pnlMembers.Size = new Size(800, 462);
+            pnlMembers.Size = new Size(932, 462);
             pnlMembers.TabIndex = 1;
             pnlMembers.WrapContents = false;
             // 
@@ -132,7 +132,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 800);
+            ClientSize = new Size(932, 800);
             Controls.Add(pnlMembers);
             Controls.Add(pnlTop);
             FormBorderStyle = FormBorderStyle.FixedDialog;
