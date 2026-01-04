@@ -48,35 +48,37 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
             flowLayoutPanel1.Controls.Clear();
 
             string selectedStatus = cmbFilter.SelectedItem?.ToString();
-            // Handle initial load where selection might be null
             if (string.IsNullOrEmpty(selectedStatus)) selectedStatus = "ALL STATUS";
 
             try
             {
                 using (var conn = Db.Open())
                 {
-                    // Base Query
-                    string sql = "SELECT id, unit_code, floor_no, status, unit_type FROM unit WHERE is_deleted = FALSE";
+                    string sql = @"
+                SELECT 
+                    u.id,
+                    u.unit_code,
+                    u.floor_no,
+                    u.status,
+                    ut.label AS unit_type
+                FROM unit u
+                JOIN unit_type ut ON ut.id = u.unit_type_id
+                WHERE u.is_deleted = FALSE";
 
-                    // Apply Filter Logic
                     if (selectedStatus != "ALL STATUS")
-                    {
-                        sql += " AND status = @status";
-                    }
+                        sql += " AND u.status = @status";
 
-                    sql += " ORDER BY unit_code";
+                    sql += " ORDER BY u.unit_code";
 
                     using (var cmd = new NpgsqlCommand(sql, conn))
                     {
-                        // Add parameter if needed
                         if (selectedStatus != "ALL STATUS")
-                        {
                             cmd.Parameters.AddWithValue("@status", selectedStatus);
-                        }
 
                         using (var reader = cmd.ExecuteReader())
                         {
                             flowLayoutPanel1.SuspendLayout();
+
                             while (reader.Read())
                             {
                                 int id = reader.GetInt32(0);
@@ -85,14 +87,15 @@ namespace IT008_Quản_Lý_Chung_Cư.Controls
                                 string status = reader.GetString(3);
                                 string type = reader.GetString(4);
 
-                                UnitItemControl item = new UnitItemControl(id, code, floor, status, type);
+                                UnitItemControl item =
+                                    new UnitItemControl(id, code, floor, status, type);
 
-                                // Responsive width
                                 item.Width = flowLayoutPanel1.ClientSize.Width - 30;
-                                item.Margin = new Padding(0, 0, 0, 10); // Space between items
+                                item.Margin = new Padding(0, 0, 0, 10);
 
                                 flowLayoutPanel1.Controls.Add(item);
                             }
+
                             flowLayoutPanel1.ResumeLayout();
                         }
                     }
