@@ -62,38 +62,43 @@ namespace IT008_Quản_Lý_Chung_Cư
                     pnlHistory.Controls.Add(CreateHistoryItem(entry));
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Error: " + ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private Panel CreateHistoryItem(MonthlyReadingDisplay data)
         {
             Guna2Panel p = new Guna2Panel();
-            p.Size = new Size(950, 60);
-            p.Margin = new Padding(0, 0, 0, 10);
-            p.FillColor = Color.FromArgb(245, 248, 250);
-            p.BorderRadius = 8;
+            p.Size = new Size(950, 70);
+            p.Margin = new Padding(0, 0, 0, 12);
+            p.FillColor = Color.White;
+            p.BorderRadius = 10;
             p.ShadowDecoration.Enabled = true;
-            p.ShadowDecoration.Depth = 5;
-            p.ShadowDecoration.BorderRadius = 8;
+            p.ShadowDecoration.Depth = 8;
+            p.ShadowDecoration.BorderRadius = 10;
+            p.ShadowDecoration.Color = Color.FromArgb(200, 200, 200);
 
             Guna2HtmlLabel lbl = new Guna2HtmlLabel();
             lbl.AutoSize = true;
             lbl.BackColor = Color.Transparent;
-            lbl.Font = new Font("Arial", 12F, FontStyle.Bold);
+            lbl.Font = new Font("Arial", 11F, FontStyle.Bold);
             lbl.ForeColor = Color.FromArgb(44, 62, 80);
-            lbl.Location = new Point(20, 15);
+            lbl.Location = new Point(25, 25);
             lbl.Text = $"MONTH: {data.Date:MM/yyyy} | ELECTRICITY: {data.Elec:N0} KWH | WATER: {data.Water:N0} M³";
             p.Controls.Add(lbl);
 
+            // Edit button
             Guna2Button btnEdit = new Guna2Button();
             btnEdit.Text = "EDIT";
-            btnEdit.Size = new Size(120, 40);
-            btnEdit.Location = new Point(800, 10);
+            btnEdit.Size = new Size(100, 45);
+            btnEdit.Location = new Point(p.Width - 120, 13);
             btnEdit.FillColor = Color.FromArgb(52, 152, 219);
             btnEdit.ForeColor = Color.White;
-            btnEdit.BorderRadius = 6;
+            btnEdit.BorderRadius = 8;
             btnEdit.Cursor = Cursors.Hand;
-
+            btnEdit.Font = new Font("Arial", 10F, FontStyle.Bold);
             btnEdit.Click += (s, e) =>
             {
                 Form f = new NewMeterReading_Form(_unitId, _unitCode, _staffId, data.Date, data.Elec, data.Water);
@@ -101,7 +106,63 @@ namespace IT008_Quản_Lý_Chung_Cư
             };
             p.Controls.Add(btnEdit);
 
+            // Delete button
+            Guna2Button btnDelete = new Guna2Button();
+            btnDelete.Text = "DEL";
+            btnDelete.Size = new Size(70, 45);
+            btnDelete.Location = new Point(p.Width - 205, 13);
+            btnDelete.FillColor = Color.FromArgb(231, 76, 60);
+            btnDelete.ForeColor = Color.White;
+            btnDelete.BorderRadius = 8;
+            btnDelete.Cursor = Cursors.Hand;
+            btnDelete.Font = new Font("Arial", 10F, FontStyle.Bold);
+            btnDelete.Click += (s, e) => DeleteMeterReading(data.Date);
+            p.Controls.Add(btnDelete);
+
             return p;
+        }
+
+        private void DeleteMeterReading(DateTime periodMonth)
+        {
+            if (MessageBox.Show(
+                $"Are you sure you want to delete the meter readings for {periodMonth:MM/yyyy}?\n\nThis will delete both ELECTRICITY and WATER readings for this month.",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                try
+                {
+                    using (var conn = Db.Open())
+                    {
+                        // Delete both electricity and water readings for this period
+                        string sql = "DELETE FROM meter_reading WHERE unit_id = @uid AND period_month = @period";
+                        using (var cmd = new NpgsqlCommand(sql, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@uid", _unitId);
+                            cmd.Parameters.AddWithValue("@period", periodMonth.Date);
+                            int rowsDeleted = cmd.ExecuteNonQuery();
+
+                            if (rowsDeleted > 0)
+                            {
+                                MessageBox.Show(
+                                    $"Successfully deleted {rowsDeleted} meter reading(s) for {periodMonth:MM/yyyy}.",
+                                    "Success",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                            }
+                        }
+                    }
+                    LoadHistory(); // Refresh the list
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(
+                        "Error deleting meter reading: " + ex.Message,
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
