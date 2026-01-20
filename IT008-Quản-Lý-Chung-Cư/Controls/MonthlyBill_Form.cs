@@ -15,9 +15,11 @@ namespace IT008_Quản_Lý_Chung_Cư
         private decimal _elecRate = 0;
         private decimal _waterRate = 0;
 
-        private TrackBar trackStatus;
+        private Panel pnlToggle;
+        private Panel pnlToggleSlider;
         private Label lblStatusDisplay;
         private Label lblStatusTitle;
+        private bool _isPaid = false;
 
         public MonthlyBill_Form(int staffId)
         {
@@ -26,7 +28,7 @@ namespace IT008_Quản_Lý_Chung_Cư
 
             ApplyDynamicSize();
 
-            SetupSlider();
+            SetupModernToggle();
             LoadTariffs();
             LoadUnits();
 
@@ -71,50 +73,102 @@ namespace IT008_Quản_Lý_Chung_Cư
             pnlSummary.Left = centerX;
         }
 
-        private void SetupSlider()
+        private void SetupModernToggle()
         {
-            int sliderX = pnlSummary.Left + 120;
-            int sliderY = pnlSummary.Bottom + 20;
+            int toggleY = pnlSummary.Bottom + 30;
 
+            // Status Title Label
             lblStatusTitle = new Label();
             lblStatusTitle.Text = "Payment Status:";
             lblStatusTitle.AutoSize = true;
-            lblStatusTitle.Font = new Font("Arial", 10F, FontStyle.Regular);
-            lblStatusTitle.ForeColor = Color.Gray;
-            lblStatusTitle.Location = new Point(pnlSummary.Left + 15, sliderY + 5);
+            lblStatusTitle.Font = new Font("Arial", 11F, FontStyle.Regular);
+            lblStatusTitle.ForeColor = Color.FromArgb(80, 80, 80);
+            lblStatusTitle.Location = new Point(pnlSummary.Left + 20, toggleY + 8);
             pnlMain.Controls.Add(lblStatusTitle);
 
-            trackStatus = new TrackBar();
-            trackStatus.Minimum = 0;
-            trackStatus.Maximum = 1;
-            trackStatus.Value = 0;
-            trackStatus.TickStyle = TickStyle.None;
-            trackStatus.AutoSize = false;
-            trackStatus.Size = new Size(50, 30);
-            trackStatus.Location = new Point(lblStatusTitle.Right + 10, sliderY + 2);
-            trackStatus.ValueChanged += (s, e) => UpdateStatusLabel();
-            pnlMain.Controls.Add(trackStatus);
+            // Toggle Background Panel
+            pnlToggle = new Panel();
+            pnlToggle.Size = new Size(60, 30);
+            pnlToggle.Location = new Point(lblStatusTitle.Right + 15, toggleY);
+            pnlToggle.BackColor = Color.FromArgb(220, 220, 220);
+            pnlToggle.Cursor = Cursors.Hand;
+            pnlToggle.Click += ToggleStatus;
+            pnlMain.Controls.Add(pnlToggle);
 
+            // Toggle Slider (the circle that moves)
+            pnlToggleSlider = new Panel();
+            pnlToggleSlider.Size = new Size(26, 26);
+            pnlToggleSlider.Location = new Point(2, 2);
+            pnlToggleSlider.BackColor = Color.White;
+            pnlToggleSlider.Cursor = Cursors.Hand;
+            pnlToggleSlider.Click += ToggleStatus;
+            pnlToggle.Controls.Add(pnlToggleSlider);
+
+            // Round the corners
+            System.Drawing.Drawing2D.GraphicsPath pathToggle = new System.Drawing.Drawing2D.GraphicsPath();
+            pathToggle.AddEllipse(0, 0, pnlToggle.Height, pnlToggle.Height);
+            pathToggle.AddEllipse(pnlToggle.Width - pnlToggle.Height, 0, pnlToggle.Height, pnlToggle.Height);
+            pathToggle.AddRectangle(new Rectangle(pnlToggle.Height / 2, 0, pnlToggle.Width - pnlToggle.Height, pnlToggle.Height));
+            pnlToggle.Region = new Region(pathToggle);
+
+            System.Drawing.Drawing2D.GraphicsPath pathSlider = new System.Drawing.Drawing2D.GraphicsPath();
+            pathSlider.AddEllipse(0, 0, pnlToggleSlider.Width, pnlToggleSlider.Height);
+            pnlToggleSlider.Region = new Region(pathSlider);
+
+            // Status Display Label
             lblStatusDisplay = new Label();
             lblStatusDisplay.AutoSize = true;
-            lblStatusDisplay.Font = new Font("Arial", 10F, FontStyle.Bold);
-            lblStatusDisplay.Location = new Point(trackStatus.Right + 5, sliderY + 5);
+            lblStatusDisplay.Font = new Font("Arial", 11F, FontStyle.Bold);
+            lblStatusDisplay.Location = new Point(pnlToggle.Right + 15, toggleY + 8);
             pnlMain.Controls.Add(lblStatusDisplay);
 
-            UpdateStatusLabel();
+            UpdateToggleDisplay();
         }
 
-        private void UpdateStatusLabel()
+        private void ToggleStatus(object sender, EventArgs e)
         {
-            if (trackStatus.Value == 1)
+            _isPaid = !_isPaid;
+            AnimateToggle();
+            UpdateToggleDisplay();
+        }
+
+        private void AnimateToggle()
+        {
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            timer.Interval = 10;
+            int targetX = _isPaid ? (pnlToggle.Width - pnlToggleSlider.Width - 2) : 2;
+            int step = _isPaid ? 2 : -2;
+
+            timer.Tick += (s, e) =>
             {
+                if ((_isPaid && pnlToggleSlider.Left >= targetX) || (!_isPaid && pnlToggleSlider.Left <= targetX))
+                {
+                    pnlToggleSlider.Left = targetX;
+                    timer.Stop();
+                    timer.Dispose();
+                }
+                else
+                {
+                    pnlToggleSlider.Left += step;
+                }
+            };
+
+            timer.Start();
+        }
+
+        private void UpdateToggleDisplay()
+        {
+            if (_isPaid)
+            {
+                pnlToggle.BackColor = Color.FromArgb(46, 204, 113);
                 lblStatusDisplay.Text = "PAID";
-                lblStatusDisplay.ForeColor = Color.SeaGreen;
+                lblStatusDisplay.ForeColor = Color.FromArgb(46, 204, 113);
             }
             else
             {
+                pnlToggle.BackColor = Color.FromArgb(220, 220, 220);
                 lblStatusDisplay.Text = "UNPAID";
-                lblStatusDisplay.ForeColor = Color.OrangeRed;
+                lblStatusDisplay.ForeColor = Color.FromArgb(231, 76, 60);
             }
         }
 
@@ -141,8 +195,9 @@ namespace IT008_Quản_Lý_Chung_Cư
                                 txtAdjust.Text = reader.GetDecimal(5).ToString("0");
                                 string status = reader.GetString(6);
 
-                                trackStatus.Value = (status == "PAID") ? 1 : 0;
-                                UpdateStatusLabel();
+                                _isPaid = (status == "PAID");
+                                pnlToggleSlider.Left = _isPaid ? (pnlToggle.Width - pnlToggleSlider.Width - 2) : 2;
+                                UpdateToggleDisplay();
 
                                 foreach (UnitItem item in cbUnit.Items)
                                 {
@@ -258,11 +313,9 @@ namespace IT008_Quản_Lý_Chung_Cư
                                 }
                             }
 
-                            // Populate the fields with the fetched values
                             txtElecUsage.Text = electricity > 0 ? electricity.ToString("0.###") : string.Empty;
                             txtWaterUsage.Text = water > 0 ? water.ToString("0.###") : string.Empty;
 
-                            // Trigger calculation of total
                             CalculateTotal();
                         }
                     }
@@ -304,7 +357,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             {
                 using (var conn = Db.Open())
                 {
-                    string status = (trackStatus.Value == 1) ? "PAID" : "UNPAID";
+                    string status = _isPaid ? "PAID" : "UNPAID";
                     string sql;
 
                     if (_billId == null)

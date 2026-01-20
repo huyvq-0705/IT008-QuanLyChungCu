@@ -58,18 +58,18 @@ namespace IT008_Quản_Lý_Chung_Cư
             pnlHeader.Location = new Point(0, 0);
             pnlHeader.Margin = new Padding(4, 5, 4, 5);
             pnlHeader.Name = "pnlHeader";
-            pnlHeader.Size = new Size(643, 92);
+            pnlHeader.Size = new Size(700, 100);
             pnlHeader.TabIndex = 0;
             // 
             // lblTitle
             // 
             lblTitle.Dock = DockStyle.Fill;
-            lblTitle.Font = new Font("Georgia", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.Font = new Font("Georgia", 20F, FontStyle.Bold);
             lblTitle.ForeColor = Color.FromArgb(30, 30, 30);
             lblTitle.Location = new Point(0, 0);
             lblTitle.Margin = new Padding(4, 0, 4, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(643, 92);
+            lblTitle.Size = new Size(700, 100);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Create Monthly Bill";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -87,71 +87,72 @@ namespace IT008_Quản_Lý_Chung_Cư
             pnlMain.Controls.Add(groupBox3);
             pnlMain.Controls.Add(pnlSummary);
             pnlMain.Dock = DockStyle.Fill;
-            pnlMain.Location = new Point(0, 92);
+            pnlMain.Location = new Point(0, 100);
             pnlMain.Margin = new Padding(4, 5, 4, 5);
             pnlMain.Name = "pnlMain";
-            pnlMain.Padding = new Padding(39, 31, 39, 31);
-            pnlMain.Size = new Size(643, 752);
+            pnlMain.Padding = new Padding(40, 35, 40, 35);
+            pnlMain.Size = new Size(700, 730);
             pnlMain.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Georgia", 9F);
+            label1.Font = new Font("Georgia", 10F);
             label1.ForeColor = Color.FromArgb(80, 80, 80);
-            label1.Location = new Point(39, 31);
+            label1.Location = new Point(40, 35);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(38, 18);
+            label1.Size = new Size(44, 20);
             label1.TabIndex = 0;
             label1.Text = "Unit";
             // 
             // cbUnit
             // 
             cbUnit.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbUnit.Font = new Font("Arial", 10F);
+            cbUnit.Font = new Font("Arial", 10.5F);
             cbUnit.FormattingEnabled = true;
-            cbUnit.Location = new Point(39, 61);
+            cbUnit.Location = new Point(40, 65);
             cbUnit.Margin = new Padding(4, 5, 4, 5);
             cbUnit.Name = "cbUnit";
-            cbUnit.Size = new Size(169, 31);
+            cbUnit.Size = new Size(200, 32);
             cbUnit.TabIndex = 1;
             cbUnit.SelectedIndexChanged += cbUnit_SelectedIndexChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Georgia", 9F);
+            label2.Font = new Font("Georgia", 10F);
             label2.ForeColor = Color.FromArgb(80, 80, 80);
-            label2.Location = new Point(347, 31);
+            label2.Location = new Point(360, 35);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(53, 18);
+            label2.Size = new Size(61, 20);
             label2.TabIndex = 2;
             label2.Text = "Month";
             // 
             // dtpMonth
             // 
             dtpMonth.CustomFormat = "MM/yyyy";
-            dtpMonth.Font = new Font("Arial", 10F);
+            dtpMonth.Font = new Font("Arial", 10.5F);
             dtpMonth.Format = DateTimePickerFormat.Custom;
-            dtpMonth.Location = new Point(347, 61);
+            dtpMonth.Location = new Point(360, 65);
             dtpMonth.Margin = new Padding(4, 5, 4, 5);
             dtpMonth.Name = "dtpMonth";
-            dtpMonth.Size = new Size(156, 30);
+            dtpMonth.Size = new Size(180, 32);
             dtpMonth.TabIndex = 3;
+            dtpMonth.ValueChanged += dtpMonth_ValueChanged;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(txtRent);
-            groupBox1.Font = new Font("Georgia", 9F);
+            groupBox1.Font = new Font("Georgia", 10F, FontStyle.Bold);
             groupBox1.ForeColor = Color.FromArgb(40, 40, 40);
-            groupBox1.Location = new Point(39, 130);
+            groupBox1.Location = new Point(40, 140);
             groupBox1.Margin = new Padding(4, 5, 4, 5);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(19, 15, 19, 23);
-            groupBox1.Size = new Size(527, 115);
+            groupBox1.Padding = new Padding(20, 18, 20, 25);
+            groupBox1.Size = new Size(620, 125);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Monthly Rent";
@@ -159,23 +160,24 @@ namespace IT008_Quản_Lý_Chung_Cư
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Georgia", 9F);
+            label3.Font = new Font("Georgia", 9.5F);
             label3.ForeColor = Color.FromArgb(80, 80, 80);
-            label3.Location = new Point(19, 54);
+            label3.Location = new Point(20, 60);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(63, 18);
+            label3.Size = new Size(70, 20);
             label3.TabIndex = 0;
             label3.Text = "Amount";
             // 
             // txtRent
             // 
+            txtRent.BackColor = Color.FromArgb(250, 250, 250);
             txtRent.Enabled = false;
-            txtRent.Font = new Font("Arial", 11F, FontStyle.Bold);
-            txtRent.Location = new Point(154, 49);
+            txtRent.Font = new Font("Arial", 12F, FontStyle.Bold);
+            txtRent.Location = new Point(170, 55);
             txtRent.Margin = new Padding(4, 5, 4, 5);
             txtRent.Name = "txtRent";
-            txtRent.Size = new Size(346, 32);
+            txtRent.Size = new Size(420, 35);
             txtRent.TabIndex = 1;
             txtRent.TextAlign = HorizontalAlignment.Right;
             txtRent.TextChanged += CalculateTotal;
@@ -187,13 +189,13 @@ namespace IT008_Quản_Lý_Chung_Cư
             groupBox2.Controls.Add(lblElecRate);
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(txtElecTotal);
-            groupBox2.Font = new Font("Georgia", 9F);
+            groupBox2.Font = new Font("Georgia", 10F, FontStyle.Bold);
             groupBox2.ForeColor = Color.FromArgb(40, 40, 40);
-            groupBox2.Location = new Point(39, 268);
+            groupBox2.Location = new Point(40, 290);
             groupBox2.Margin = new Padding(4, 5, 4, 5);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(19, 15, 19, 23);
-            groupBox2.Size = new Size(527, 161);
+            groupBox2.Padding = new Padding(20, 18, 20, 25);
+            groupBox2.Size = new Size(620, 175);
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             groupBox2.Text = "Electricity";
@@ -201,23 +203,23 @@ namespace IT008_Quản_Lý_Chung_Cư
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Georgia", 9F);
+            label4.Font = new Font("Georgia", 9.5F);
             label4.ForeColor = Color.FromArgb(80, 80, 80);
-            label4.Location = new Point(19, 54);
+            label4.Location = new Point(20, 60);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(97, 18);
+            label4.Size = new Size(110, 20);
             label4.TabIndex = 0;
             label4.Text = "Usage (kWh)";
             // 
             // txtElecUsage
             // 
-            txtElecUsage.Font = new Font("Arial", 10F);
-            txtElecUsage.Location = new Point(154, 49);
+            txtElecUsage.Font = new Font("Arial", 11F);
+            txtElecUsage.Location = new Point(170, 55);
             txtElecUsage.Margin = new Padding(4, 5, 4, 5);
             txtElecUsage.Name = "txtElecUsage";
             txtElecUsage.PlaceholderText = "0";
-            txtElecUsage.Size = new Size(127, 30);
+            txtElecUsage.Size = new Size(150, 33);
             txtElecUsage.TabIndex = 1;
             txtElecUsage.TextAlign = HorizontalAlignment.Right;
             txtElecUsage.TextChanged += CalculateTotal;
@@ -225,35 +227,36 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblElecRate
             // 
             lblElecRate.AutoSize = true;
-            lblElecRate.Font = new Font("Arial", 8F, FontStyle.Italic);
+            lblElecRate.Font = new Font("Arial", 8.5F, FontStyle.Italic);
             lblElecRate.ForeColor = Color.FromArgb(108, 117, 125);
-            lblElecRate.Location = new Point(154, 95);
+            lblElecRate.Location = new Point(170, 105);
             lblElecRate.Margin = new Padding(4, 0, 4, 0);
             lblElecRate.Name = "lblElecRate";
-            lblElecRate.Size = new Size(120, 19);
+            lblElecRate.Size = new Size(130, 20);
             lblElecRate.TabIndex = 2;
             lblElecRate.Text = "Rate: 0 VND/kWh";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Arial", 9F);
+            label5.Font = new Font("Georgia", 9.5F);
             label5.ForeColor = Color.FromArgb(80, 80, 80);
-            label5.Location = new Point(309, 54);
+            label5.Location = new Point(350, 60);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(42, 20);
+            label5.Size = new Size(47, 20);
             label5.TabIndex = 3;
             label5.Text = "Total";
             // 
             // txtElecTotal
             // 
+            txtElecTotal.BackColor = Color.FromArgb(250, 250, 250);
             txtElecTotal.Enabled = false;
-            txtElecTotal.Font = new Font("Arial", 10F, FontStyle.Bold);
-            txtElecTotal.Location = new Point(360, 49);
+            txtElecTotal.Font = new Font("Arial", 11F, FontStyle.Bold);
+            txtElecTotal.Location = new Point(420, 55);
             txtElecTotal.Margin = new Padding(4, 5, 4, 5);
             txtElecTotal.Name = "txtElecTotal";
-            txtElecTotal.Size = new Size(140, 30);
+            txtElecTotal.Size = new Size(170, 33);
             txtElecTotal.TabIndex = 4;
             txtElecTotal.TextAlign = HorizontalAlignment.Right;
             // 
@@ -264,13 +267,13 @@ namespace IT008_Quản_Lý_Chung_Cư
             groupBox3.Controls.Add(lblWaterRate);
             groupBox3.Controls.Add(label7);
             groupBox3.Controls.Add(txtWaterTotal);
-            groupBox3.Font = new Font("Georgia", 9F);
+            groupBox3.Font = new Font("Georgia", 10F, FontStyle.Bold);
             groupBox3.ForeColor = Color.FromArgb(40, 40, 40);
-            groupBox3.Location = new Point(39, 452);
+            groupBox3.Location = new Point(40, 490);
             groupBox3.Margin = new Padding(4, 5, 4, 5);
             groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new Padding(19, 15, 19, 23);
-            groupBox3.Size = new Size(527, 161);
+            groupBox3.Padding = new Padding(20, 18, 20, 25);
+            groupBox3.Size = new Size(620, 175);
             groupBox3.TabIndex = 6;
             groupBox3.TabStop = false;
             groupBox3.Text = "Water";
@@ -278,23 +281,23 @@ namespace IT008_Quản_Lý_Chung_Cư
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Georgia", 9F);
+            label8.Font = new Font("Georgia", 9.5F);
             label8.ForeColor = Color.FromArgb(80, 80, 80);
-            label8.Location = new Point(19, 54);
+            label8.Location = new Point(20, 60);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(87, 18);
+            label8.Size = new Size(99, 20);
             label8.TabIndex = 0;
             label8.Text = "Usage (m³)";
             // 
             // txtWaterUsage
             // 
-            txtWaterUsage.Font = new Font("Arial", 10F);
-            txtWaterUsage.Location = new Point(154, 49);
+            txtWaterUsage.Font = new Font("Arial", 11F);
+            txtWaterUsage.Location = new Point(170, 55);
             txtWaterUsage.Margin = new Padding(4, 5, 4, 5);
             txtWaterUsage.Name = "txtWaterUsage";
             txtWaterUsage.PlaceholderText = "0";
-            txtWaterUsage.Size = new Size(127, 30);
+            txtWaterUsage.Size = new Size(150, 33);
             txtWaterUsage.TabIndex = 1;
             txtWaterUsage.TextAlign = HorizontalAlignment.Right;
             txtWaterUsage.TextChanged += CalculateTotal;
@@ -302,35 +305,36 @@ namespace IT008_Quản_Lý_Chung_Cư
             // lblWaterRate
             // 
             lblWaterRate.AutoSize = true;
-            lblWaterRate.Font = new Font("Arial", 8F, FontStyle.Italic);
+            lblWaterRate.Font = new Font("Arial", 8.5F, FontStyle.Italic);
             lblWaterRate.ForeColor = Color.FromArgb(108, 117, 125);
-            lblWaterRate.Location = new Point(154, 95);
+            lblWaterRate.Location = new Point(170, 105);
             lblWaterRate.Margin = new Padding(4, 0, 4, 0);
             lblWaterRate.Name = "lblWaterRate";
-            lblWaterRate.Size = new Size(109, 19);
+            lblWaterRate.Size = new Size(119, 20);
             lblWaterRate.TabIndex = 2;
             lblWaterRate.Text = "Rate: 0 VND/m³";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Arial", 9F);
+            label7.Font = new Font("Georgia", 9.5F);
             label7.ForeColor = Color.FromArgb(80, 80, 80);
-            label7.Location = new Point(309, 54);
+            label7.Location = new Point(350, 60);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(42, 20);
+            label7.Size = new Size(47, 20);
             label7.TabIndex = 3;
             label7.Text = "Total";
             // 
             // txtWaterTotal
             // 
+            txtWaterTotal.BackColor = Color.FromArgb(250, 250, 250);
             txtWaterTotal.Enabled = false;
-            txtWaterTotal.Font = new Font("Arial", 10F, FontStyle.Bold);
-            txtWaterTotal.Location = new Point(360, 49);
+            txtWaterTotal.Font = new Font("Arial", 11F, FontStyle.Bold);
+            txtWaterTotal.Location = new Point(420, 55);
             txtWaterTotal.Margin = new Padding(4, 5, 4, 5);
             txtWaterTotal.Name = "txtWaterTotal";
-            txtWaterTotal.Size = new Size(140, 30);
+            txtWaterTotal.Size = new Size(170, 33);
             txtWaterTotal.TabIndex = 4;
             txtWaterTotal.TextAlign = HorizontalAlignment.Right;
             // 
@@ -341,33 +345,33 @@ namespace IT008_Quản_Lý_Chung_Cư
             pnlSummary.Controls.Add(txtAdjust);
             pnlSummary.Controls.Add(labelTotal);
             pnlSummary.Controls.Add(lblTotalAmount);
-            pnlSummary.Location = new Point(39, 636);
+            pnlSummary.Location = new Point(40, 690);
             pnlSummary.Margin = new Padding(4, 5, 4, 5);
             pnlSummary.Name = "pnlSummary";
-            pnlSummary.Padding = new Padding(19, 23, 19, 23);
-            pnlSummary.Size = new Size(527, 123);
+            pnlSummary.Padding = new Padding(20, 25, 20, 25);
+            pnlSummary.Size = new Size(620, 135);
             pnlSummary.TabIndex = 7;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Georgia", 9F);
+            label9.Font = new Font("Georgia", 9.5F);
             label9.ForeColor = Color.FromArgb(80, 80, 80);
-            label9.Location = new Point(19, 31);
+            label9.Location = new Point(20, 35);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(91, 18);
+            label9.Size = new Size(102, 20);
             label9.TabIndex = 0;
             label9.Text = "Adjustments";
             // 
             // txtAdjust
             // 
-            txtAdjust.Font = new Font("Arial", 10F);
-            txtAdjust.Location = new Point(135, 26);
+            txtAdjust.Font = new Font("Arial", 11F);
+            txtAdjust.Location = new Point(150, 30);
             txtAdjust.Margin = new Padding(4, 5, 4, 5);
             txtAdjust.Name = "txtAdjust";
             txtAdjust.PlaceholderText = "0";
-            txtAdjust.Size = new Size(127, 30);
+            txtAdjust.Size = new Size(150, 33);
             txtAdjust.TabIndex = 1;
             txtAdjust.TextAlign = HorizontalAlignment.Right;
             txtAdjust.TextChanged += CalculateTotal;
@@ -377,7 +381,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             labelTotal.AutoSize = true;
             labelTotal.Font = new Font("Arial", 12F, FontStyle.Bold);
             labelTotal.ForeColor = Color.FromArgb(40, 40, 40);
-            labelTotal.Location = new Point(19, 77);
+            labelTotal.Location = new Point(20, 85);
             labelTotal.Margin = new Padding(4, 0, 4, 0);
             labelTotal.Name = "labelTotal";
             labelTotal.Size = new Size(77, 28);
@@ -386,12 +390,12 @@ namespace IT008_Quản_Lý_Chung_Cư
             // 
             // lblTotalAmount
             // 
-            lblTotalAmount.Font = new Font("Arial", 16F, FontStyle.Bold);
+            lblTotalAmount.Font = new Font("Arial", 17F, FontStyle.Bold);
             lblTotalAmount.ForeColor = Color.FromArgb(0, 123, 255);
-            lblTotalAmount.Location = new Point(135, 69);
+            lblTotalAmount.Location = new Point(150, 75);
             lblTotalAmount.Margin = new Padding(4, 0, 4, 0);
             lblTotalAmount.Name = "lblTotalAmount";
-            lblTotalAmount.Size = new Size(366, 46);
+            lblTotalAmount.Size = new Size(450, 50);
             lblTotalAmount.TabIndex = 3;
             lblTotalAmount.Text = "0 VND";
             lblTotalAmount.TextAlign = ContentAlignment.MiddleRight;
@@ -402,11 +406,11 @@ namespace IT008_Quản_Lý_Chung_Cư
             pnlFooter.Controls.Add(btnCancel);
             pnlFooter.Controls.Add(btnSave);
             pnlFooter.Dock = DockStyle.Bottom;
-            pnlFooter.Location = new Point(0, 844);
+            pnlFooter.Location = new Point(0, 830);
             pnlFooter.Margin = new Padding(4, 5, 4, 5);
             pnlFooter.Name = "pnlFooter";
-            pnlFooter.Padding = new Padding(39, 23, 39, 23);
-            pnlFooter.Size = new Size(643, 107);
+            pnlFooter.Padding = new Padding(40, 25, 40, 25);
+            pnlFooter.Size = new Size(700, 115);
             pnlFooter.TabIndex = 2;
             // 
             // btnCancel
@@ -414,12 +418,12 @@ namespace IT008_Quản_Lý_Chung_Cư
             btnCancel.BackColor = Color.FromArgb(248, 249, 250);
             btnCancel.FlatAppearance.BorderColor = Color.FromArgb(222, 226, 230);
             btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.Font = new Font("Arial", 10F);
+            btnCancel.Font = new Font("Arial", 10.5F);
             btnCancel.ForeColor = Color.FromArgb(80, 80, 80);
-            btnCancel.Location = new Point(39, 23);
+            btnCancel.Location = new Point(40, 25);
             btnCancel.Margin = new Padding(4, 5, 4, 5);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(129, 61);
+            btnCancel.Size = new Size(140, 65);
             btnCancel.TabIndex = 0;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
@@ -431,12 +435,12 @@ namespace IT008_Quản_Lý_Chung_Cư
             btnSave.BackColor = Color.FromArgb(0, 123, 255);
             btnSave.FlatAppearance.BorderSize = 0;
             btnSave.FlatStyle = FlatStyle.Flat;
-            btnSave.Font = new Font("Arial", 10F, FontStyle.Bold);
+            btnSave.Font = new Font("Arial", 11F, FontStyle.Bold);
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(450, 23);
+            btnSave.Location = new Point(500, 25);
             btnSave.Margin = new Padding(4, 5, 4, 5);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(154, 61);
+            btnSave.Size = new Size(160, 65);
             btnSave.TabIndex = 1;
             btnSave.Text = "SAVE BILL";
             btnSave.UseVisualStyleBackColor = false;
@@ -447,7 +451,7 @@ namespace IT008_Quản_Lý_Chung_Cư
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(643, 951);
+            ClientSize = new Size(700, 945);
             Controls.Add(pnlMain);
             Controls.Add(pnlFooter);
             Controls.Add(pnlHeader);
@@ -471,8 +475,6 @@ namespace IT008_Quản_Lý_Chung_Cư
             pnlSummary.PerformLayout();
             pnlFooter.ResumeLayout(false);
             ResumeLayout(false);
-
-
         }
 
         private System.Windows.Forms.Panel pnlHeader;
@@ -505,7 +507,5 @@ namespace IT008_Quản_Lý_Chung_Cư
         private System.Windows.Forms.Panel pnlFooter;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
-
-
     }
 }
